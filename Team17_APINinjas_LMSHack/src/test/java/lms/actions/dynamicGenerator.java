@@ -2,7 +2,7 @@ package lms.actions;
 
 public class dynamicGenerator {
 	
-	private static int counter = 10;
+	private static int counter = 14;
 	
 	public static String generateProgramName() {
         String baseProgName = "March24-ApINinjas-QA-";

@@ -54,7 +54,7 @@ public class BatchTests {
 			
 	}
 	
-	public static void GetBatch200Validation(Response response) {
+	public static void GetDeleteBatch200Validation(Response response) {
 		 try {
 			response
 				.then()
@@ -90,21 +90,22 @@ public class BatchTests {
 //	    }
 //	}
 	
-	public static void Put200PositiveValidation(Response response) {
+	public static void Put200Validation(Response response) {
 		
-//		try {
-//			String jsonSchema = FileUtils.readFileToString(new File(FileNameConstants.JSON_SCHEMA), "UTF-8");				
+		try {
+			String jsonSchema = FileUtils.readFileToString(new File(FileNameConstants.Batch_JSON_SCHEMA), "UTF-8");				
 			
 			response
 				.then()
-//				.log().all()
 				.assertThat()
-				.statusCode(200);
-//				.body(JsonSchemaValidator.matchesJsonSchema(jsonSchema));
+				.statusCode(200)
+				.statusLine("HTTP/1.1 200 ")
+				.header("Content-Type", "application/json")
+				.body(JsonSchemaValidator.matchesJsonSchema(jsonSchema));
 			
-//		} catch (IOException e) {
-//			e.printStackTrace();
-//		}
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 	
 	public static void GetUnauthorizedValidation(Response response) {

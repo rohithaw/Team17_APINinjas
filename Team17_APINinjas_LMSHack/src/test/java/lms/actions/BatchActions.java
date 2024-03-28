@@ -91,13 +91,13 @@ public static void setBatchDetails(Response response) {
                 batchName = response.path("batchName").toString();
                 programID = response.path("programId").toString();
                 
-                System.out.println("Batch Name is: " + batchName);
-                System.out.println("Batch ID is: " + batchID);
-                System.out.println("Program ID is: " + programID);
-                
                 Env_Var.batchID = batchID;
                 Env_Var.batchName = batchName;
                 Env_Var.programID = programID;
+                
+                System.out.println("Created Batch Id is: "+ batchID );
+                System.out.println("Created Batch Name is: "+ batchName );
+                System.out.println("This Batch is created under the Program ID: "+ programID );
             }  
 }
 
@@ -117,12 +117,6 @@ public static RequestSpecification getGetDeleteBatchRequest(String url, boolean 
 						.baseUri(url);
 	}
 	return request;
-}
-
-public static Response getAllBatchResponse(RequestSpecification request) {
-	
-	response = request.when().get();
-	return response;
 }
 
 public static Response getGetPutDeleteBatchResponsePositive(RequestSpecification request, String type, String IdorName ) {
@@ -147,6 +141,30 @@ public static Response getGetPutDeleteBatchResponsePositive(RequestSpecification
 public static Response getBatchResponse(RequestSpecification request) {
 	response = request.when().get();
 	return response;
+}
+
+public static RequestSpecification getPutBatchRequest(String url, String token) throws JsonProcessingException{
+	
+	String batchName = Env_Var.batchName;
+
+	try {
+		BatchPojo bP = new BatchPojo("SDET",batchName,15,"Active",16228);
+		ObjectMapper objectMapper = new ObjectMapper(); 
+		String requestBody = objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(bP);		
+		System.out.println(requestBody);
+		request =  
+			RestAssured
+				.given()
+					.headers("Authorization", token)
+					.contentType(ContentType.JSON)
+					.body(requestBody)
+					.baseUri(url);	
+		
+	} catch (JsonProcessingException e) {
+		e.printStackTrace();
+	}
+	
+	return request;
 }
 
 public static Response getGetDeleteBatchResponseNegative(RequestSpecification request, String UserIdorName, String type ) {

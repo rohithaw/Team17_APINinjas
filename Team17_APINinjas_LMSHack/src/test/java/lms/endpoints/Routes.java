@@ -46,13 +46,13 @@ public class Routes {
 		public static String UpdateBatch_Url = base_url+"/batches/{{batchId}}";
 		public static String UpdateBatch_InvalidUrl = Invalid_base_url+"/batches/{{batchId}}";
 		public static String UpdateBatch_InvalidEP = base_url+"/batch/{{batchId}}";
-		public static String UpdateBatch_InvalidID = base_url+"/batches";
+		public static String UpdateBatch_ID = base_url+"/batches";
 		
 		//DELETE Batch 
 		public static String DeleteBatch_Url = base_url+"/batches/{{batchId}}";
 		public static String DeleteBatch_InvalidUrl = Invalid_base_url+"/batches/{{batchId}}";
 		public static String DeleteBatch_InvalidEP = base_url+"/batch/{{batchId}}";
-		public static String DeleteBatch_InvalidID = base_url+"/batches";
+		public static String DeleteBatch_ID = base_url+"/batches";
 		
 		// Program Module:
 		
