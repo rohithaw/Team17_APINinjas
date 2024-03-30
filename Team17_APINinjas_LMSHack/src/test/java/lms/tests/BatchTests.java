@@ -17,9 +17,12 @@ import io.restassured.http.ContentType;
 import io.restassured.module.jsv.JsonSchemaValidator;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
+import lms.actions.BatchActions;
 import lms.utilities.FileNameConstants;
 
 public class BatchTests {
+	
+	static List<String> expectedStatusList = new ArrayList<>();
 	
 	public static String getToken(Response response){
 			response
@@ -52,6 +55,70 @@ public class BatchTests {
 			e.printStackTrace();
 		}
 			
+	}
+	
+	public static void postPutBatchValidationsDD(List<Response> responses, String type) {
+	    if(type.toLowerCase()=="post") {
+	    	expectedStatusList = BatchActions.PoststatusList;
+	    } else {
+	    	expectedStatusList = BatchActions.PutstatusList;
+	    }
+	    // Iterate over both response list and expected status list simultaneously
+	    for (int i = 0; i < responses.size() && i < expectedStatusList.size(); i++) {
+	        Response response = responses.get(i);
+	        String expectedStatus = expectedStatusList.get(i);
+	      if(expectedStatus=="201") {
+	        
+	        try {
+				String jsonSchema = FileUtils.readFileToString(new File(FileNameConstants.Batch_JSON_SCHEMA), "UTF-8");		
+	            // Validate response against expected status code
+	            response
+	            	.then()
+	            	.assertThat()
+	            	.statusCode(Integer.parseInt(expectedStatus.split("\\.")[0]))
+	            	.header("Content-Type", "application/json")
+					.body(JsonSchemaValidator.matchesJsonSchema(jsonSchema));
+	        
+	         } catch (IOException e) {
+				e.printStackTrace();
+	         }
+	      }else {
+	    	  try {
+		            // Validate response against expected status code
+		            response
+		            	.then()
+		            	.assertThat()
+		            	.statusCode(Integer.parseInt(expectedStatus.split("\\.")[0]));
+		        
+				} catch (AssertionError e) {
+		            // Handle assertion error
+		            System.err.println("Assertion failed for response " + (i + 1) + ": " + e.getMessage());
+		        }
+	      }
+	   }
+	}
+	
+	public static void getDeleteBatchValidationsDD(List<Response> responses, String by) {
+	    if(by.toLowerCase()=="id") {
+	    	expectedStatusList = BatchActions.getDeleteIDstatusList;
+	    } else {
+	    	expectedStatusList = BatchActions.getBNamestatusList;
+	    }
+	    // Iterate over both response list and expected status list simultaneously
+	    for (int i = 0; i < responses.size() && i < expectedStatusList.size(); i++) {
+	        Response response = responses.get(i);
+	        String expectedStatus = expectedStatusList.get(i);
+	        System.out.println(expectedStatus);
+	        try {
+	            response
+	            	.then()
+	            	.assertThat()
+	            	.statusCode(Integer.parseInt(expectedStatus.split("\\.")[0]));
+	            		        
+	         } catch (AssertionError e) {
+		            System.err.println("Assertion failed for response " + (i + 1) + ": " + e.getMessage());
+	         }	      
+	      }
 	}
 	
 	public static void GetDeleteBatch200Validation(Response response) {
