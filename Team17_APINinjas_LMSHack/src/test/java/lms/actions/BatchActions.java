@@ -8,7 +8,6 @@ import java.util.Map;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.sun.tools.javac.code.Type;
-
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
@@ -30,9 +29,10 @@ public class BatchActions extends ExcelReader {
 	static String batchName;
 	public static ArrayList<String> PoststatusList = new ArrayList<>();
 	public static ArrayList<String> PutstatusList = new ArrayList<>();
-	public static ArrayList<String> getDeleteIDstatusList = new ArrayList<>();
-	public static ArrayList<String> getBNamestatusList = new ArrayList<>();
-
+	public static ArrayList<String> batchIDstatusList = new ArrayList<>();
+	public static ArrayList<String>  batchNamestatusList = new ArrayList<>();
+	public static ArrayList<String>  programIDstatusList = new ArrayList<>();
+		
 	static String userLoginEmailId = PropertiesFile.readPropertiesFile("userLoginEmailId");
 	static String password = PropertiesFile.readPropertiesFile("password");
 	
@@ -66,7 +66,7 @@ public static RequestSpecification getPostBatchRequest(String url, String token)
 		System.out.println("Generated batch name is"+ batchName);
 
 		try {
-			BatchPojo bP = new BatchPojo("Full Stack Tester",batchName,10,"Active",16228);
+			BatchPojo bP = new BatchPojo("Full Stack Tester",batchName,10,"Active",16766);
 			ObjectMapper objectMapper = new ObjectMapper(); 
 			String requestBody = objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(bP);		
 			System.out.println(requestBody);
@@ -84,6 +84,17 @@ public static RequestSpecification getPostBatchRequest(String url, String token)
 		
 		return request;
 	}
+
+public static RequestSpecification getPostPutBatchRequestNoAuth(String url) throws JsonProcessingException{
+	
+		request =  
+			RestAssured
+				.given()					
+					.contentType(ContentType.JSON)					
+					.baseUri(url);	
+
+	return request;
+}
 
 public static List<RequestSpecification> getPostPutBatchRequestsDD(String url, String token, String type) throws IOException {
 	 String bDes;
@@ -146,6 +157,116 @@ public static List<RequestSpecification> getPostPutBatchRequestsDD(String url, S
        return requestSpecifications;
 }
 
+public static List<RequestSpecification> getPostBatchRequestsDDNegative(String url, String token) throws IOException {
+	 
+	ExcelReader excelReader = new ExcelReader();
+	 List<Map<String, String>> testData = excelReader.readTestDataFromExcel(FileNameConstants.BatchEXCEL_TEST_DATA, "PostPutTestData-BatchJyo");
+       List<RequestSpecification> requestSpecifications = new ArrayList<>();
+       int columnCount = 0;
+       // Iterate over each row of test data
+       System.out.println("Number of rows in the Post Test Data are: "+ testData.size());
+       for (Map<String, String> row : testData) {
+           String bDes = row.get("batchDescription"); // Extract fields from each row
+           String bName = row.get("batchName");
+           if (columnCount < 3) {
+           	bName = dynamicGenerator.generateBatchName(bName);    
+           }
+           columnCount++;
+           
+           String classesStr = row.get("NoOfClasses");
+           int classes = 0; // Default value in case of null or conversion failure
+           if (classesStr != null && !classesStr.isEmpty()) {
+               try {
+                   classes = Integer.parseInt(classesStr.split("\\.")[0]);
+               } catch (NumberFormatException e) {
+                   // Handle conversion failure
+                   System.err.println("Error converting NoOfClasses to int: " + e.getMessage());
+               }
+           }
+           String bStatus = row.get("batchStatus");
+           String pIdStr = row.get("programId");
+           int pId = 0; // Default value in case of null or conversion failure
+
+           if (pIdStr != null && !pIdStr.isEmpty()) {
+               try {
+                   pId = Integer.parseInt(pIdStr.split("\\.")[0]);
+               } catch (NumberFormatException e) {
+                   
+                   System.err.println("Error converting ProgramId to int: " + e.getMessage());
+               }
+           }
+           PoststatusList.add(row.get("ExpectedStatusCodePost"));
+    	   
+           // Prepare request body
+           String requestBody = prepareRequestBody(bDes, bName, classes, bStatus, pId);
+           request =  
+   				RestAssured
+   					.given()
+   						.headers("Authorization", token)
+   						.contentType(ContentType.JSON)
+   						.body(requestBody)
+   						.baseUri(url);	
+           requestSpecifications.add(request);		    		
+   		
+       }
+       return requestSpecifications;
+}
+
+public static List<RequestSpecification> getPutBatchRequestsDDNegative(String url, String token) throws IOException {
+	 
+	ExcelReader excelReader = new ExcelReader();
+	 List<Map<String, String>> testData = excelReader.readTestDataFromExcel(FileNameConstants.BatchEXCEL_TEST_DATA, "PostPutTestData-BatchJyo");
+       List<RequestSpecification> requestSpecifications = new ArrayList<>();
+//       int columnCount = 0;
+       // Iterate over each row of test data
+       System.out.println("Number of rows in the Put Test Data are: "+ testData.size());
+       for (Map<String, String> row : testData) {
+           String bDes = row.get("updateBatchDescription"); // Extract fields from each row
+           String bName = row.get("updateBatchName");
+//           if (columnCount < 3) {
+//           	bName = dynamicGenerator.generateBatchName(bName);    
+//           }
+//           columnCount++;
+           
+           String classesStr = row.get("updateNoOfClasses");
+           int classes = 0; // Default value in case of null or conversion failure
+           if (classesStr != null && !classesStr.isEmpty()) {
+               try {
+                   classes = Integer.parseInt(classesStr.split("\\.")[0]);
+               } catch (NumberFormatException e) {
+                   // Handle conversion failure
+                   System.err.println("Error converting NoOfClasses to int: " + e.getMessage());
+               }
+           }
+           String bStatus = row.get("updateBatchStatus");
+           String pIdStr = row.get("updateProgramId");
+           int pId = 0; // Default value in case of null or conversion failure
+
+           if (pIdStr != null && !pIdStr.isEmpty()) {
+               try {
+                   pId = Integer.parseInt(pIdStr.split("\\.")[0]);
+               } catch (NumberFormatException e) {
+                   
+                   System.err.println("Error converting ProgramId to int: " + e.getMessage());
+               }
+           }
+           PutstatusList.add(row.get("ExpectedStatusCodePut"));
+    	   
+           // Prepare request body
+           String requestBody = prepareRequestBody(bDes, bName, classes, bStatus, pId);
+           request =  
+   				RestAssured
+   					.given()
+   						.headers("Authorization", token)
+   						.contentType(ContentType.JSON)
+   						.body(requestBody)
+   						.baseUri(url);	
+           requestSpecifications.add(request);		    		
+   		
+       }
+       return requestSpecifications;
+}
+
 private static String prepareRequestBody(String batchDesc, String bName, int classes, String bStatus, int pId) throws JsonProcessingException {
 	
 	BatchPojo bP = new BatchPojo(batchDesc,bName,classes,bStatus,pId);
@@ -191,8 +312,47 @@ public static List<Response> getPutBatchResponsesDD(List<RequestSpecification> r
 	return responses;
 }
 
+public static List<Response> getPutBatchResponsesNegativeDD(List<RequestSpecification> requests, String batchId) {
+	
+	List<Response> responses = new ArrayList<>();
+	
+	for (RequestSpecification request : requests) {
+		if(batchId != null) {
+			response = request.when().put("/{batchId}",batchId);
+			responses.add(response);
+		}else {
+			batchId = "9036";
+			response = request.when().put("/{batchId}",batchId);
+			responses.add(response);
+		}
+	}
+	return responses;
+}
+
 public static Response getPostBatchResponse(RequestSpecification request) {
 	response = request.when().post();	
+	return response;
+}
+
+public static Response BatchResponseInvalidUrl(RequestSpecification request, String type) {
+	
+	switch (type.toLowerCase()) {
+	case "post":
+		response = request.when().post();
+		break;
+	case "put":
+		response = request.when().put();
+		break;
+	case "get":
+		response = request.when().get();
+		break;
+	case "delete":
+		response = request.when().delete();
+		break;
+	default:
+		System.out.println("Invalid request type");
+		break;
+	}
 	return response;
 }
 
@@ -221,13 +381,17 @@ public static RequestSpecification getGetDeleteBatchRequest(String url, boolean 
 					.headers("Authorization", token)
 					.contentType(ContentType.JSON)						
 					.baseUri(url);
-	} else {
+	} 
+	return request;
+}
+
+public static RequestSpecification getGetDeleteBatchRequestNoAuth(String url) throws JsonProcessingException {
 		request =  
 				RestAssured
 					.given()
 						.contentType(ContentType.JSON)						
 						.baseUri(url);
-	}
+	
 	return request;
 }
 
@@ -307,8 +471,9 @@ public static List<Response> getGetBatchResponsesDD(String by, String token, Str
             }
            
        	}
-   	   getDeleteIDstatusList.add(row.get("ExpectedStatusGetDeleteID"));
-   	   getBNamestatusList.add(row.get("StatusGetBName"));
+   	   batchIDstatusList.add(row.get("ExpectedStatusbatchID"));
+   	   batchNamestatusList.add(row.get("StatusGetBName"));
+   	   programIDstatusList.add(row.get("ExpectedStatusProgramID"));   	
    	   
    	   responses.add(response);
     }
@@ -333,15 +498,15 @@ public static List<Response> getDeleteBatchResponsesDD(String token, String url 
    			   bID = row.get("BatchID"); // Extract fields from each row  
    			   if (!bID.contains(".")) {
    				   System.out.println("String Batch Id from excel is: "+ bID);
-   				   response = request.when().get("/{bID}", bID);                  
+   				   response = request.when().delete("/{bID}", bID);                  
    			   } else {
    				   int batchid = Integer.parseInt(bID.split("\\.")[0]);
    				   bID = Integer.toString(batchid); 
    				   System.out.println("String Batch Id from excel is: "+ bID);
-   				   response = request.when().get("/{bID}", bID);            	
+   				   response = request.when().delete("/{bID}", bID);            	
    			   	}           
    		   
-   	   getDeleteIDstatusList.add(row.get("ExpectedStatusGetDeleteID"));  	   
+   	   batchIDstatusList.add(row.get("ExpectedStatusbatchID"));
    	   responses.add(response);
     }
 	return responses;

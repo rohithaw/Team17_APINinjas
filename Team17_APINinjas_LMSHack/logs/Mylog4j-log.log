@@ -1,0 +1,15 @@
+[ERROR] 2024-03-30 14:14:44.852 [main] LoggerLoad - 1 expectation failed.
+Expected status code <400> but was <201>.
+
+[ERROR] 2024-03-30 14:14:44.856 [main] LoggerLoad - 1 expectation failed.
+Expected status code <201> but was <400>.
+
+[ERROR] 2024-03-30 14:14:49.114 [main] LoggerLoad - 1 expectation failed.
+Expected status code <404> but was <200>.
+
+[ERROR] 2024-03-30 14:15:10.405 [main] LoggerLoad - 1 expectation failed.
+Expected status code <200> but was <400>.
+
+[ERROR] 2024-03-30 14:15:14.817 [main] LoggerLoad - 1 expectation failed.
+Expected status code <404> but was <200>.
+

@@ -10,7 +10,6 @@ import java.util.Map;
 import org.testng.ITestResult;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-
 import io.cucumber.java.After;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -23,7 +22,7 @@ import lms.endpoints.Routes;
 import lms.tests.BatchTests;
 
 
-public class BatchDDModule_SD {
+public class ETEBatch_SD {
 	
 	 RequestSpecification request;
 	 Response response;
@@ -64,9 +63,14 @@ public class BatchDDModule_SD {
 	}
 	
 //Get All Batches steps	
-	@Given("Authorized Admin sets the GET Batches request with valid baseUrl,valid endpoint")
-	public void authorized_admin_sets_the_get_batches_request_with_valid_base_url_valid_endpoint() throws JsonProcessingException {
-	    this.request = BatchActions.getGetDeleteBatchRequest(Routes.GetBatches_Url, true, token);
+	
+	@Given("Authorized Admin sets the GET Batches request with or without search {string}")
+	public void authorized_admin_sets_the_get_batches_request_with_or_without(String string) throws JsonProcessingException {
+		if("Yes".equals(string)) {
+			this.request = BatchActions.getGetDeleteBatchRequest(Routes.GetBatchesSearch_Url, true, token);
+			}else if ("No".equals(string)) {
+			   this.request = BatchActions.getGetDeleteBatchRequest(Routes.GetBatches_Url, true, token);
+			}
 	}
 
 	@When("Admin sends GET Batches request")
@@ -84,12 +88,6 @@ public class BatchDDModule_SD {
 	public void admin_sends_get_by_batch_id_request() {
 		this.response = BatchActions.getGetPutDeleteBatchResponsePositive(request, "get", Env_Var.batchID);
 	}
-//Get by BatchID Negative steps:
-
-	@When("Admin sends GET by BatchID request for Negative scenarios")
-	public void admin_sends_get_by_batch_id_request_for_negative_scenarios() throws IOException {
-		 this.responses = BatchActions.getGetBatchResponsesDD( "batchid", token, Routes.GetBatchID_ID );
-	}
 
 //Get by program ID positive steps:
 	@Given("Authorized Admin sets the GET by programID request with valid baseUrl,valid endpoint ,id")
@@ -101,13 +99,7 @@ public class BatchDDModule_SD {
 	public void admin_sends_get_by_program_id_request() {
 		this.response = BatchActions.getGetPutDeleteBatchResponsePositive(request, "get", Env_Var.programID);
 	}
-	
-//Get by program ID Negative steps:
-	@When("Admin sends GET by programID request for Negative scenarios")
-	public void admin_sends_get_by_program_id_request_for_negative_scenarios() throws IOException {
-		this.responses = BatchActions.getGetBatchResponsesDD("programid", token, Routes.GetProgramID_ID );
-	}
-	
+		
 //Get by Batch Name positive steps:	
 	@Given("Authorized Admin sets the GET by batchName request with valid baseUrl,valid endpoint ,batchName")
 	 public void authorized_admin_sets_the_get_by_batch_name_request_with_valid_base_url_valid_endpoint_batch_name() throws JsonProcessingException {
@@ -119,17 +111,6 @@ public class BatchDDModule_SD {
 		 this.response = BatchActions.getGetPutDeleteBatchResponsePositive(request, "get", Env_Var.batchName);
 	 }	 
 		
-//Get by Batch Name Negative steps:	
-	 @When("Admin sends GET by BatchName request for Negative scenarios")
-	 public void admin_sends_get_by_batch_name_request_for_negative_scenarios() throws IOException {
-		 this.responses = BatchActions.getGetBatchResponsesDD("batchname", token, Routes.GetBatchName_BatchName );
-	 }
-
-	 @Then("Admin receives expected Status in get BatchName response")
-	 public void admin_receives_expected_status_in_get_batch_name_response() {
-		 BatchTests.getDeleteBatchValidationsDD(responses, "name");
-	 }
-
 //Put Batch Steps:	 
 	 @Given("Admin sets Put Batch request with valid Url, invalid endpoint and valid request body")
 	 public void admin_sets_put_batch_request_with_valid_url_invalid_endpoint_and_valid_request_body() throws IOException {
@@ -163,16 +144,7 @@ public class BatchDDModule_SD {
 	 public void admin_receives_ok_status_in_delete_batch_response(Integer int1) {
 		 BatchTests.GetDeleteBatch200Validation(response);
 	 }
-	 
-//Delete Batch Negative Steps:
-	 @When("Admin sends Delete Batch request for Negative scenarios")
-	 public void admin_sends_delete_batch_request_for_negative_scenarios() throws IOException {
-		 this.responses = BatchActions.getDeleteBatchResponsesDD(token, Routes.DeleteBatch_ID);
-	 }
-
-	 @Then("Admin receives expected Status in Batch response")
-	 public void admin_receives_expected_status_in_batch_response() {
-		 BatchTests.getDeleteBatchValidationsDD(responses, "id");
-	 }
 	
 }
+
+

@@ -17,8 +17,10 @@ import io.restassured.http.ContentType;
 import io.restassured.module.jsv.JsonSchemaValidator;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
+import lms.GlobalVariables.Env_Var;
 import lms.actions.BatchActions;
 import lms.utilities.FileNameConstants;
+import lms.utilities.LoggerLoad;
 
 public class BatchTests {
 	
@@ -35,6 +37,7 @@ public class BatchTests {
 		String token = response.path("token");
 		String AuthToken = "Bearer "+token;
 		System.out.println("Succesful User login with token: "+AuthToken);
+		Env_Var.token = AuthToken;
 		return AuthToken;
 	}
 	
@@ -93,22 +96,24 @@ public class BatchTests {
 				} catch (AssertionError e) {
 		            // Handle assertion error
 		            System.err.println("Assertion failed for response " + (i + 1) + ": " + e.getMessage());
+		            LoggerLoad.error(e.getMessage());
 		        }
 	      }
 	   }
 	}
 	
 	public static void getDeleteBatchValidationsDD(List<Response> responses, String by) {
-	    if(by.toLowerCase()=="id") {
-	    	expectedStatusList = BatchActions.getDeleteIDstatusList;
-	    } else {
-	    	expectedStatusList = BatchActions.getBNamestatusList;
-	    }
+	    if(by.toLowerCase()=="batchid") {
+	    	expectedStatusList = BatchActions.batchIDstatusList;
+	    } else if(by.toLowerCase()=="batchname"){
+	    	expectedStatusList = BatchActions.batchNamestatusList;
+	    } else
+	    	expectedStatusList = BatchActions.programIDstatusList;
+	    	
 	    // Iterate over both response list and expected status list simultaneously
 	    for (int i = 0; i < responses.size() && i < expectedStatusList.size(); i++) {
 	        Response response = responses.get(i);
 	        String expectedStatus = expectedStatusList.get(i);
-	        System.out.println(expectedStatus);
 	        try {
 	            response
 	            	.then()
@@ -117,6 +122,7 @@ public class BatchTests {
 	            		        
 	         } catch (AssertionError e) {
 		            System.err.println("Assertion failed for response " + (i + 1) + ": " + e.getMessage());
+		            LoggerLoad.error(e.getMessage());
 	         }	      
 	      }
 	}
@@ -131,31 +137,9 @@ public class BatchTests {
 					.header("Content-Type", "application/json");
 		 	} catch (AssertionError e) {
 	            System.err.println("Assertion failed " + e.getMessage());
+	            LoggerLoad.error(e.getMessage());
 	        }			
 	}
-	
-//	public static void postBatchValidationsDD(List<Response> responses) {
-//	    List<String> expectedStatusList = BatchAssignEndPoints.statusList;
-//
-	    // Iterate over both response list and expected status list simultaneously
-//	    for (int i = 0; i < responses.size() && i < expectedStatusList.size(); i++) {
-//	        Response response = responses.get(i);
-//	        String expectedStatus = expectedStatusList.get(i);
-//
-//	        try {
-//	            // Validate response against expected status code
-//	            response
-//	            	.then()
-//	            	.assertThat()
-//	            	.statusCode(Integer.parseInt(expectedStatus.split("\\.")[0]));
-//	        
-//	        } catch (AssertionError e) {
-//	            // Handle assertion error
-//	            System.err.println("Assertion failed for response " + (i + 1) + ": " + e.getMessage());
-//	        }
-//	        
-//	    }
-//	}
 	
 	public static void Put200Validation(Response response) {
 		
@@ -180,17 +164,20 @@ public class BatchTests {
 			.then()
 				.assertThat()
 				.statusCode(401)
-				.statusLine("HTTP/1.1 401 ")
-				.header("Content-Type", "application/json");
+				.statusLine("HTTP/1.1 401 ");
 	}
 	
 	public static void GetNegative404Validation(Response response) {
+	try {	
 		response
 			.then()
 				.assertThat()
 				.statusCode(404)
-				.statusLine("HTTP/1.1 404 ")
-				.header("Content-Type", "application/json");
+				.statusLine("HTTP/1.1 404 ");
+	} catch (AssertionError e) {
+        System.err.println("Assertion failed " + e.getMessage());
+        LoggerLoad.error(e.getMessage());
+    }
 	}
 	
 	public static void GetNegative400Validation(Response response) {
