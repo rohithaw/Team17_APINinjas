@@ -1,0 +1,1 @@
+{"uuid":"4a5cba43-d75b-499f-b058-403adea6f702","name":"Scenario Outline: User should not be able to do CRUD operations on Batch Module with invalid end point","children":["a6d3ded0-2428-4bfc-85ee-1daa3c28401e"],"befores":[],"afters":[],"start":1711845490042,"stop":1711845491015}

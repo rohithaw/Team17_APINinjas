@@ -20,6 +20,7 @@ import lms.GlobalVariables.Env_Var;
 import lms.actions.BatchActions;
 import lms.endpoints.Routes;
 import lms.tests.BatchTests;
+import lms.utilities.LoggerLoad;
 
 
 public class BatchDDNegModule_SD {
@@ -51,6 +52,7 @@ public class BatchDDNegModule_SD {
 	 
 	 @Given("Authorized Admin sets Post Batch request with valid Url,valid endpoint, invalid request body")
 	 public void authorized_admin_sets_post_batch_request_with_valid_url_valid_endpoint_invalid_request_body() throws IOException {
+		 LoggerLoad.info("Execution of Post Batch Scenarios started");
 		 this.requests = BatchActions.getPostBatchRequestsDDNegative(Routes.CreateBatch_Url, token);
 	 }
 
@@ -68,13 +70,15 @@ public class BatchDDNegModule_SD {
 
 	@When("Admin sends GET by BatchID request for Negative scenarios")
 	public void admin_sends_get_by_batch_id_request_for_negative_scenarios() throws IOException {
-		 this.responses = BatchActions.getGetBatchResponsesDD( "batchid", token, Routes.GetBatchID_ID );
+		LoggerLoad.info("Execution of Get by BatchID Scenarios started"); 
+		this.responses = BatchActions.getGetBatchResponsesDD( "batchid", token, Routes.GetBatchID_ID );
 	}
 	
 //Get by program ID Negative steps:
 	
 	@When("Admin sends GET by programID request for Negative scenarios")
 	public void admin_sends_get_by_program_id_request_for_negative_scenarios() throws IOException {
+		LoggerLoad.info("Execution of Get by programID Scenarios started");
 		this.responses = BatchActions.getGetBatchResponsesDD("programid", token, Routes.GetProgramID_ID );
 	}
 	
@@ -87,6 +91,7 @@ public class BatchDDNegModule_SD {
 	
 	 @When("Admin sends GET by BatchName request for Negative scenarios")
 	 public void admin_sends_get_by_batch_name_request_for_negative_scenarios() throws IOException {
+		 LoggerLoad.info("Execution of Get by Batch Name Scenarios started");
 		 this.responses = BatchActions.getGetBatchResponsesDD("batchname", token, Routes.GetBatchName_BatchName );
 	 }
 
@@ -99,6 +104,7 @@ public class BatchDDNegModule_SD {
 	 
 	 @Given("Admin sets Put Batch request with valid Url, invalid endpoint and invalid request body")
 	 public void admin_sets_put_batch_request_with_valid_url_invalid_endpoint_and_invalid_request_body() throws IOException {
+		 LoggerLoad.info("Execution of Update Batch Scenarios started");
 		 this.requests = BatchActions.getPutBatchRequestsDDNegative(Routes.UpdateBatch_ID, token);
 	 }
 
@@ -116,6 +122,7 @@ public class BatchDDNegModule_SD {
 //Delete Batch Negative Steps:
 	 @When("Admin sends Delete Batch request for Negative scenarios")
 	 public void admin_sends_delete_batch_request_for_negative_scenarios() throws IOException {
+		 LoggerLoad.info("Execution of Delete Batch Scenarios started");
 		 this.responses = BatchActions.getDeleteBatchResponsesDD(token, Routes.DeleteBatch_ID);
 	 }
 
@@ -127,6 +134,7 @@ public class BatchDDNegModule_SD {
 //Invalid Url All Batch Module:
 	 @Given("User sets {string} with invalid Url, valid endpoint and valid request body")
 	 public void user_sets_with_invalid_url_valid_endpoint_and_valid_request_body(String string) throws JsonProcessingException {
+		 LoggerLoad.info("Execution of Invalid Url Batch Scenarios started");
 		 if("Create".equals(string)) {
 			 this.request = BatchActions.getPostBatchRequest(Routes.CreateBatch_InvalidUrl, token);
 			}else if ("Get_All".equals(string)) {
@@ -165,6 +173,7 @@ public class BatchDDNegModule_SD {
 //Invalid End Point All Batch Module:
 	 @Given("User sets {string} with valid Url, invalid endpoint and valid request body.")
 	 public void user_sets_with_valid_url_invalid_endpoint_and_valid_request_body(String string) throws JsonProcessingException {
+		 LoggerLoad.info("Execution of Invalid Endpoint Batch Scenarios started");
 		 if("Create".equals(string)) {
 			 this.request = BatchActions.getPostBatchRequest(Routes.CreateBatch_InvalidEP, token);
 			}else if ("Get_All".equals(string)) {
@@ -185,6 +194,7 @@ public class BatchDDNegModule_SD {
 //No Auth All Batch Module:
 	 @Given("Unauthorized User sets {string} with valid baseUrl,valid endpoint")
 	 public void unauthorized_user_sets_with_valid_base_url_valid_endpoint(String string) throws JsonProcessingException {
+		 LoggerLoad.info("Execution of No Auth Batch Scenarios started");
 		 if("Create".equals(string)) {
 			 this.request = BatchActions.getPostPutBatchRequestNoAuth(Routes.CreateBatch_Url);
 			}else if ("Get_All".equals(string)) {

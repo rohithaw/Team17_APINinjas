@@ -1,0 +1,2256 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Team17_APINinjas Extent Framework</title>
+<link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@d6562a79075e061305ccfdb82f01e5e195e2d307/spark/css/spark-style.css" rel="stylesheet" />
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@7cc78ce/spark/js/jsontree.js"></script>
+<style type="text/css"></style></head><body class="spa bdd-report standard">
+  <div class="app">
+    <div class="layout">
+<div class="header navbar">
+<div class="vheader">
+<div class="nav-logo">
+<a href="#">
+<div class="logo" style="background-image: url('https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png')"></div>
+</a>
+</div>
+<ul class="nav-left">
+<li class="search-box">
+<a class="search-toggle" href="#">
+<i class="search-icon fa fa-search"></i>
+<i class="search-icon-close fa fa-close"></i>
+</a>
+</li>
+<li class="search-input"><input id="search-tests" class="form-control" type="text" placeholder="Search..."></li>
+</ul>
+<ul class="nav-right">
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">Team17_APINinjas Report</span></a>
+</li>
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">Mar 30, 2024 17:37:11</span></a>
+</li>
+</ul>
+</div>
+</div><div class="side-nav">
+<div class="side-nav-inner">
+<ul class="side-nav-menu">
+<li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
+<a id="nav-dashboard" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bar-chart"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('test-view')">
+<a id="nav-test" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-list"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('category-view')">
+<a id="nav-category" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-tag"></i></span>
+</a>
+</li>
+</ul>
+</div>
+</div>      <div class="vcontainer">
+        <div class="main-content">
+<div class="container-fluid p-4 view dashboard-view">
+<div class="row">
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Started</p>
+<h3>Mar 30, 2024 17:37:11</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Ended</p>
+<h3>Mar 30, 2024 17:38:21</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-pass">Features Passed</p>
+<h3>1</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-fail">Features Failed</p>
+<h3>0</h3>
+</div></div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Features</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='parent-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='100%'>
+<b>1</b> features passed
+</small>
+</div>
+<div>
+<small data-tooltip='0%'><b>0</b> features failed,
+<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Scenarios</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='child-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='100%'><b>27</b> scenarios passed</small></div>
+<div>
+<small data-tooltip='0%'><b>0</b> scenarios failed,
+<b>0</b> skipped, <b data-tooltip='%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Steps</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='grandchild-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='100%'><b>158</b> steps passed</small></div>
+<div>
+<small data-tooltip='0%'><b>0</b> steps failed,
+<b>0</b> skipped, <b data-tooltip='%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><div class="col-md-12">
+<div class="card"><div class="card-header"><p>Timeline</p></div>
+<div class="card-body pt-0"><div>
+<canvas id="timeline" height="120"></canvas>
+</div></div>
+</div>
+</div></div>
+<script>
+var timeline = {
+"LMS API Batch Module - Create Batch Requests - Post":69.191
+};
+</script>
+<div class="row">
+<div class="col-lg-6 col-md-12 category-container">
+<div class="card">
+<div class="card-header"><p>Tags</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
+<tr>
+<td>@Get_by_batchName_Negative_DD</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@InvalidEP_Batch</td>
+<td>7</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@NoAuth_Batch</td>
+<td>7</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@InvalidUrl_Batch</td>
+<td>7</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@PUT_Batch_DD_Negative</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@BatchModuleNegative</td>
+<td>27</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@Delete_Batch_Negative_DD</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@Get_by_batchID_Negative_DD</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@Get_by_programID_Negative_DD</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@POST_Batch_DD_Negative</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="col-lg-6 col-md-12 sysenv-container">
+<div class="card">
+<div class="card-header"><p>System/Environment</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Value</th></tr></thead>
+<tbody>
+<tr>
+<td>Engineer</td>
+<td>APINinjas</td>
+</tr>
+<tr>
+<td>Project</td>
+<td>Team17_APINinjas</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+</div>
+<script>
+var statusGroup = {
+parentCount: 5,
+passParent: 1,
+failParent: 0,
+warningParent: 0,
+skipParent: 0,
+childCount: 5,
+passChild: 27,
+failChild: 0,
+warningChild: 0,
+skipChild: 0,
+infoChild: 0,
+grandChildCount: 5,
+passGrandChild: 158,
+failGrandChild: 0,
+warningGrandChild: 0,
+skipGrandChild: 0,
+infoGrandChild: 0,
+eventsCount: 5,
+};
+</script><div class="test-wrapper row view test-view">
+  <div class="test-list">
+    <div class="test-list-tools">
+<ul class="tools pull-left">
+<li><a href="#"><span class="font-size-14">Tests</span></a></li>
+</ul>
+<ul class="tools text-right">
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
+<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
+<div class="dropdown-divider"></div>
+<a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
+</ul>
+</li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
+<ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" href="#">@Get_by_batchName_Negative_DD</a><a class="dropdown-item" href="#">@InvalidEP_Batch</a><a class="dropdown-item" href="#">@NoAuth_Batch</a><a class="dropdown-item" href="#">@InvalidUrl_Batch</a><a class="dropdown-item" href="#">@PUT_Batch_DD_Negative</a><a class="dropdown-item" href="#">@BatchModuleNegative</a><a class="dropdown-item" href="#">@Delete_Batch_Negative_DD</a><a class="dropdown-item" href="#">@Get_by_batchID_Negative_DD</a><a class="dropdown-item" href="#">@Get_by_programID_Negative_DD</a><a class="dropdown-item" href="#">@POST_Batch_DD_Negative</a>
+</ul>
+</li>
+</ul>
+</div>    <div class="test-list-wrapper scrollable">
+      <ul class="test-list-item">
+        <li class="test-item"  status="pass" test-id="1"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">LMS API Batch Module - Create Batch Requests - Post</p>
+            <p class="text-sm">
+              <span>5:37:12 PM</span> / <span>00:01:09:191</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">LMS API Batch Module - Create Batch Requests - Post</h5>
+<span class='badge badge-success'>03.30.2024 5:37:12 PM</span>
+<span class='badge badge-danger'>03.30.2024 5:38:21 PM</span>
+<span class='badge badge-default'>00:01:09:191</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="2"><span class="badge log pass-bg mr-2">Pass</span>Authorized Admin unable to create new Batch</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="lms.stepDefinitions.BatchDDNegModule_SD.admin_logs_in_with_valid_username_and_password_for_batch_module_negative()">
+                <span>Given Admin logs in with valid Username and password for Batch Module Negative</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="lms.stepDefinitions.BatchDDNegModule_SD.admin_send_post_login_request_for_batch_module_negative()">
+                <span>When Admin send Post Login request for Batch Module Negative</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="lms.stepDefinitions.BatchDDNegModule_SD.admin_should_be_able_to_get_in_the_response_and_generate_token_for_batch_module_negative(java.lang.Integer)">
+                <span>Then Admin should be able to get 200 in the response and generate Token for Batch Module Negative</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="lms.stepDefinitions.BatchDDNegModule_SD.authorized_admin_sets_post_batch_request_with_valid_url_valid_endpoint_invalid_request_body()">
+                <span>Given Authorized Admin sets Post Batch request with valid Url,valid endpoint, invalid request body</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="lms.stepDefinitions.BatchDDNegModule_SD.admin_sends_post_batch_request_for_negative_scenarios()">
+                <span>When Admin sends POST Batch request for Negative scenarios</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="lms.stepDefinitions.BatchDDNegModule_SD.admin_receives_expected_status_in_post_batch_negative_response()">
+                <span>Then Admin receives expected status in Post batch Negative response</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="9"><span class="badge log pass-bg mr-2">Pass</span>Authorized Admin unable to view Batch with invalid batchID from Excel</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="lms.stepDefinitions.BatchDDNegModule_SD.admin_logs_in_with_valid_username_and_password_for_batch_module_negative()">
+                <span>Given Admin logs in with valid Username and password for Batch Module Negative</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="lms.stepDefinitions.BatchDDNegModule_SD.admin_send_post_login_request_for_batch_module_negative()">
+                <span>When Admin send Post Login request for Batch Module Negative</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="lms.stepDefinitions.BatchDDNegModule_SD.admin_should_be_able_to_get_in_the_response_and_generate_token_for_batch_module_negative(java.lang.Integer)">
+                <span>Then Admin should be able to get 200 in the response and generate Token for Batch Module Negative</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="lms.stepDefinitions.BatchDDNegModule_SD.admin_sends_get_by_batch_id_request_for_negative_scenarios()">
+                <span>When Admin sends GET by BatchID request for Negative scenarios</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="lms.stepDefinitions.BatchDDNegModule_SD.admin_receives_expected_status_in_batch_ID_response()">
+                <span>Then Admin receives expected Status in BatchID response</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="15"><span class="badge log pass-bg mr-2">Pass</span>Authorized Admin unable to view Batch with invalid programID from Excel</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="lms.stepDefinitions.BatchDDNegModule_SD.admin_logs_in_with_valid_username_and_password_for_batch_module_negative()">
+                <span>Given Admin logs in with valid Username and password for Batch Module Negative</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="lms.stepDefinitions.BatchDDNegModule_SD.admin_send_post_login_request_for_batch_module_negative()">
+                <span>When Admin send Post Login request for Batch Module Negative</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="lms.stepDefinitions.BatchDDNegModule_SD.admin_should_be_able_to_get_in_the_response_and_generate_token_for_batch_module_negative(java.lang.Integer)">
+                <span>Then Admin should be able to get 200 in the response and generate Token for Batch Module Negative</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="lms.stepDefinitions.BatchDDNegModule_SD.admin_sends_get_by_program_id_request_for_negative_scenarios()">
+                <span>When Admin sends GET by programID request for Negative scenarios</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="lms.stepDefinitions.BatchDDNegModule_SD.admin_receives_expected_status_in_get_programID_response()">
+                <span>Then Admin receives expected Status in get programID response</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="21"><span class="badge log pass-bg mr-2">Pass</span>Authorized Admin unable to view Batch with invalid batchName from Excel</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="lms.stepDefinitions.BatchDDNegModule_SD.admin_logs_in_with_valid_username_and_password_for_batch_module_negative()">
+                <span>Given Admin logs in with valid Username and password for Batch Module Negative</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="lms.stepDefinitions.BatchDDNegModule_SD.admin_send_post_login_request_for_batch_module_negative()">
+                <span>When Admin send Post Login request for Batch Module Negative</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="lms.stepDefinitions.BatchDDNegModule_SD.admin_should_be_able_to_get_in_the_response_and_generate_token_for_batch_module_negative(java.lang.Integer)">
+                <span>Then Admin should be able to get 200 in the response and generate Token for Batch Module Negative</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="lms.stepDefinitions.BatchDDNegModule_SD.admin_sends_get_by_batch_name_request_for_negative_scenarios()">
+                <span>When Admin sends GET by BatchName request for Negative scenarios</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="lms.stepDefinitions.BatchDDNegModule_SD.admin_receives_expected_status_in_get_batch_name_response()">
+                <span>Then Admin receives expected Status in get BatchName response</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="27"><span class="badge log pass-bg mr-2">Pass</span>Authorized Admin unable to update Batch</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="lms.stepDefinitions.BatchDDNegModule_SD.admin_logs_in_with_valid_username_and_password_for_batch_module_negative()">
+                <span>Given Admin logs in with valid Username and password for Batch Module Negative</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="lms.stepDefinitions.BatchDDNegModule_SD.admin_send_post_login_request_for_batch_module_negative()">
+                <span>When Admin send Post Login request for Batch Module Negative</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="lms.stepDefinitions.BatchDDNegModule_SD.admin_should_be_able_to_get_in_the_response_and_generate_token_for_batch_module_negative(java.lang.Integer)">
+                <span>Then Admin should be able to get 200 in the response and generate Token for Batch Module Negative</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="lms.stepDefinitions.BatchDDNegModule_SD.admin_sets_put_batch_request_with_valid_url_invalid_endpoint_and_invalid_request_body()">
+                <span>Given Admin sets Put Batch request with valid Url, invalid endpoint and invalid request body</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="lms.stepDefinitions.BatchDDNegModule_SD.admin_sends_put_batch_request_for_negative_scenarios()">
+                <span>When Admin sends PUT Batch request for Negative scenarios</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="lms.stepDefinitions.BatchDDNegModule_SD.admin_receives_expected_status_in_put_batch_negative_response()">
+                <span>Then Admin receives expected status in Put batch Negative response</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="34"><span class="badge log pass-bg mr-2">Pass</span>Authorized Admin unable to delete batch with invalid batch ID from Excel</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="lms.stepDefinitions.BatchDDNegModule_SD.admin_logs_in_with_valid_username_and_password_for_batch_module_negative()">
+                <span>Given Admin logs in with valid Username and password for Batch Module Negative</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="lms.stepDefinitions.BatchDDNegModule_SD.admin_send_post_login_request_for_batch_module_negative()">
+                <span>When Admin send Post Login request for Batch Module Negative</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="lms.stepDefinitions.BatchDDNegModule_SD.admin_should_be_able_to_get_in_the_response_and_generate_token_for_batch_module_negative(java.lang.Integer)">
+                <span>Then Admin should be able to get 200 in the response and generate Token for Batch Module Negative</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="lms.stepDefinitions.BatchDDNegModule_SD.admin_sends_delete_batch_request_for_negative_scenarios()">
+                <span>When Admin sends Delete Batch request for Negative scenarios</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="lms.stepDefinitions.BatchDDNegModule_SD.admin_receives_expected_status_in_batch_ID_response()">
+                <span>Then Admin receives expected Status in BatchID response</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="40"><span class="badge log pass-bg mr-2">Pass</span>User should not be able to do CRUD operations on Batch Module with invalid Url</div>
+      </div>
+    </div>
+        <div class="scenario_outline collapse">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="41"><span class="badge log pass-bg mr-2">Pass</span>User should not be able to do CRUD operations on Batch Module with invalid Url</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given Admin logs in with valid Username and password for Batch Module Negative</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When Admin send Post Login request for Batch Module Negative</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Admin should be able to get 200 in the response and generate Token for Batch Module Negative</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Given User sets "Create" with invalid Url, valid endpoint and valid request body</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When User sends "POST" Batch</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then User receives 404 Not found status in Batch response</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="48"><span class="badge log pass-bg mr-2">Pass</span>User should not be able to do CRUD operations on Batch Module with invalid Url</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given Admin logs in with valid Username and password for Batch Module Negative</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When Admin send Post Login request for Batch Module Negative</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Admin should be able to get 200 in the response and generate Token for Batch Module Negative</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Given User sets "Get_All" with invalid Url, valid endpoint and valid request body</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When User sends "GET" Batch</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then User receives 404 Not found status in Batch response</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="55"><span class="badge log pass-bg mr-2">Pass</span>User should not be able to do CRUD operations on Batch Module with invalid Url</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given Admin logs in with valid Username and password for Batch Module Negative</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When Admin send Post Login request for Batch Module Negative</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Admin should be able to get 200 in the response and generate Token for Batch Module Negative</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Given User sets "Get_By_BatchId" with invalid Url, valid endpoint and valid request body</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When User sends "GET" Batch</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then User receives 404 Not found status in Batch response</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="62"><span class="badge log pass-bg mr-2">Pass</span>User should not be able to do CRUD operations on Batch Module with invalid Url</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given Admin logs in with valid Username and password for Batch Module Negative</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When Admin send Post Login request for Batch Module Negative</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Admin should be able to get 200 in the response and generate Token for Batch Module Negative</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Given User sets "Get_By_ProgramId" with invalid Url, valid endpoint and valid request body</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When User sends "GET" Batch</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then User receives 404 Not found status in Batch response</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="69"><span class="badge log pass-bg mr-2">Pass</span>User should not be able to do CRUD operations on Batch Module with invalid Url</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given Admin logs in with valid Username and password for Batch Module Negative</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When Admin send Post Login request for Batch Module Negative</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Admin should be able to get 200 in the response and generate Token for Batch Module Negative</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Given User sets "Get_By_BatchName" with invalid Url, valid endpoint and valid request body</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When User sends "GET" Batch</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then User receives 404 Not found status in Batch response</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="76"><span class="badge log pass-bg mr-2">Pass</span>User should not be able to do CRUD operations on Batch Module with invalid Url</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given Admin logs in with valid Username and password for Batch Module Negative</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When Admin send Post Login request for Batch Module Negative</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Admin should be able to get 200 in the response and generate Token for Batch Module Negative</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Given User sets "Update" with invalid Url, valid endpoint and valid request body</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When User sends "PUT" Batch</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then User receives 404 Not found status in Batch response</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="83"><span class="badge log pass-bg mr-2">Pass</span>User should not be able to do CRUD operations on Batch Module with invalid Url</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given Admin logs in with valid Username and password for Batch Module Negative</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When Admin send Post Login request for Batch Module Negative</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Admin should be able to get 200 in the response and generate Token for Batch Module Negative</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Given User sets "Delete" with invalid Url, valid endpoint and valid request body</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When User sends "DELETE" Batch</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then User receives 404 Not found status in Batch response</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="90"><span class="badge log pass-bg mr-2">Pass</span>User should not be able to do CRUD operations on Batch Module with invalid end point</div>
+      </div>
+    </div>
+        <div class="scenario_outline collapse">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="91"><span class="badge log pass-bg mr-2">Pass</span>User should not be able to do CRUD operations on Batch Module with invalid end point</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given Admin logs in with valid Username and password for Batch Module Negative</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When Admin send Post Login request for Batch Module Negative</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Admin should be able to get 200 in the response and generate Token for Batch Module Negative</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Given User sets "Create" with valid Url, invalid endpoint and valid request body.</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When User sends "POST" Batch</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then User receives 404 Not found status in Batch response</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="98"><span class="badge log pass-bg mr-2">Pass</span>User should not be able to do CRUD operations on Batch Module with invalid end point</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given Admin logs in with valid Username and password for Batch Module Negative</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When Admin send Post Login request for Batch Module Negative</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Admin should be able to get 200 in the response and generate Token for Batch Module Negative</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Given User sets "Get_All" with valid Url, invalid endpoint and valid request body.</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When User sends "GET" Batch</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then User receives 404 Not found status in Batch response</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="105"><span class="badge log pass-bg mr-2">Pass</span>User should not be able to do CRUD operations on Batch Module with invalid end point</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given Admin logs in with valid Username and password for Batch Module Negative</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When Admin send Post Login request for Batch Module Negative</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Admin should be able to get 200 in the response and generate Token for Batch Module Negative</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Given User sets "Get_By_BatchId" with valid Url, invalid endpoint and valid request body.</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When User sends "GET" Batch</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then User receives 404 Not found status in Batch response</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="112"><span class="badge log pass-bg mr-2">Pass</span>User should not be able to do CRUD operations on Batch Module with invalid end point</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given Admin logs in with valid Username and password for Batch Module Negative</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When Admin send Post Login request for Batch Module Negative</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Admin should be able to get 200 in the response and generate Token for Batch Module Negative</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Given User sets "Get_By_ProgramId" with valid Url, invalid endpoint and valid request body.</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When User sends "GET" Batch</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then User receives 404 Not found status in Batch response</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="119"><span class="badge log pass-bg mr-2">Pass</span>User should not be able to do CRUD operations on Batch Module with invalid end point</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given Admin logs in with valid Username and password for Batch Module Negative</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When Admin send Post Login request for Batch Module Negative</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Admin should be able to get 200 in the response and generate Token for Batch Module Negative</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Given User sets "Get_By_BatchName" with valid Url, invalid endpoint and valid request body.</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When User sends "GET" Batch</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then User receives 404 Not found status in Batch response</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="126"><span class="badge log pass-bg mr-2">Pass</span>User should not be able to do CRUD operations on Batch Module with invalid end point</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given Admin logs in with valid Username and password for Batch Module Negative</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When Admin send Post Login request for Batch Module Negative</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Admin should be able to get 200 in the response and generate Token for Batch Module Negative</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Given User sets "Update" with valid Url, invalid endpoint and valid request body.</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When User sends "PUT" Batch</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then User receives 404 Not found status in Batch response</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="133"><span class="badge log pass-bg mr-2">Pass</span>User should not be able to do CRUD operations on Batch Module with invalid end point</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given Admin logs in with valid Username and password for Batch Module Negative</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When Admin send Post Login request for Batch Module Negative</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Admin should be able to get 200 in the response and generate Token for Batch Module Negative</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Given User sets "Delete" with valid Url, invalid endpoint and valid request body.</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When User sends "DELETE" Batch</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then User receives 404 Not found status in Batch response</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="140"><span class="badge log pass-bg mr-2">Pass</span>Unauthorized user not able to do CRUD operations on Batch Module</div>
+      </div>
+    </div>
+        <div class="scenario_outline collapse">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="141"><span class="badge log pass-bg mr-2">Pass</span>Unauthorized user not able to do CRUD operations on Batch Module</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given Admin logs in with valid Username and password for Batch Module Negative</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When Admin send Post Login request for Batch Module Negative</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Admin should be able to get 200 in the response and generate Token for Batch Module Negative</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Given Unauthorized User sets "Create" with valid baseUrl,valid endpoint</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When User sends "POST" Batch</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then User receives 401 Unauthorized Status in Batch response</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="148"><span class="badge log pass-bg mr-2">Pass</span>Unauthorized user not able to do CRUD operations on Batch Module</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given Admin logs in with valid Username and password for Batch Module Negative</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When Admin send Post Login request for Batch Module Negative</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Admin should be able to get 200 in the response and generate Token for Batch Module Negative</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Given Unauthorized User sets "Get_All" with valid baseUrl,valid endpoint</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When User sends "GET" Batch</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then User receives 401 Unauthorized Status in Batch response</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="155"><span class="badge log pass-bg mr-2">Pass</span>Unauthorized user not able to do CRUD operations on Batch Module</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given Admin logs in with valid Username and password for Batch Module Negative</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When Admin send Post Login request for Batch Module Negative</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Admin should be able to get 200 in the response and generate Token for Batch Module Negative</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Given Unauthorized User sets "Get_By_BatchId" with valid baseUrl,valid endpoint</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When User sends "GET" Batch</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then User receives 401 Unauthorized Status in Batch response</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="162"><span class="badge log pass-bg mr-2">Pass</span>Unauthorized user not able to do CRUD operations on Batch Module</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given Admin logs in with valid Username and password for Batch Module Negative</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When Admin send Post Login request for Batch Module Negative</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Admin should be able to get 200 in the response and generate Token for Batch Module Negative</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Given Unauthorized User sets "Get_By_ProgramId" with valid baseUrl,valid endpoint</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When User sends "GET" Batch</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then User receives 401 Unauthorized Status in Batch response</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="169"><span class="badge log pass-bg mr-2">Pass</span>Unauthorized user not able to do CRUD operations on Batch Module</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given Admin logs in with valid Username and password for Batch Module Negative</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When Admin send Post Login request for Batch Module Negative</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Admin should be able to get 200 in the response and generate Token for Batch Module Negative</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Given Unauthorized User sets "Get_By_BatchName" with valid baseUrl,valid endpoint</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When User sends "GET" Batch</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then User receives 401 Unauthorized Status in Batch response</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="176"><span class="badge log pass-bg mr-2">Pass</span>Unauthorized user not able to do CRUD operations on Batch Module</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given Admin logs in with valid Username and password for Batch Module Negative</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When Admin send Post Login request for Batch Module Negative</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Admin should be able to get 200 in the response and generate Token for Batch Module Negative</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Given Unauthorized User sets "Update" with valid baseUrl,valid endpoint</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When User sends "PUT" Batch</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then User receives 401 Unauthorized Status in Batch response</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="183"><span class="badge log pass-bg mr-2">Pass</span>Unauthorized user not able to do CRUD operations on Batch Module</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given Admin logs in with valid Username and password for Batch Module Negative</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When Admin send Post Login request for Batch Module Negative</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Admin should be able to get 200 in the response and generate Token for Batch Module Negative</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Given Unauthorized User sets "Delete" with valid baseUrl,valid endpoint</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When User sends "DELETE" Batch</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then User receives 401 Unauthorized Status in Batch response</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+<div class="test-content scrollable">
+<div class="test-content-tools">
+<ul><li><a class="back-to-test" href="#"><i class="fa fa-arrow-left"></i></a></li></ul>
+</div>
+<div class="test-content-detail"><div class="detail-body"></div></div>
+</div></div>
+<div class="test-wrapper row view category-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Category</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">10</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@Get_by_batchName_Negative_DD</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@Get_by_batchName_Negative_DD</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:37:38 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='21'>Authorized Admin unable to view Batch with invalid batchName from Excel</a>
+<div class="">
+<span class="badge badge-default">LMS API Batch Module - Create Batch Requests - Post.Authorized Admin unable to view Batch with invalid batchName from Excel</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>7</span>
+</span>
+<p class="name">@InvalidEP_Batch</p>
+<p class="duration text-sm">7 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@InvalidEP_Batch</h4>
+<span status="pass" class='badge log pass-bg'>7 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:38:06 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='91'>User should not be able to do CRUD operations on Batch Module with invalid end point</a>
+<div class="">
+<span class="badge badge-default">LMS API Batch Module - Create Batch Requests - Post.User should not be able to do CRUD operations on Batch Module with invalid end point</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:38:07 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='98'>User should not be able to do CRUD operations on Batch Module with invalid end point</a>
+<div class="">
+<span class="badge badge-default">LMS API Batch Module - Create Batch Requests - Post.User should not be able to do CRUD operations on Batch Module with invalid end point</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:38:09 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='105'>User should not be able to do CRUD operations on Batch Module with invalid end point</a>
+<div class="">
+<span class="badge badge-default">LMS API Batch Module - Create Batch Requests - Post.User should not be able to do CRUD operations on Batch Module with invalid end point</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:38:10 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='112'>User should not be able to do CRUD operations on Batch Module with invalid end point</a>
+<div class="">
+<span class="badge badge-default">LMS API Batch Module - Create Batch Requests - Post.User should not be able to do CRUD operations on Batch Module with invalid end point</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:38:11 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='119'>User should not be able to do CRUD operations on Batch Module with invalid end point</a>
+<div class="">
+<span class="badge badge-default">LMS API Batch Module - Create Batch Requests - Post.User should not be able to do CRUD operations on Batch Module with invalid end point</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:38:12 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='126'>User should not be able to do CRUD operations on Batch Module with invalid end point</a>
+<div class="">
+<span class="badge badge-default">LMS API Batch Module - Create Batch Requests - Post.User should not be able to do CRUD operations on Batch Module with invalid end point</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:38:12 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='133'>User should not be able to do CRUD operations on Batch Module with invalid end point</a>
+<div class="">
+<span class="badge badge-default">LMS API Batch Module - Create Batch Requests - Post.User should not be able to do CRUD operations on Batch Module with invalid end point</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>7</span>
+</span>
+<p class="name">@NoAuth_Batch</p>
+<p class="duration text-sm">7 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@NoAuth_Batch</h4>
+<span status="pass" class='badge log pass-bg'>7 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:38:14 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='141'>Unauthorized user not able to do CRUD operations on Batch Module</a>
+<div class="">
+<span class="badge badge-default">LMS API Batch Module - Create Batch Requests - Post.Unauthorized user not able to do CRUD operations on Batch Module</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:38:15 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='148'>Unauthorized user not able to do CRUD operations on Batch Module</a>
+<div class="">
+<span class="badge badge-default">LMS API Batch Module - Create Batch Requests - Post.Unauthorized user not able to do CRUD operations on Batch Module</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:38:16 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='155'>Unauthorized user not able to do CRUD operations on Batch Module</a>
+<div class="">
+<span class="badge badge-default">LMS API Batch Module - Create Batch Requests - Post.Unauthorized user not able to do CRUD operations on Batch Module</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:38:17 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='162'>Unauthorized user not able to do CRUD operations on Batch Module</a>
+<div class="">
+<span class="badge badge-default">LMS API Batch Module - Create Batch Requests - Post.Unauthorized user not able to do CRUD operations on Batch Module</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:38:18 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='169'>Unauthorized user not able to do CRUD operations on Batch Module</a>
+<div class="">
+<span class="badge badge-default">LMS API Batch Module - Create Batch Requests - Post.Unauthorized user not able to do CRUD operations on Batch Module</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:38:19 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='176'>Unauthorized user not able to do CRUD operations on Batch Module</a>
+<div class="">
+<span class="badge badge-default">LMS API Batch Module - Create Batch Requests - Post.Unauthorized user not able to do CRUD operations on Batch Module</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:38:20 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='183'>Unauthorized user not able to do CRUD operations on Batch Module</a>
+<div class="">
+<span class="badge badge-default">LMS API Batch Module - Create Batch Requests - Post.Unauthorized user not able to do CRUD operations on Batch Module</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>7</span>
+</span>
+<p class="name">@InvalidUrl_Batch</p>
+<p class="duration text-sm">7 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@InvalidUrl_Batch</h4>
+<span status="pass" class='badge log pass-bg'>7 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:37:59 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='41'>User should not be able to do CRUD operations on Batch Module with invalid Url</a>
+<div class="">
+<span class="badge badge-default">LMS API Batch Module - Create Batch Requests - Post.User should not be able to do CRUD operations on Batch Module with invalid Url</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:38:00 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='48'>User should not be able to do CRUD operations on Batch Module with invalid Url</a>
+<div class="">
+<span class="badge badge-default">LMS API Batch Module - Create Batch Requests - Post.User should not be able to do CRUD operations on Batch Module with invalid Url</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:38:01 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='55'>User should not be able to do CRUD operations on Batch Module with invalid Url</a>
+<div class="">
+<span class="badge badge-default">LMS API Batch Module - Create Batch Requests - Post.User should not be able to do CRUD operations on Batch Module with invalid Url</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:38:02 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='62'>User should not be able to do CRUD operations on Batch Module with invalid Url</a>
+<div class="">
+<span class="badge badge-default">LMS API Batch Module - Create Batch Requests - Post.User should not be able to do CRUD operations on Batch Module with invalid Url</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:38:03 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='69'>User should not be able to do CRUD operations on Batch Module with invalid Url</a>
+<div class="">
+<span class="badge badge-default">LMS API Batch Module - Create Batch Requests - Post.User should not be able to do CRUD operations on Batch Module with invalid Url</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:38:04 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='76'>User should not be able to do CRUD operations on Batch Module with invalid Url</a>
+<div class="">
+<span class="badge badge-default">LMS API Batch Module - Create Batch Requests - Post.User should not be able to do CRUD operations on Batch Module with invalid Url</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:38:05 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='83'>User should not be able to do CRUD operations on Batch Module with invalid Url</a>
+<div class="">
+<span class="badge badge-default">LMS API Batch Module - Create Batch Requests - Post.User should not be able to do CRUD operations on Batch Module with invalid Url</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@PUT_Batch_DD_Negative</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@PUT_Batch_DD_Negative</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:37:42 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='27'>Authorized Admin unable to update Batch</a>
+<div class="">
+<span class="badge badge-default">LMS API Batch Module - Create Batch Requests - Post.Authorized Admin unable to update Batch</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>27</span>
+</span>
+<p class="name">@BatchModuleNegative</p>
+<p class="duration text-sm">27 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@BatchModuleNegative</h4>
+<span status="pass" class='badge log pass-bg'>27 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:37:12 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='2'>Authorized Admin unable to create new Batch</a>
+<div class="">
+<span class="badge badge-default">LMS API Batch Module - Create Batch Requests - Post.Authorized Admin unable to create new Batch</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:37:29 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='9'>Authorized Admin unable to view Batch with invalid batchID from Excel</a>
+<div class="">
+<span class="badge badge-default">LMS API Batch Module - Create Batch Requests - Post.Authorized Admin unable to view Batch with invalid batchID from Excel</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:37:34 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='15'>Authorized Admin unable to view Batch with invalid programID from Excel</a>
+<div class="">
+<span class="badge badge-default">LMS API Batch Module - Create Batch Requests - Post.Authorized Admin unable to view Batch with invalid programID from Excel</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:37:38 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='21'>Authorized Admin unable to view Batch with invalid batchName from Excel</a>
+<div class="">
+<span class="badge badge-default">LMS API Batch Module - Create Batch Requests - Post.Authorized Admin unable to view Batch with invalid batchName from Excel</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:37:42 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='27'>Authorized Admin unable to update Batch</a>
+<div class="">
+<span class="badge badge-default">LMS API Batch Module - Create Batch Requests - Post.Authorized Admin unable to update Batch</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:37:55 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='34'>Authorized Admin unable to delete batch with invalid batch ID from Excel</a>
+<div class="">
+<span class="badge badge-default">LMS API Batch Module - Create Batch Requests - Post.Authorized Admin unable to delete batch with invalid batch ID from Excel</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:37:59 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='41'>User should not be able to do CRUD operations on Batch Module with invalid Url</a>
+<div class="">
+<span class="badge badge-default">LMS API Batch Module - Create Batch Requests - Post.User should not be able to do CRUD operations on Batch Module with invalid Url</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:38:00 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='48'>User should not be able to do CRUD operations on Batch Module with invalid Url</a>
+<div class="">
+<span class="badge badge-default">LMS API Batch Module - Create Batch Requests - Post.User should not be able to do CRUD operations on Batch Module with invalid Url</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:38:01 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='55'>User should not be able to do CRUD operations on Batch Module with invalid Url</a>
+<div class="">
+<span class="badge badge-default">LMS API Batch Module - Create Batch Requests - Post.User should not be able to do CRUD operations on Batch Module with invalid Url</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:38:02 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='62'>User should not be able to do CRUD operations on Batch Module with invalid Url</a>
+<div class="">
+<span class="badge badge-default">LMS API Batch Module - Create Batch Requests - Post.User should not be able to do CRUD operations on Batch Module with invalid Url</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:38:03 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='69'>User should not be able to do CRUD operations on Batch Module with invalid Url</a>
+<div class="">
+<span class="badge badge-default">LMS API Batch Module - Create Batch Requests - Post.User should not be able to do CRUD operations on Batch Module with invalid Url</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:38:04 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='76'>User should not be able to do CRUD operations on Batch Module with invalid Url</a>
+<div class="">
+<span class="badge badge-default">LMS API Batch Module - Create Batch Requests - Post.User should not be able to do CRUD operations on Batch Module with invalid Url</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:38:05 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='83'>User should not be able to do CRUD operations on Batch Module with invalid Url</a>
+<div class="">
+<span class="badge badge-default">LMS API Batch Module - Create Batch Requests - Post.User should not be able to do CRUD operations on Batch Module with invalid Url</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:38:06 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='91'>User should not be able to do CRUD operations on Batch Module with invalid end point</a>
+<div class="">
+<span class="badge badge-default">LMS API Batch Module - Create Batch Requests - Post.User should not be able to do CRUD operations on Batch Module with invalid end point</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:38:07 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='98'>User should not be able to do CRUD operations on Batch Module with invalid end point</a>
+<div class="">
+<span class="badge badge-default">LMS API Batch Module - Create Batch Requests - Post.User should not be able to do CRUD operations on Batch Module with invalid end point</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:38:09 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='105'>User should not be able to do CRUD operations on Batch Module with invalid end point</a>
+<div class="">
+<span class="badge badge-default">LMS API Batch Module - Create Batch Requests - Post.User should not be able to do CRUD operations on Batch Module with invalid end point</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:38:10 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='112'>User should not be able to do CRUD operations on Batch Module with invalid end point</a>
+<div class="">
+<span class="badge badge-default">LMS API Batch Module - Create Batch Requests - Post.User should not be able to do CRUD operations on Batch Module with invalid end point</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:38:11 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='119'>User should not be able to do CRUD operations on Batch Module with invalid end point</a>
+<div class="">
+<span class="badge badge-default">LMS API Batch Module - Create Batch Requests - Post.User should not be able to do CRUD operations on Batch Module with invalid end point</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:38:12 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='126'>User should not be able to do CRUD operations on Batch Module with invalid end point</a>
+<div class="">
+<span class="badge badge-default">LMS API Batch Module - Create Batch Requests - Post.User should not be able to do CRUD operations on Batch Module with invalid end point</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:38:12 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='133'>User should not be able to do CRUD operations on Batch Module with invalid end point</a>
+<div class="">
+<span class="badge badge-default">LMS API Batch Module - Create Batch Requests - Post.User should not be able to do CRUD operations on Batch Module with invalid end point</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:38:14 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='141'>Unauthorized user not able to do CRUD operations on Batch Module</a>
+<div class="">
+<span class="badge badge-default">LMS API Batch Module - Create Batch Requests - Post.Unauthorized user not able to do CRUD operations on Batch Module</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:38:15 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='148'>Unauthorized user not able to do CRUD operations on Batch Module</a>
+<div class="">
+<span class="badge badge-default">LMS API Batch Module - Create Batch Requests - Post.Unauthorized user not able to do CRUD operations on Batch Module</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:38:16 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='155'>Unauthorized user not able to do CRUD operations on Batch Module</a>
+<div class="">
+<span class="badge badge-default">LMS API Batch Module - Create Batch Requests - Post.Unauthorized user not able to do CRUD operations on Batch Module</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:38:17 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='162'>Unauthorized user not able to do CRUD operations on Batch Module</a>
+<div class="">
+<span class="badge badge-default">LMS API Batch Module - Create Batch Requests - Post.Unauthorized user not able to do CRUD operations on Batch Module</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:38:18 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='169'>Unauthorized user not able to do CRUD operations on Batch Module</a>
+<div class="">
+<span class="badge badge-default">LMS API Batch Module - Create Batch Requests - Post.Unauthorized user not able to do CRUD operations on Batch Module</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:38:19 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='176'>Unauthorized user not able to do CRUD operations on Batch Module</a>
+<div class="">
+<span class="badge badge-default">LMS API Batch Module - Create Batch Requests - Post.Unauthorized user not able to do CRUD operations on Batch Module</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:38:20 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='183'>Unauthorized user not able to do CRUD operations on Batch Module</a>
+<div class="">
+<span class="badge badge-default">LMS API Batch Module - Create Batch Requests - Post.Unauthorized user not able to do CRUD operations on Batch Module</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@Delete_Batch_Negative_DD</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@Delete_Batch_Negative_DD</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:37:55 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='34'>Authorized Admin unable to delete batch with invalid batch ID from Excel</a>
+<div class="">
+<span class="badge badge-default">LMS API Batch Module - Create Batch Requests - Post.Authorized Admin unable to delete batch with invalid batch ID from Excel</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@Get_by_batchID_Negative_DD</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@Get_by_batchID_Negative_DD</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:37:29 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='9'>Authorized Admin unable to view Batch with invalid batchID from Excel</a>
+<div class="">
+<span class="badge badge-default">LMS API Batch Module - Create Batch Requests - Post.Authorized Admin unable to view Batch with invalid batchID from Excel</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@Get_by_programID_Negative_DD</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@Get_by_programID_Negative_DD</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:37:34 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='15'>Authorized Admin unable to view Batch with invalid programID from Excel</a>
+<div class="">
+<span class="badge badge-default">LMS API Batch Module - Create Batch Requests - Post.Authorized Admin unable to view Batch with invalid programID from Excel</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@POST_Batch_DD_Negative</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@POST_Batch_DD_Negative</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:37:12 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='2'>Authorized Admin unable to create new Batch</a>
+<div class="">
+<span class="badge badge-default">LMS API Batch Module - Create Batch Requests - Post.Authorized Admin unable to create new Batch</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div>        </div>
+      </div>
+    </div>
+  </div>
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@d6562a79075e061305ccfdb82f01e5e195e2d307/spark/js/spark-script.js"></script>
+<script type="text/javascript"></script></body>
+</html>

@@ -3,7 +3,7 @@ package lms.actions;
 public class dynamicGenerator {
 	
 	private static int Positivecounter = 31;
-	private static int Negcounter = 6;
+	private static int Negcounter = 8;
 	
 	public static String generateProgramName() {
         String baseProgName = "March24-ApINinjas-QA-";

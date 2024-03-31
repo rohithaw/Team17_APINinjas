@@ -10,15 +10,15 @@ package lms.runner;
 
 		@CucumberOptions(
 				monochrome = false,  //console output formatting
-				tags = "@LMSModulesAll", //tags from feature file
+				tags = "@BatchModuleNegative", //tags from feature file
 				features = {"src/test/resources/features"}, //location of feature files
 				glue= {"lms.stepDefinitions","lms.hooks"}, //location of step definition files
 				plugin = {"pretty", //For the Detailed output and generating reports.
 							"html:target/Cucumber-Reports/Team17_APINinjas.html" ,
 							"json:target/Cucumber-Reports/Team17_APINinjas.json" , 
 							"junit:target/Cucumber-Reports/Team17_APINinjas.xml",
-							//"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
-							//"io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm"
+							"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
+							"io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm"
 						}
 				) 
 

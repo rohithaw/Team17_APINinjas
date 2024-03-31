@@ -1,0 +1,1 @@
+{"uuid":"b6961717-d7c1-4e0e-a7f5-93271160b7be","name":"Scenario Outline: Unauthorized user not able to do CRUD operations on Batch Module","children":["69cb8c7b-ca2d-4674-a7fe-23610693536f"],"befores":[],"afters":[],"start":1711845497119,"stop":1711845498131}
