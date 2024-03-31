@@ -55,3 +55,14 @@ Expected status code <404> but was <200>.
 [INFO ] 2024-03-30 17:38:18.685 [main] LoggerLoad - Execution of No Auth Batch Scenarios started
 [INFO ] 2024-03-30 17:38:19.841 [main] LoggerLoad - Execution of No Auth Batch Scenarios started
 [INFO ] 2024-03-30 17:38:20.889 [main] LoggerLoad - Execution of No Auth Batch Scenarios started
+[INFO ] 2024-03-30 23:22:57.999 [main] LoggerLoad - ********Admin Enters valid Username and Passowrd for Authentication*
+[INFO ] 2024-03-30 23:23:04.028 [main] LoggerLoad - ***************** Admin has logged in Successfully*
+[INFO ] 2024-03-30 23:23:04.029 [main] LoggerLoad - ******************Execution of Post Program Scenarios started
+[INFO ] 2024-03-30 23:23:06.248 [main] LoggerLoad - Created Program Id is: 17424
+[INFO ] 2024-03-30 23:23:06.250 [main] LoggerLoad - Created Program Name is: March24-ApINinjas-QA-076
+[INFO ] 2024-03-30 23:25:10.811 [main] LoggerLoad - ********Admin Enters valid Username and Passowrd for Authentication*
+[INFO ] 2024-03-30 23:25:17.155 [main] LoggerLoad - ***************** Admin has logged in Successfully*
+[INFO ] 2024-03-30 23:25:17.156 [main] LoggerLoad - ******************Execution of Post Program Scenarios started
+[ERROR] 2024-03-30 23:25:19.302 [main] LoggerLoad - 1 expectation failed.
+Expected status code <201> but was <400>.
+

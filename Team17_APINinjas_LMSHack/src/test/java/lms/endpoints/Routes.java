@@ -51,6 +51,47 @@ public class Routes {
 		public static String DeleteBatch_ID = base_url+"/batches";
 		
 		// Program Module:
+		//POST PROGRAM
+		public static String CreateProgram_Url = base_url+"/saveprogram";
+		public static String CreateProgram_InvalidUrl= Invalid_base_url+"/saveprogram";
+		public static String CreateProgram_InvalidERP = base_url+"/SaveProgram";
+		
+		
+	    //GET ALL PROGRAM
+		public static String GetProgram_Url = base_url+"/allPrograms";
+		public static String GetProgram_InvalidUrl = Invalid_base_url+"/allPrograms";
+		public static String GetProgram_InvalidEP = base_url+"/AllProgramss";
+
+		//GET Program BY PROGRAMID
+		public static String GetProgramByProgramID_Url = base_url+"/programs";
+		public static String GetProgramByProgramID_InvalidUrl = Invalid_base_url+"/programs/{{programId}}";
+		public static String GetProgramByProgramID_InvalidEP = base_url+"/Program/{programId}";
+		
+		
+		//GET PRogram By PROGRAM WITH USERS
+		public static String GetProgramwithUsers_Url = base_url+"/allProgramsWithUsers";
+		public static String GetProgramwithUsers_InvalidUrl = Invalid_base_url+"/allProgramsWithUsers";
+		public static String GetProgramwithUsers_InvalidEP = base_url+"/AllProgramss";
+		
+		//PUT program By PROGRAMNAME
+		public static String PutProgramByProgName_Url = base_url+"/program";
+		public static String PutProgramByProgName_InvalidUrl = Invalid_base_url+"/program/{programName}";
+		public static String PutProgramByProgName_InvalidEP = base_url+"/pPrograms/{programName}";
+		
+		//PUT program By PROGRAMID
+		public static String PutProgramByProgID_Url = base_url+"/putprogram";
+		public static String PutProgramByProgID_InvalidUrl = Invalid_base_url+"/putprogram/{programId}";
+		public static String PutProgramByProgID_InvalidEP = base_url+"/Putprograms/{programId}";
+		
+		//DELETE Program By ProgramID
+		public static String DeleteProgramByProgID_Url = base_url+"/deletebyprogid";
+		public static String DeleteProgramByProgID_InvalidUrl = base_url+"/deletebyprogid/{programId}";		
+		public static String DeleteProgramByProgID_InvalidEP = base_url+"/DeletebyprogiD/{programId}";	
+		
+		//DELETE Program By ProgramName
+		public static String DeleteProgramByProgName_Url = base_url+"/deletebyprogname";
+		public static String DeleteProgramByProgName_InvalidUrl = base_url+"/deletebyprogname/{programName}";		
+		public static String DeleteProgramByProgName_InvalidEP = base_url+"/DeletebyProgname/{programName}";
 		
 		//User Module:
 

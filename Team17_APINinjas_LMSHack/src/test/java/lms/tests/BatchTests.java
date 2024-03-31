@@ -8,6 +8,8 @@ import java.util.List;
 import org.apache.commons.io.FileUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.hamcrest.Matchers;
+import org.testng.Assert;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -27,16 +29,31 @@ public class BatchTests {
 	static List<String> expectedStatusList = new ArrayList<>();
 	
 	public static String getToken(Response response){
+		
+		try {
+			String jsonSchema = FileUtils.readFileToString(new File(FileNameConstants.UserLogin_JSON_SCHEMA), "UTF-8");
 			response
 				.then()
 					.assertThat()
 					.statusCode(200)
+					.statusLine("HTTP/1.1 200 ")
+					.header("Content-Type", "application/json")
+					.body(JsonSchemaValidator.matchesJsonSchema(jsonSchema))
+					.time(Matchers.lessThan(4000L))
 				.extract()
 					.response();
-		
+			
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		// Validate that the response contains a specific field
+        String responseBody = response.getBody().asString();
+        Assert.assertTrue(responseBody.contains("status"), "Active");
+        
 		String token = response.path("token");
 		String AuthToken = "Bearer "+token;
-		System.out.println("Succesful User login with token: "+AuthToken);
+		LoggerLoad.info("***************** Admin has logged in Successfully*");
+		System.out.println("Admin successfully logged in with token: "+AuthToken);
 		Env_Var.token = AuthToken;
 		return AuthToken;
 	}
@@ -52,13 +69,19 @@ public class BatchTests {
 				.statusCode(201)
 				.statusLine("HTTP/1.1 201 ")
 				.header("Content-Type", "application/json")
-				.body(JsonSchemaValidator.matchesJsonSchema(jsonSchema));
+				.body(JsonSchemaValidator.matchesJsonSchema(jsonSchema))
+				.time(Matchers.lessThan(4000L));
+			
+			// Validate that the response contains a specific field
+	        String responseBody = response.getBody().asString();
+	        Assert.assertTrue(responseBody.contains("batchName"), "March24");
 				
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-			
-	}
+		
+    }
+
 	
 	public static void postPutBatchValidationsDD(List<Response> responses, String type) {
 	    if(type.toLowerCase()=="post") {
@@ -80,7 +103,12 @@ public class BatchTests {
 	            	.assertThat()
 	            	.statusCode(Integer.parseInt(expectedStatus.split("\\.")[0]))
 	            	.header("Content-Type", "application/json")
-					.body(JsonSchemaValidator.matchesJsonSchema(jsonSchema));
+					.body(JsonSchemaValidator.matchesJsonSchema(jsonSchema))
+					.time(Matchers.lessThan(4000L));
+	            
+	         // Validate that the response contains a specific field
+		        String responseBody = response.getBody().asString();
+		        Assert.assertTrue(responseBody.contains("batchName"), "March24-ApINinjas");
 	        
 	         } catch (IOException e) {
 				e.printStackTrace();
@@ -134,7 +162,8 @@ public class BatchTests {
 					.assertThat()
 					.statusCode(200)
 					.statusLine("HTTP/1.1 200 ")
-					.header("Content-Type", "application/json");
+					.header("Content-Type", "application/json")
+					.time(Matchers.lessThan(4000L));
 		 	} catch (AssertionError e) {
 	            System.err.println("Assertion failed " + e.getMessage());
 	            LoggerLoad.error(e.getMessage());
@@ -152,7 +181,11 @@ public class BatchTests {
 				.statusCode(200)
 				.statusLine("HTTP/1.1 200 ")
 				.header("Content-Type", "application/json")
-				.body(JsonSchemaValidator.matchesJsonSchema(jsonSchema));
+				.body(JsonSchemaValidator.matchesJsonSchema(jsonSchema))
+				.time(Matchers.lessThan(4000L));
+			// Validate that the response contains a specific field
+	        String responseBody = response.getBody().asString();
+	        Assert.assertTrue(responseBody.contains("batchName"), "March24");
 			
 		} catch (IOException e) {
 			e.printStackTrace();

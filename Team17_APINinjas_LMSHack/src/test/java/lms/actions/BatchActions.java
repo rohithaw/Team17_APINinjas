@@ -18,6 +18,7 @@ import lms.payload.BatchPojo;
 import lms.payload.LoginPojo;
 import lms.utilities.ExcelReader;
 import lms.utilities.FileNameConstants;
+import lms.utilities.LoggerLoad;
 import lms.utilities.PropertiesFile;
 
 public class BatchActions extends ExcelReader {
@@ -104,7 +105,7 @@ public static List<RequestSpecification> getPostPutBatchRequestsDD(String url, S
 	 String bStatus;
 	 
 	 ExcelReader excelReader = new ExcelReader();
-	 List<Map<String, String>> testData = excelReader.readTestDataFromExcel(FileNameConstants.BatchEXCEL_TEST_DATA, "ETEPositiveTestData-BatchJyo");
+	 List<Map<String, String>> testData = excelReader.readTestDataFromExcel(FileNameConstants.EXCEL_TEST_DATA, "ETEPositiveTestData");
        List<RequestSpecification> requestSpecifications = new ArrayList<>();
        for (Map<String, String> row : testData) {
     	   
@@ -120,7 +121,7 @@ public static List<RequestSpecification> getPostPutBatchRequestsDD(String url, S
                }
            }
            bName = dynamicGenerator.generateBatchName();
-           pId = 16766; 
+           pId = Integer.parseInt(Env_Var.programID); 
 //         int pId = Integer.parseInt(Env_Var.programID);
            bStatus = row.get("batchStatus");
            PoststatusList.add(row.get("ExpectedStatusCodePost"));
@@ -137,8 +138,8 @@ public static List<RequestSpecification> getPostPutBatchRequestsDD(String url, S
     	               }
     	           }
     	         bName = dynamicGenerator.generateBatchName();
-    	         pId = 16228; 
-//    	         int pId = Integer.parseInt(Env_Var.programID);
+ //   	         pId = 16228; 
+    	         pId = Integer.parseInt(Env_Var.programID);
     	         bStatus = row.get("updateBatchStatus");
     	         PutstatusList.add(row.get("ExpectedStatusCodePut"));
     	   }    	   
@@ -160,7 +161,7 @@ public static List<RequestSpecification> getPostPutBatchRequestsDD(String url, S
 public static List<RequestSpecification> getPostBatchRequestsDDNegative(String url, String token) throws IOException {
 	 
 	ExcelReader excelReader = new ExcelReader();
-	 List<Map<String, String>> testData = excelReader.readTestDataFromExcel(FileNameConstants.BatchEXCEL_TEST_DATA, "PostPutTestData-BatchJyo");
+	 List<Map<String, String>> testData = excelReader.readTestDataFromExcel(FileNameConstants.EXCEL_TEST_DATA, "PostPutTestData-BatchJyo");
        List<RequestSpecification> requestSpecifications = new ArrayList<>();
        int columnCount = 0;
        // Iterate over each row of test data
@@ -215,7 +216,7 @@ public static List<RequestSpecification> getPostBatchRequestsDDNegative(String u
 public static List<RequestSpecification> getPutBatchRequestsDDNegative(String url, String token) throws IOException {
 	 
 	ExcelReader excelReader = new ExcelReader();
-	 List<Map<String, String>> testData = excelReader.readTestDataFromExcel(FileNameConstants.BatchEXCEL_TEST_DATA, "PostPutTestData-BatchJyo");
+	 List<Map<String, String>> testData = excelReader.readTestDataFromExcel(FileNameConstants.EXCEL_TEST_DATA, "PostPutTestData-BatchJyo");
        List<RequestSpecification> requestSpecifications = new ArrayList<>();
 //       int columnCount = 0;
        // Iterate over each row of test data
@@ -293,9 +294,9 @@ public static List<Response> getPostBatchResponsesDD(List<RequestSpecification> 
              Env_Var.batchName = batchName;
              Env_Var.programID = programID;
              
-             System.out.println("Created Batch Id is: "+ batchID );
-             System.out.println("Created Batch Name is: "+ batchName );
-             System.out.println("This Batch is created under the Program ID: "+ programID );
+             LoggerLoad.info("Created Batch Id is: "+ batchID );
+             LoggerLoad.info("Created Batch Name is: "+ batchName );
+             LoggerLoad.info("This Batch is created under the Program ID: "+ programID );
          }
 	}
 	return responses;
@@ -367,9 +368,9 @@ public static void setBatchDetails(Response response) {
                 Env_Var.batchName = batchName;
                 Env_Var.programID = programID;
                 
-                System.out.println("Created Batch Id is: "+ batchID );
-                System.out.println("Created Batch Name is: "+ batchName );
-                System.out.println("This Batch is created under the Program ID: "+ programID );
+                LoggerLoad.info("Created Batch Id is: "+ batchID );
+                LoggerLoad.info("Created Batch Name is: "+ batchName );
+                LoggerLoad.info("This Batch is created under the Program ID: "+ programID );
             }  
 }
 
@@ -421,7 +422,7 @@ public static List<Response> getGetBatchResponsesDD(String by, String token, Str
 	
 	List<Response> responses = new ArrayList<>();
 	ExcelReader excelReader = new ExcelReader();
-	List<Map<String, String>> testData = excelReader.readTestDataFromExcel(FileNameConstants.BatchEXCEL_TEST_DATA, "GetDeleteTestData-BatchJyo");
+	List<Map<String, String>> testData = excelReader.readTestDataFromExcel(FileNameConstants.EXCEL_TEST_DATA, "GetDeleteTestData-BatchJyo");
 	System.out.println("Number of rows in the Test Data are: "+ testData.size());
 	for (Map<String, String> row : testData) {
     	
@@ -485,7 +486,7 @@ public static List<Response> getDeleteBatchResponsesDD(String token, String url 
 	
 	List<Response> responses = new ArrayList<>();
 	ExcelReader excelReader = new ExcelReader();
-	List<Map<String, String>> testData = excelReader.readTestDataFromExcel(FileNameConstants.BatchEXCEL_TEST_DATA, "GetDeleteTestData-BatchJyo");
+	List<Map<String, String>> testData = excelReader.readTestDataFromExcel(FileNameConstants.EXCEL_TEST_DATA, "GetDeleteTestData-BatchJyo");
 	System.out.println(testData.size());
 	for (Map<String, String> row : testData) {    	
     	request =  
