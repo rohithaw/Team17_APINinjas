@@ -14,16 +14,16 @@ Feature: LMS API User Module
     #Positive-2scenarios
   @PUT_Admin_Info
   Scenario: Admin is able to update Admin details with Admin userid and mandatory fields
-  Given Admin creates PUT Request with valid data in request body (values only in mandatory fields) 
+  Given Admin creates PUT Request with valid data in request body with values only in mandatory fields
   When Admin sends PUT User request
   Then Admin receives 200 OK status in Put User response
   # Scenario: Admin is able to update Admin details with Admin userid  and valid data in all fields
   
   #Negative-3scenarios
-  Scenario: Admin is able to update Admin details with  Admin userid and invalid data
-  Given Admin creates PUT Request with invalid data in request body 
-  When Admin sends PUT User request
-  Then Admin receives 400 Bad Request Status with message and boolean success details
+  #Scenario: Admin is able to update Admin details with  Admin userid and invalid data
+  #Given Admin creates PUT Request with invalid data in request body 
+  #When Admin sends PUT User request
+  #Then Admin receives 400 Bad Request Status with message and boolean success details
   # Scenario: Admin is able to update Admin details with invalid AdminId
   # Scenario: Admin is able to update Admin details with No authorization
   

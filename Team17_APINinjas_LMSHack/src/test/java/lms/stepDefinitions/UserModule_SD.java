@@ -57,6 +57,25 @@ public class UserModule_SD {
 		 UserTests.PostUser201Validation(response);
 	}
 	
+	//Put- update User details-UserId(Fields we are changing in request body should change in the given user id fields as well)
+	@Given("Admin creates PUT Request with valid data in request body with values only in mandatory fields")
+	public void admin_creates_put_request_with_valid_data_in_request_body_with_values_only_in_mandatory_fields() throws JsonProcessingException {
+		this.request = UserActions.getPutUserUpdateRequest(Routes.UpdateUser_Url, token);
+	}
+
+	@When("Admin sends PUT User request")
+	public void admin_sends_put_user_request() {
+		this.response = UserActions.getUserUpdateResponse(request);
+		
+	}
+
+	@Then("Admin receives {int} OK status in Put User response")
+	public void admin_receives_ok_status_in_put_user_response(Integer int1) {
+		 UserTests.PutUser200Validation(response);
+	}
+
+	
+	
 	
 
 }

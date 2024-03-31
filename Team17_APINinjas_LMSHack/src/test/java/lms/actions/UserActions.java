@@ -3,6 +3,7 @@ package lms.actions;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -12,10 +13,10 @@ import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import lms.GlobalVariables.Env_Var;
 import lms.endpoints.Routes;
-import lms.payload.UserPojo;
-import lms.payload.UserRoleMapPojo;
 import lms.payload.LoginPojo;
 import lms.payload.UserLoginPojo;
+import lms.payload.UserPojo;
+import lms.payload.UserRoleMapPojo;
 import lms.utilities.ExcelReader;
 import lms.utilities.PropertiesFile;
 
@@ -45,9 +46,8 @@ public class UserActions extends ExcelReader {
 
 		return response;
 	}
-
-	public static RequestSpecification getPostCreateUserRequest(String url, String token)
-			throws JsonProcessingException {
+//Create User--->Request
+	public static RequestSpecification getPostCreateUserRequest(String url, String token) throws JsonProcessingException {
 
 //		dynamicGenerator.resetCounter();
 		// String baseBatchName = "March24-ApINinjas-QA-QA1-";
@@ -58,9 +58,9 @@ public class UserActions extends ExcelReader {
 		UserLoginPojo userLoginpj = new UserLoginPojo();
 		userLoginpj.setLoginStatus("Active");
 		userLoginpj.setPassword("hack0234");
-		userLoginpj.setRoleIds(List.of("string"));
+		//userLoginpj.setRoleIds(List.of("string"));
 		userLoginpj.setStatus("Active");
-		userLoginpj.setUserLoginEmail("saxi09@gmail.com");
+		userLoginpj.setUserLoginEmail("saxi74@gmail.com");
 
 		// Creating a list of UserRoleMapPojo objects
 		List<UserRoleMapPojo> userRoleMaps = new ArrayList<>();
@@ -77,16 +77,17 @@ public class UserActions extends ExcelReader {
 			userpj.setUserEduUg("bsc");
 			userpj.setUserFirstName("APINinjas");
 			userpj.setUserLastName("Student");
-			userpj.setUserLinkedinUrl("https://www.linkedin.com/in/saxi/");
+			userpj.setUserLinkedinUrl("https://www.linkedin.com/in/sa622/");
 			userpj.setUserLocation("Seattle");
 			userpj.setUserLogin(userLoginpj);
 			userpj.setUserMiddleName("pp");
-			userpj.setUserPhoneNumber(4259995457L);
+			userpj.setUserPhoneNumber(4374795557L);
 			userpj.setUserRoleMaps(userRoleMaps);
 			userpj.setUserTimeZone("EST");
 			userpj.setUserVisaStatus("H1B");
 
 			ObjectMapper objectMapper = new ObjectMapper();
+			objectMapper.setSerializationInclusion(JsonInclude.Include.NON_NULL) ;
 			String requestBody = objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(userpj);
 			
 			System.out.println("POST User request body is : "+requestBody);
@@ -100,6 +101,7 @@ public class UserActions extends ExcelReader {
 		return request;
 	}
 
+	//Create user---> Response
 public static Response getPostCreateUserResponse(RequestSpecification request) {
 	response = request.when().post();	
 	//System.out.println("Create user response body is : "+response.prettyPrint()+"\n");
@@ -110,18 +112,61 @@ public static void setUserDetails(Response response) {
    
             if (response.path("userId") != null) {
                 userID = response.path("userId").toString();
-                //batchName = response.path("batchName").toString();
-               // programID = response.path("programId").toString();
-                
+               
                 Env_Var.userID = userID;
-                //Env_Var.batchName = batchName;
-                //Env_Var.programID = programID;
                 
                 System.out.println("Created User Id is: "+ userID );
               
             }  
 }
 
+
+//Update user details----> Request
+public static RequestSpecification getPutUserUpdateRequest(String url, String token) throws JsonProcessingException{
+	
+	String userID = Env_Var.userID;
+
+	try {
+		UserPojo userpj = new UserPojo();
+		UserLoginPojo userLoginpj = new UserLoginPojo();
+		userpj.setUserComments(null);
+		userpj.setUserEduPg("msc");
+		userpj.setUserEduUg("bsc");
+		userpj.setUserFirstName("APINinjas1234");
+		userpj.setUserUserId(null);
+		userpj.setUserLastName("Student1");
+		userpj.setUserLinkedinUrl(null);
+		userpj.setUserLocation(null);
+		userLoginpj.setUserLoginEmail(null);
+		userpj.setUserPhoneNumber(4279895457L);
+		userpj.setUserTimeZone("EST");
+		userpj.setUserVisaStatus("H1B");
+
+		ObjectMapper objectMapper = new ObjectMapper(); 
+		objectMapper.setSerializationInclusion(JsonInclude.Include.NON_NULL) ;
+		String requestBody = objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(userpj);		
+		System.out.println(requestBody);
+		request =  
+			RestAssured
+				.given()
+					.headers("Authorization", token)
+					.contentType(ContentType.JSON)
+					.body(requestBody)
+					.pathParam("userId", userID);
+					//.baseUri(url);	
+		
+	} catch (JsonProcessingException e) {
+		e.printStackTrace();
+	}
+	
+	return request;
+}
+
+//Update user details----> Response
+public static Response getUserUpdateResponse(RequestSpecification request) {
+	response = request.when().put(Routes.UpdateUser_Url);
+	return response;
+}
 /*public static RequestSpecification getGetDeleteBatchRequest(String url, boolean Auth, String token) throws JsonProcessingException {
 	if(Auth) {
 	request =  
@@ -159,34 +204,9 @@ public static Response getGetPutDeleteBatchResponsePositive(RequestSpecification
 	return response;
 }
 
-public static Response getBatchResponse(RequestSpecification request) {
-	response = request.when().get();
-	return response;
-}
 
-public static RequestSpecification getPutBatchRequest(String url, String token) throws JsonProcessingException{
-	
-	String batchName = Env_Var.batchName;
 
-	try {
-		BatchPojo bP = new BatchPojo("SDET",batchName,15,"Active",16228);
-		ObjectMapper objectMapper = new ObjectMapper(); 
-		String requestBody = objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(bP);		
-		System.out.println(requestBody);
-		request =  
-			RestAssured
-				.given()
-					.headers("Authorization", token)
-					.contentType(ContentType.JSON)
-					.body(requestBody)
-					.baseUri(url);	
-		
-	} catch (JsonProcessingException e) {
-		e.printStackTrace();
-	}
-	
-	return request;
-}
+
 
 public static Response getGetDeleteBatchResponseNegative(RequestSpecification request, String UserIdorName, String type ) {
 	switch (type.toLowerCase()) {

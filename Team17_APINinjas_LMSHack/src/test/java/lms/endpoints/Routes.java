@@ -15,7 +15,10 @@ public class Routes {
 		
 		//User Module:
 		//POST Create User
-		public static String CreateUser_Url = base_url+"/users/roleStatus";	
+		public static String CreateUser_Url = base_url+"/users/roleStatus";
+		public static String UpdateUser_Url = base_url+"/users/{userId}";
+		
+
 		
 		
 		//Batch Module:

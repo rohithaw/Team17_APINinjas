@@ -7,6 +7,7 @@ public class UserPojo {
     private String userEduPg;
     private String userEduUg;
     private String userFirstName;
+    private String userUserId;
     private String userLastName;
     private String userLinkedinUrl;
     private String userLocation;
@@ -19,7 +20,7 @@ public class UserPojo {
     public UserPojo() {
     	
     }
-    public UserPojo(String uComments, String Pg, String Ug, String fName, String lName,
+    public UserPojo(String uComments, String Pg, String Ug, String fName, String uId, String lName,
     		String LinkedinUrl, String uLocation, UserLoginPojo uLogin, String uMidName,
     		long phone,  List<UserRoleMapPojo> uRoleMaps, String uTime, String uVisaStatus ) {
     	
@@ -27,6 +28,7 @@ public class UserPojo {
     	setUserEduPg(Pg);
     	setUserEduUg(Ug);
     	setUserFirstName(fName);
+    	setUserUserId(uId);
     	setUserLastName(lName);
     	setUserLinkedinUrl(LinkedinUrl);
     	setUserLocation(uLocation);
@@ -62,6 +64,15 @@ public class UserPojo {
 	public void setUserFirstName(String userFirstName) {
 		this.userFirstName = userFirstName;
 	}
+	
+	public String getUserUserId() {
+		return userUserId;
+	}
+	public void setUserUserId(String userUserId) {
+		this.userUserId = userUserId;
+	}
+	
+	
 	public String getUserLastName() {
 		return userLastName;
 	}
