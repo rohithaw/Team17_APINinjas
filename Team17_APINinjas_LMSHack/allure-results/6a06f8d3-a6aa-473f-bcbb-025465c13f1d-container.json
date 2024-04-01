@@ -1,0 +1,1 @@
+{"uuid":"6a06f8d3-a6aa-473f-bcbb-025465c13f1d","name":"Scenario: Authorized Admin able to delete batch with valid url, end point by valid batch ID","children":["cd68a1aa-4721-4e13-985c-043346ef03f6"],"befores":[],"afters":[],"start":1711955863743,"stop":1711955864771}

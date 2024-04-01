@@ -1,459 +1,777 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="27" passed="27" failed="0" skipped="0">
+<testng-results ignored="0" total="41" passed="39" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-03-30T17:37:10 PDT" name="Default suite" finished-at="2024-03-30T17:38:24 PDT" duration-ms="73760">
+  <suite started-at="2024-04-01T00:16:51 PDT" name="Default suite" finished-at="2024-04-01T00:17:56 PDT" duration-ms="64936">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:lms.runner.TestRunner@5c86dbc5]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2024-03-30T17:37:10 PDT" name="Default test" finished-at="2024-03-30T17:38:24 PDT" duration-ms="73760">
+    <test started-at="2024-04-01T00:16:51 PDT" name="Default test" finished-at="2024-04-01T00:17:56 PDT" duration-ms="64936">
       <class name="lms.runner.TestRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:lms.runner.TestRunner@5c86dbc5]" started-at="2024-03-30T17:37:10 PDT" name="setUpClass" finished-at="2024-03-30T17:37:11 PDT" duration-ms="1234" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:lms.runner.TestRunner@5c86dbc5]" started-at="2024-04-01T00:16:51 PDT" name="setUpClass" finished-at="2024-04-01T00:16:52 PDT" duration-ms="1064" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@760d9d4a]]>
+                <![CDATA[org.testng.TestRunner@61ae22d4]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:lms.runner.TestRunner@5c86dbc5]" started-at="2024-03-30T17:37:12 PDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-03-30T17:37:29 PDT" duration-ms="17690" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:lms.runner.TestRunner@5c86dbc5]" started-at="2024-04-01T00:16:52 PDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-01T00:16:58 PDT" duration-ms="5840" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Authorized Admin unable to create new Batch"]]>
+                <![CDATA["Authorized admin able to create new Program with test data from Excel"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["LMS API Batch Module - Create Batch Requests - Post"]]>
+                <![CDATA["LMS API All Modules End To End Positive Scenarios"]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:lms.runner.TestRunner@5c86dbc5]" started-at="2024-03-30T17:37:29 PDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-03-30T17:37:34 PDT" duration-ms="4427" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:lms.runner.TestRunner@5c86dbc5]" started-at="2024-04-01T00:16:58 PDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-01T00:16:59 PDT" duration-ms="1106" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Authorized Admin unable to view Batch with invalid batchID from Excel"]]>
+                <![CDATA["Check if admin able to retrieve all programs with valid API Endpoint"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["LMS API Batch Module - Create Batch Requests - Post"]]>
+                <![CDATA["LMS API All Modules End To End Positive Scenarios"]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:lms.runner.TestRunner@5c86dbc5]" started-at="2024-03-30T17:37:34 PDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-03-30T17:37:38 PDT" duration-ms="4308" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:lms.runner.TestRunner@5c86dbc5]" started-at="2024-04-01T00:16:59 PDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-01T00:17:00 PDT" duration-ms="1058" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Authorized Admin unable to view Batch with invalid programID from Excel"]]>
+                <![CDATA["Check if admin able to retrieve program by programID with valid API Endpoint"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["LMS API Batch Module - Create Batch Requests - Post"]]>
+                <![CDATA["LMS API All Modules End To End Positive Scenarios"]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:lms.runner.TestRunner@5c86dbc5]" started-at="2024-03-30T17:37:38 PDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-03-30T17:37:42 PDT" duration-ms="4322" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:lms.runner.TestRunner@5c86dbc5]" started-at="2024-04-01T00:17:00 PDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-01T00:17:01 PDT" duration-ms="1143" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Authorized Admin unable to view Batch with invalid batchName from Excel"]]>
+                <![CDATA["Check if admin able to retrieve program with User details for valid API Endpoint"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["LMS API Batch Module - Create Batch Requests - Post"]]>
+                <![CDATA["LMS API All Modules End To End Positive Scenarios"]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:lms.runner.TestRunner@5c86dbc5]" started-at="2024-03-30T17:37:42 PDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-03-30T17:37:55 PDT" duration-ms="12428" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:lms.runner.TestRunner@5c86dbc5]" started-at="2024-04-01T00:17:01 PDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-01T00:17:03 PDT" duration-ms="1523" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Authorized Admin unable to update Batch"]]>
+                <![CDATA["Authorized admin able to update Program by programID with test data from Excel"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["LMS API Batch Module - Create Batch Requests - Post"]]>
+                <![CDATA["LMS API All Modules End To End Positive Scenarios"]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:lms.runner.TestRunner@5c86dbc5]" started-at="2024-03-30T17:37:55 PDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-03-30T17:37:59 PDT" duration-ms="4304" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:lms.runner.TestRunner@5c86dbc5]" started-at="2024-04-01T00:17:03 PDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-01T00:17:04 PDT" duration-ms="1270" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Authorized Admin unable to delete batch with invalid batch ID from Excel"]]>
+                <![CDATA["Authorized admin able to update Program by programName with test data from Excel"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["LMS API Batch Module - Create Batch Requests - Post"]]>
+                <![CDATA["LMS API All Modules End To End Positive Scenarios"]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:lms.runner.TestRunner@5c86dbc5]" started-at="2024-03-30T17:37:59 PDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-03-30T17:38:00 PDT" duration-ms="1035" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:lms.runner.TestRunner@5c86dbc5]" started-at="2024-04-01T00:17:04 PDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-01T00:17:05 PDT" duration-ms="1247" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["User should not be able to do CRUD operations on Batch Module with invalid Url"]]>
+                <![CDATA["Authorized Admin able to create new Batch"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["LMS API Batch Module - Create Batch Requests - Post"]]>
+                <![CDATA["LMS API All Modules End To End Positive Scenarios"]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:lms.runner.TestRunner@5c86dbc5]" started-at="2024-03-30T17:38:00 PDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-03-30T17:38:01 PDT" duration-ms="1011" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:lms.runner.TestRunner@5c86dbc5]" started-at="2024-04-01T00:17:05 PDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-01T00:17:07 PDT" duration-ms="1134" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["User should not be able to do CRUD operations on Batch Module with invalid Url"]]>
+                <![CDATA[": Authorized Admin able to view all Batches"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["LMS API Batch Module - Create Batch Requests - Post"]]>
+                <![CDATA["LMS API All Modules End To End Positive Scenarios"]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:lms.runner.TestRunner@5c86dbc5]" started-at="2024-03-30T17:38:01 PDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-03-30T17:38:02 PDT" duration-ms="1027" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:lms.runner.TestRunner@5c86dbc5]" started-at="2024-04-01T00:17:07 PDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-01T00:17:08 PDT" duration-ms="1173" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["User should not be able to do CRUD operations on Batch Module with invalid Url"]]>
+                <![CDATA[": Authorized Admin able to view all Batches"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["LMS API Batch Module - Create Batch Requests - Post"]]>
+                <![CDATA["LMS API All Modules End To End Positive Scenarios"]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:lms.runner.TestRunner@5c86dbc5]" started-at="2024-03-30T17:38:02 PDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-03-30T17:38:03 PDT" duration-ms="981" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:lms.runner.TestRunner@5c86dbc5]" started-at="2024-04-01T00:17:08 PDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-01T00:17:09 PDT" duration-ms="1134" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["User should not be able to do CRUD operations on Batch Module with invalid Url"]]>
+                <![CDATA["Authorized Admin able to view respective Batch with valid endpoint,valid url,valid batchID"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["LMS API Batch Module - Create Batch Requests - Post"]]>
+                <![CDATA["LMS API All Modules End To End Positive Scenarios"]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:lms.runner.TestRunner@5c86dbc5]" started-at="2024-03-30T17:38:03 PDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-03-30T17:38:04 PDT" duration-ms="1064" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:lms.runner.TestRunner@5c86dbc5]" started-at="2024-04-01T00:17:09 PDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-01T00:17:10 PDT" duration-ms="1038" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["User should not be able to do CRUD operations on Batch Module with invalid Url"]]>
+                <![CDATA["Authorized Admin able to view respective Batch with valid endpoint,valid url,valid programID"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["LMS API Batch Module - Create Batch Requests - Post"]]>
+                <![CDATA["LMS API All Modules End To End Positive Scenarios"]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:lms.runner.TestRunner@5c86dbc5]" started-at="2024-03-30T17:38:04 PDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-03-30T17:38:05 PDT" duration-ms="987" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:lms.runner.TestRunner@5c86dbc5]" started-at="2024-04-01T00:17:10 PDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-01T00:17:11 PDT" duration-ms="1060" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["User should not be able to do CRUD operations on Batch Module with invalid Url"]]>
+                <![CDATA["Authorized Admin able to view respective Batch with valid endpoint,valid url,valid batchName"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["LMS API Batch Module - Create Batch Requests - Post"]]>
+                <![CDATA["LMS API All Modules End To End Positive Scenarios"]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:lms.runner.TestRunner@5c86dbc5]" started-at="2024-03-30T17:38:05 PDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-03-30T17:38:06 PDT" duration-ms="1051" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:lms.runner.TestRunner@5c86dbc5]" started-at="2024-04-01T00:17:11 PDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-01T00:17:12 PDT" duration-ms="1452" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["User should not be able to do CRUD operations on Batch Module with invalid Url"]]>
+                <![CDATA["Admin should be able to update Batch with valid Url,request body and valid end point"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["LMS API Batch Module - Create Batch Requests - Post"]]>
+                <![CDATA["LMS API All Modules End To End Positive Scenarios"]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:lms.runner.TestRunner@5c86dbc5]" started-at="2024-03-30T17:38:06 PDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-03-30T17:38:07 PDT" duration-ms="1133" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:lms.runner.TestRunner@5c86dbc5]" started-at="2024-04-01T00:17:12 PDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-01T00:17:15 PDT" duration-ms="2170" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["User should not be able to do CRUD operations on Batch Module with invalid end point"]]>
+                <![CDATA["Authorized user able to create new User with Roles from Excel test data"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["LMS API Batch Module - Create Batch Requests - Post"]]>
+                <![CDATA["LMS API All Modules End To End Positive Scenarios"]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:lms.runner.TestRunner@5c86dbc5]" started-at="2024-03-30T17:38:07 PDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-03-30T17:38:08 PDT" duration-ms="1189" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:lms.runner.TestRunner@5c86dbc5]" started-at="2024-04-01T00:17:15 PDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-01T00:17:16 PDT" duration-ms="1524" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["User should not be able to do CRUD operations on Batch Module with invalid end point"]]>
+                <![CDATA["Admin is able to update Admin details with Admin userid and mandatory fields"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["LMS API Batch Module - Create Batch Requests - Post"]]>
+                <![CDATA["LMS API All Modules End To End Positive Scenarios"]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:lms.runner.TestRunner@5c86dbc5]" started-at="2024-03-30T17:38:09 PDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-03-30T17:38:10 PDT" duration-ms="1030" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:lms.runner.TestRunner@5c86dbc5]" started-at="2024-04-01T00:17:16 PDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-01T00:17:18 PDT" duration-ms="1550" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["User should not be able to do CRUD operations on Batch Module with invalid end point"]]>
+                <![CDATA["Check if admin is able to assign Admin to with program/batch by Admin Id"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["LMS API Batch Module - Create Batch Requests - Post"]]>
+                <![CDATA["LMS API All Modules End To End Positive Scenarios"]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:lms.runner.TestRunner@5c86dbc5]" started-at="2024-03-30T17:38:10 PDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-03-30T17:38:11 PDT" duration-ms="984" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:lms.runner.TestRunner@5c86dbc5]" started-at="2024-04-01T00:17:18 PDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-01T00:17:19 PDT" duration-ms="1213" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["User should not be able to do CRUD operations on Batch Module with invalid end point"]]>
+                <![CDATA["Check if admin is able to retreive all users with assigned program batches"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["LMS API Batch Module - Create Batch Requests - Post"]]>
+                <![CDATA["LMS API All Modules End To End Positive Scenarios"]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:lms.runner.TestRunner@5c86dbc5]" started-at="2024-03-30T17:38:11 PDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-03-30T17:38:11 PDT" duration-ms="979" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:lms.runner.TestRunner@5c86dbc5]" started-at="2024-04-01T00:17:19 PDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-01T00:17:20 PDT" duration-ms="1213" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA["User should not be able to do CRUD operations on Batch Module with invalid end point"]]>
+                <![CDATA["Check if admin is able to retreive assigned program batches for a user"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["LMS API Batch Module - Create Batch Requests - Post"]]>
+                <![CDATA["LMS API All Modules End To End Positive Scenarios"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[1 expectation failed.
+Expected status code <200> but was <404>.
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: 1 expectation failed.
+Expected status code <200> but was <404>.
+
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:57)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
+at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
+at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+at lms.tests.UPRBTests.GetUserMapRole200Validation(UPRBTests.java:25)
+at lms.stepDefinitions.ETEPositiveLMS_SD.user_should_be_able_to_get_in_the_response_for_get_users_prgm_batch_user_id_for_a_user(ETEPositiveLMS_SD.java:644)
+at ✽.User should be able to get 200 in the response for GetUsersPrgmBatchUserId for a user(file:///C:/Users/jyoth/git/Team17_APINinjas/Jyo/Team17_APINinjas_LMSHack/src/test/resources/features/ETEPositiveLMS.feature:118)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:lms.runner.TestRunner@5c86dbc5]" started-at="2024-04-01T00:17:20 PDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-01T00:17:21 PDT" duration-ms="1130" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Check if admin able to retrieve all UserRoles with with valid API Endpoint"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["LMS API All Modules End To End Positive Scenarios"]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:lms.runner.TestRunner@5c86dbc5]" started-at="2024-03-30T17:38:12 PDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-03-30T17:38:12 PDT" duration-ms="986" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:lms.runner.TestRunner@5c86dbc5]" started-at="2024-04-01T00:17:21 PDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-01T00:17:23 PDT" duration-ms="1445" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["User should not be able to do CRUD operations on Batch Module with invalid end point"]]>
+                <![CDATA["Check if admin able to retrieve all User with valid API Endpoint"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["LMS API Batch Module - Create Batch Requests - Post"]]>
+                <![CDATA["LMS API All Modules End To End Positive Scenarios"]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:lms.runner.TestRunner@5c86dbc5]" started-at="2024-03-30T17:38:12 PDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-03-30T17:38:14 PDT" duration-ms="1022" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:lms.runner.TestRunner@5c86dbc5]" started-at="2024-04-01T00:17:23 PDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-01T00:17:24 PDT" duration-ms="1171" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["User should not be able to do CRUD operations on Batch Module with invalid end point"]]>
+                <![CDATA["Check if admin able to retrieve all Userinfo by ID with with valid API Endpoint"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["LMS API Batch Module - Create Batch Requests - Post"]]>
+                <![CDATA["LMS API All Modules End To End Positive Scenarios"]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:lms.runner.TestRunner@5c86dbc5]" started-at="2024-03-30T17:38:14 PDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-03-30T17:38:15 PDT" duration-ms="1102" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:lms.runner.TestRunner@5c86dbc5]" started-at="2024-04-01T00:17:24 PDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-01T00:17:25 PDT" duration-ms="1174" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Unauthorized user not able to do CRUD operations on Batch Module"]]>
+                <![CDATA["Check if admin able to retrieve all ActiveUsers with with valid API Endpoint"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["LMS API Batch Module - Create Batch Requests - Post"]]>
+                <![CDATA["LMS API All Modules End To End Positive Scenarios"]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:lms.runner.TestRunner@5c86dbc5]" started-at="2024-03-30T17:38:15 PDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-03-30T17:38:16 PDT" duration-ms="1006" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:lms.runner.TestRunner@5c86dbc5]" started-at="2024-04-01T00:17:25 PDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-01T00:17:26 PDT" duration-ms="1167" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Unauthorized user not able to do CRUD operations on Batch Module"]]>
+                <![CDATA["Check if admin able to retrieve count users with with valid API Endpoint"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["LMS API Batch Module - Create Batch Requests - Post"]]>
+                <![CDATA["LMS API All Modules End To End Positive Scenarios"]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:lms.runner.TestRunner@5c86dbc5]" started-at="2024-03-30T17:38:16 PDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-03-30T17:38:17 PDT" duration-ms="989" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:lms.runner.TestRunner@5c86dbc5]" started-at="2024-04-01T00:17:26 PDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-01T00:17:27 PDT" duration-ms="1043" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Unauthorized user not able to do CRUD operations on Batch Module"]]>
+                <![CDATA["Check if admin able to retrieve count users with with valid API Endpoint"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["LMS API Batch Module - Create Batch Requests - Post"]]>
+                <![CDATA["LMS API All Modules End To End Positive Scenarios"]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:lms.runner.TestRunner@5c86dbc5]" started-at="2024-03-30T17:38:17 PDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-03-30T17:38:18 PDT" duration-ms="1024" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:lms.runner.TestRunner@5c86dbc5]" started-at="2024-04-01T00:17:27 PDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-01T00:17:28 PDT" duration-ms="1042" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Unauthorized user not able to do CRUD operations on Batch Module"]]>
+                <![CDATA["Check if admin able to retrieve count users with with valid API Endpoint"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["LMS API Batch Module - Create Batch Requests - Post"]]>
+                <![CDATA["LMS API All Modules End To End Positive Scenarios"]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:lms.runner.TestRunner@5c86dbc5]" started-at="2024-03-30T17:38:18 PDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-03-30T17:38:19 PDT" duration-ms="1032" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:lms.runner.TestRunner@5c86dbc5]" started-at="2024-04-01T00:17:28 PDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-01T00:17:29 PDT" duration-ms="1133" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Unauthorized user not able to do CRUD operations on Batch Module"]]>
+                <![CDATA["Check if admin able to retrieve count users with with valid API Endpoint"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["LMS API Batch Module - Create Batch Requests - Post"]]>
+                <![CDATA["LMS API All Modules End To End Positive Scenarios"]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:lms.runner.TestRunner@5c86dbc5]" started-at="2024-03-30T17:38:19 PDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-03-30T17:38:20 PDT" duration-ms="1124" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:lms.runner.TestRunner@5c86dbc5]" started-at="2024-04-01T00:17:29 PDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-01T00:17:31 PDT" duration-ms="1211" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Unauthorized user not able to do CRUD operations on Batch Module"]]>
+                <![CDATA["Check if admin able to retrieve user by progbatch with with valid API Endpoint"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["LMS API Batch Module - Create Batch Requests - Post"]]>
+                <![CDATA["LMS API All Modules End To End Positive Scenarios"]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:lms.runner.TestRunner@5c86dbc5]" started-at="2024-03-30T17:38:20 PDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-03-30T17:38:21 PDT" duration-ms="1095" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:lms.runner.TestRunner@5c86dbc5]" started-at="2024-04-01T00:17:31 PDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-01T00:17:32 PDT" duration-ms="1089" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Unauthorized user not able to do CRUD operations on Batch Module"]]>
+                <![CDATA["Check if admin able to retrieve userbyprog with with valid API Endpoint"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["LMS API Batch Module - Create Batch Requests - Post"]]>
+                <![CDATA["LMS API All Modules End To End Positive Scenarios"]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:lms.runner.TestRunner@5c86dbc5]" started-at="2024-03-30T17:38:21 PDT" name="tearDownClass" finished-at="2024-03-30T17:38:24 PDT" duration-ms="3075" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:lms.runner.TestRunner@5c86dbc5]" started-at="2024-04-01T00:17:32 PDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-01T00:17:33 PDT" duration-ms="1115" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Check if admin able to retrieve UserswithRole with with valid API Endpoint"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["LMS API All Modules End To End Positive Scenarios"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:lms.runner.TestRunner@5c86dbc5]" started-at="2024-04-01T00:17:33 PDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-01T00:17:34 PDT" duration-ms="1506" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Check if admin able to retrieve UserswithRoleID with with valid API Endpoint"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["LMS API All Modules End To End Positive Scenarios"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:lms.runner.TestRunner@5c86dbc5]" started-at="2024-04-01T00:17:34 PDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-01T00:17:36 PDT" duration-ms="1422" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Check if admin able to retrieve UserswithFilters with with valid API Endpoint"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["LMS API All Modules End To End Positive Scenarios"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:lms.runner.TestRunner@5c86dbc5]" started-at="2024-04-01T00:17:36 PDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-01T00:17:37 PDT" duration-ms="1317" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Admin is able to update User Login Status with Admin userid"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["LMS API All Modules End To End Positive Scenarios"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:lms.runner.TestRunner@5c86dbc5]" started-at="2024-04-01T00:17:37 PDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-01T00:17:38 PDT" duration-ms="1280" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Admin is able to assign User to program/batch by Admin userid"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["LMS API All Modules End To End Positive Scenarios"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:lms.runner.TestRunner@5c86dbc5]" started-at="2024-04-01T00:17:38 PDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-01T00:17:40 PDT" duration-ms="1298" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Admin should be able to update User RoleID with valid Url,request body and valid end point"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["LMS API All Modules End To End Positive Scenarios"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:lms.runner.TestRunner@5c86dbc5]" started-at="2024-04-01T00:17:40 PDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-01T00:17:41 PDT" duration-ms="1184" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Admin should be able to update User Role status with valid Url,request body and valid end point"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["LMS API All Modules End To End Positive Scenarios"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:lms.runner.TestRunner@5c86dbc5]" started-at="2024-04-01T00:17:41 PDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-01T00:17:42 PDT" duration-ms="1198" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Check if admin is able to delete the program batch for a user"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["LMS API All Modules End To End Positive Scenarios"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[1 expectation failed.
+Response body doesn't match expectation.
+Expected: The content to match the given JSON schema.
+error: instance type (object) does not match any allowed primitive type (allowed: ["array"])
+    level: "error"
+    schema: {"loadingURI":"#","pointer":""}
+    instance: {"pointer":""}
+    domain: "validation"
+    keyword: "type"
+    found: "object"
+    expected: ["array"]
+
+  Actual: {"message":"Deleted All Programs/Batches assigned to User ID","success":true}
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: 1 expectation failed.
+Response body doesn't match expectation.
+Expected: The content to match the given JSON schema.
+error: instance type (object) does not match any allowed primitive type (allowed: ["array"])
+    level: "error"
+    schema: {"loadingURI":"#","pointer":""}
+    instance: {"pointer":""}
+    domain: "validation"
+    keyword: "type"
+    found: "object"
+    expected: ["array"]
+
+  Actual: {"message":"Deleted All Programs/Batches assigned to User ID","success":true}
+
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:107)
+at io.restassured.internal.ValidatableResponseOptionsImpl.body(ValidatableResponseOptionsImpl.java:238)
+at lms.tests.UPRBTests.GetUserMapRole200Validation(UPRBTests.java:28)
+at lms.stepDefinitions.ETEPositiveLMS_SD.user_should_be_able_to_get_in_the_response_for_delete_users_prgm_batch(ETEPositiveLMS_SD.java:611)
+at ✽.User should be able to get 200 in the response for DeleteUsersPrgmBatch(file:///C:/Users/jyoth/git/Team17_APINinjas/Jyo/Team17_APINinjas_LMSHack/src/test/resources/features/ETEPositiveLMS.feature:217)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:lms.runner.TestRunner@5c86dbc5]" started-at="2024-04-01T00:17:42 PDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-01T00:17:43 PDT" duration-ms="1113" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Authorized admin able to delete User"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["LMS API All Modules End To End Positive Scenarios"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:lms.runner.TestRunner@5c86dbc5]" started-at="2024-04-01T00:17:43 PDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-01T00:17:44 PDT" duration-ms="1039" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Authorized Admin able to delete batch with valid url, end point by valid batch ID"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["LMS API All Modules End To End Positive Scenarios"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:lms.runner.TestRunner@5c86dbc5]" started-at="2024-04-01T00:17:44 PDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-01T00:17:45 PDT" duration-ms="1097" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Authorized admin able to delete Program by programID"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["LMS API All Modules End To End Positive Scenarios"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:lms.runner.TestRunner@5c86dbc5]" started-at="2024-04-01T00:17:45 PDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-01T00:17:46 PDT" duration-ms="1069" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Authorized admin able to delete Program by programName"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["LMS API All Modules End To End Positive Scenarios"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:lms.runner.TestRunner@5c86dbc5]" started-at="2024-04-01T00:17:46 PDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-04-01T00:17:48 PDT" duration-ms="1095" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Check if Admin able to logout"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["LMS API All Modules End To End Positive Scenarios"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:lms.runner.TestRunner@5c86dbc5]" started-at="2024-04-01T00:17:48 PDT" name="tearDownClass" finished-at="2024-04-01T00:17:56 PDT" duration-ms="8491" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

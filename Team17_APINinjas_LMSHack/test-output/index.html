@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Default_suite" class="navigator-link">
-              <span class="suite-name border-passed">Default suite</span>
+              <span class="suite-name border-failed">Default suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\jyoth\AppData\Local\Temp\testng-eclipse--305140462\testng-customsuite.xml</span>
+                    <span>C:\Users\jyoth\AppData\Local\Temp\testng-eclipse-1952582775\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,7 +92,26 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">27 methods,   27 passed</span>
+                    <span class="method-stats">41 methods, 2 failed,   39 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Default_suite" class="hide-methods failed suite-Default_suite"> (hide)</a> <!-- hide-methods failed suite-Default_suite -->
+                      <a href="#" panel-name="suite-Default_suite" class="show-methods failed suite-Default_suite"> (show)</a> <!-- show-methods failed suite-Default_suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Default_suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="lms.runner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Check if admin is able to retreive assigned program batches for a user&quot;, &quot;LMS API All Modules End T...)">runScenario("Check if admin is able to retreive assigned program batches for a user", "LMS API All Modules End T...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="lms.runner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Check if admin is able to delete the program batch for a user&quot;, &quot;LMS API All Modules End To End Pos...)">runScenario("Check if admin is able to delete the program batch for a user", "LMS API All Modules End To End Pos...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Default_suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,137 +122,197 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="lms.runner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;User should not be able to do CRUD operations on Batch Module with invalid end point&quot;, &quot;LMS API Bat...)">runScenario("User should not be able to do CRUD operations on Batch Module with invalid end point", "LMS API Bat...)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="lms.runner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Check if admin able to retrieve all ActiveUsers with with valid API Endpoint&quot;, &quot;LMS API All Modules...)">runScenario("Check if admin able to retrieve all ActiveUsers with with valid API Endpoint", "LMS API All Modules...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="lms.runner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Unauthorized user not able to do CRUD operations on Batch Module&quot;, &quot;LMS API Batch Module - Create B...)">runScenario("Unauthorized user not able to do CRUD operations on Batch Module", "LMS API Batch Module - Create B...)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="lms.runner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Check if admin able to retrieve all UserRoles with with valid API Endpoint&quot;, &quot;LMS API All Modules E...)">runScenario("Check if admin able to retrieve all UserRoles with with valid API Endpoint", "LMS API All Modules E...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="lms.runner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;User should not be able to do CRUD operations on Batch Module with invalid end point&quot;, &quot;LMS API Bat...)">runScenario("User should not be able to do CRUD operations on Batch Module with invalid end point", "LMS API Bat...)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="lms.runner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Check if admin able to retrieve all User with valid API Endpoint&quot;, &quot;LMS API All Modules End To End ...)">runScenario("Check if admin able to retrieve all User with valid API Endpoint", "LMS API All Modules End To End ...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="lms.runner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;User should not be able to do CRUD operations on Batch Module with invalid Url&quot;, &quot;LMS API Batch Mod...)">runScenario("User should not be able to do CRUD operations on Batch Module with invalid Url", "LMS API Batch Mod...)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="lms.runner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Check if admin able to retrieve program with User details for valid API Endpoint&quot;, &quot;LMS API All Mod...)">runScenario("Check if admin able to retrieve program with User details for valid API Endpoint", "LMS API All Mod...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="lms.runner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Unauthorized user not able to do CRUD operations on Batch Module&quot;, &quot;LMS API Batch Module - Create B...)">runScenario("Unauthorized user not able to do CRUD operations on Batch Module", "LMS API Batch Module - Create B...)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="lms.runner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Admin is able to update Admin details with Admin userid and mandatory fields&quot;, &quot;LMS API All Modules...)">runScenario("Admin is able to update Admin details with Admin userid and mandatory fields", "LMS API All Modules...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="lms.runner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;User should not be able to do CRUD operations on Batch Module with invalid end point&quot;, &quot;LMS API Bat...)">runScenario("User should not be able to do CRUD operations on Batch Module with invalid end point", "LMS API Bat...)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="lms.runner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Check if admin able to retrieve UserswithRoleID with with valid API Endpoint&quot;, &quot;LMS API All Modules...)">runScenario("Check if admin able to retrieve UserswithRoleID with with valid API Endpoint", "LMS API All Modules...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="lms.runner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;User should not be able to do CRUD operations on Batch Module with invalid Url&quot;, &quot;LMS API Batch Mod...)">runScenario("User should not be able to do CRUD operations on Batch Module with invalid Url", "LMS API Batch Mod...)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="lms.runner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Admin should be able to update Batch with valid Url,request body and valid end point&quot;, &quot;LMS API All...)">runScenario("Admin should be able to update Batch with valid Url,request body and valid end point", "LMS API All...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="lms.runner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;User should not be able to do CRUD operations on Batch Module with invalid Url&quot;, &quot;LMS API Batch Mod...)">runScenario("User should not be able to do CRUD operations on Batch Module with invalid Url", "LMS API Batch Mod...)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="lms.runner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Check if admin able to retrieve count users with with valid API Endpoint&quot;, &quot;LMS API All Modules End...)">runScenario("Check if admin able to retrieve count users with with valid API Endpoint", "LMS API All Modules End...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="lms.runner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;User should not be able to do CRUD operations on Batch Module with invalid Url&quot;, &quot;LMS API Batch Mod...)">runScenario("User should not be able to do CRUD operations on Batch Module with invalid Url", "LMS API Batch Mod...)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="lms.runner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Check if admin is able to retreive all users with assigned program batches&quot;, &quot;LMS API All Modules E...)">runScenario("Check if admin is able to retreive all users with assigned program batches", "LMS API All Modules E...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="lms.runner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Unauthorized user not able to do CRUD operations on Batch Module&quot;, &quot;LMS API Batch Module - Create B...)">runScenario("Unauthorized user not able to do CRUD operations on Batch Module", "LMS API Batch Module - Create B...)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="lms.runner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Check if admin able to retrieve all programs with valid API Endpoint&quot;, &quot;LMS API All Modules End To ...)">runScenario("Check if admin able to retrieve all programs with valid API Endpoint", "LMS API All Modules End To ...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="lms.runner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Authorized Admin unable to view Batch with invalid batchName from Excel&quot;, &quot;LMS API Batch Module - C...)">runScenario("Authorized Admin unable to view Batch with invalid batchName from Excel", "LMS API Batch Module - C...)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="lms.runner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Authorized admin able to update Program by programName with test data from Excel&quot;, &quot;LMS API All Mod...)">runScenario("Authorized admin able to update Program by programName with test data from Excel", "LMS API All Mod...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="lms.runner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Authorized Admin unable to view Batch with invalid programID from Excel&quot;, &quot;LMS API Batch Module - C...)">runScenario("Authorized Admin unable to view Batch with invalid programID from Excel", "LMS API Batch Module - C...)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="lms.runner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Check if admin able to retrieve userbyprog with with valid API Endpoint&quot;, &quot;LMS API All Modules End ...)">runScenario("Check if admin able to retrieve userbyprog with with valid API Endpoint", "LMS API All Modules End ...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="lms.runner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Authorized Admin unable to delete batch with invalid batch ID from Excel&quot;, &quot;LMS API Batch Module - ...)">runScenario("Authorized Admin unable to delete batch with invalid batch ID from Excel", "LMS API Batch Module - ...)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="lms.runner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;: Authorized Admin able to view all Batches&quot;, &quot;LMS API All Modules End To End Positive Scenarios&quot;)">runScenario(": Authorized Admin able to view all Batches", "LMS API All Modules End To End Positive Scenarios")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="lms.runner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;User should not be able to do CRUD operations on Batch Module with invalid end point&quot;, &quot;LMS API Bat...)">runScenario("User should not be able to do CRUD operations on Batch Module with invalid end point", "LMS API Bat...)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="lms.runner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Authorized Admin able to create new Batch&quot;, &quot;LMS API All Modules End To End Positive Scenarios&quot;)">runScenario("Authorized Admin able to create new Batch", "LMS API All Modules End To End Positive Scenarios")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="lms.runner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Unauthorized user not able to do CRUD operations on Batch Module&quot;, &quot;LMS API Batch Module - Create B...)">runScenario("Unauthorized user not able to do CRUD operations on Batch Module", "LMS API Batch Module - Create B...)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="lms.runner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Authorized Admin able to delete batch with valid url, end point by valid batch ID&quot;, &quot;LMS API All Mo...)">runScenario("Authorized Admin able to delete batch with valid url, end point by valid batch ID", "LMS API All Mo...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="lms.runner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;User should not be able to do CRUD operations on Batch Module with invalid end point&quot;, &quot;LMS API Bat...)">runScenario("User should not be able to do CRUD operations on Batch Module with invalid end point", "LMS API Bat...)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="lms.runner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Authorized admin able to delete Program by programName&quot;, &quot;LMS API All Modules End To End Positive S...)">runScenario("Authorized admin able to delete Program by programName", "LMS API All Modules End To End Positive S...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="lms.runner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;User should not be able to do CRUD operations on Batch Module with invalid end point&quot;, &quot;LMS API Bat...)">runScenario("User should not be able to do CRUD operations on Batch Module with invalid end point", "LMS API Bat...)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="lms.runner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Check if admin able to retrieve count users with with valid API Endpoint&quot;, &quot;LMS API All Modules End...)">runScenario("Check if admin able to retrieve count users with with valid API Endpoint", "LMS API All Modules End...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="lms.runner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;User should not be able to do CRUD operations on Batch Module with invalid end point&quot;, &quot;LMS API Bat...)">runScenario("User should not be able to do CRUD operations on Batch Module with invalid end point", "LMS API Bat...)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="lms.runner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Authorized admin able to create new Program with test data from Excel&quot;, &quot;LMS API All Modules End To...)">runScenario("Authorized admin able to create new Program with test data from Excel", "LMS API All Modules End To...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="lms.runner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;User should not be able to do CRUD operations on Batch Module with invalid Url&quot;, &quot;LMS API Batch Mod...)">runScenario("User should not be able to do CRUD operations on Batch Module with invalid Url", "LMS API Batch Mod...)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="lms.runner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Authorized Admin able to view respective Batch with valid endpoint,valid url,valid batchID&quot;, &quot;LMS A...)">runScenario("Authorized Admin able to view respective Batch with valid endpoint,valid url,valid batchID", "LMS A...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="lms.runner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Authorized Admin unable to create new Batch&quot;, &quot;LMS API Batch Module - Create Batch Requests - Post&quot;)">runScenario("Authorized Admin unable to create new Batch", "LMS API Batch Module - Create Batch Requests - Post")</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="lms.runner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Check if admin able to retrieve count users with with valid API Endpoint&quot;, &quot;LMS API All Modules End...)">runScenario("Check if admin able to retrieve count users with with valid API Endpoint", "LMS API All Modules End...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="lms.runner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Unauthorized user not able to do CRUD operations on Batch Module&quot;, &quot;LMS API Batch Module - Create B...)">runScenario("Unauthorized user not able to do CRUD operations on Batch Module", "LMS API Batch Module - Create B...)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="lms.runner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Check if admin able to retrieve all Userinfo by ID with with valid API Endpoint&quot;, &quot;LMS API All Modu...)">runScenario("Check if admin able to retrieve all Userinfo by ID with with valid API Endpoint", "LMS API All Modu...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="lms.runner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Unauthorized user not able to do CRUD operations on Batch Module&quot;, &quot;LMS API Batch Module - Create B...)">runScenario("Unauthorized user not able to do CRUD operations on Batch Module", "LMS API Batch Module - Create B...)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="lms.runner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Authorized admin able to delete User&quot;, &quot;LMS API All Modules End To End Positive Scenarios&quot;)">runScenario("Authorized admin able to delete User", "LMS API All Modules End To End Positive Scenarios")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="lms.runner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;User should not be able to do CRUD operations on Batch Module with invalid Url&quot;, &quot;LMS API Batch Mod...)">runScenario("User should not be able to do CRUD operations on Batch Module with invalid Url", "LMS API Batch Mod...)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="lms.runner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Admin is able to assign User to program/batch by Admin userid&quot;, &quot;LMS API All Modules End To End Pos...)">runScenario("Admin is able to assign User to program/batch by Admin userid", "LMS API All Modules End To End Pos...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="lms.runner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;User should not be able to do CRUD operations on Batch Module with invalid Url&quot;, &quot;LMS API Batch Mod...)">runScenario("User should not be able to do CRUD operations on Batch Module with invalid Url", "LMS API Batch Mod...)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="lms.runner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Check if admin able to retrieve program by programID with valid API Endpoint&quot;, &quot;LMS API All Modules...)">runScenario("Check if admin able to retrieve program by programID with valid API Endpoint", "LMS API All Modules...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="lms.runner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Unauthorized user not able to do CRUD operations on Batch Module&quot;, &quot;LMS API Batch Module - Create B...)">runScenario("Unauthorized user not able to do CRUD operations on Batch Module", "LMS API Batch Module - Create B...)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="lms.runner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Authorized admin able to delete Program by programID&quot;, &quot;LMS API All Modules End To End Positive Sce...)">runScenario("Authorized admin able to delete Program by programID", "LMS API All Modules End To End Positive Sce...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="lms.runner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Authorized Admin unable to view Batch with invalid batchID from Excel&quot;, &quot;LMS API Batch Module - Cre...)">runScenario("Authorized Admin unable to view Batch with invalid batchID from Excel", "LMS API Batch Module - Cre...)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="lms.runner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Check if admin able to retrieve user by progbatch with with valid API Endpoint&quot;, &quot;LMS API All Modul...)">runScenario("Check if admin able to retrieve user by progbatch with with valid API Endpoint", "LMS API All Modul...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="lms.runner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Authorized Admin unable to update Batch&quot;, &quot;LMS API Batch Module - Create Batch Requests - Post&quot;)">runScenario("Authorized Admin unable to update Batch", "LMS API Batch Module - Create Batch Requests - Post")</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="lms.runner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Check if admin able to retrieve UserswithFilters with with valid API Endpoint&quot;, &quot;LMS API All Module...)">runScenario("Check if admin able to retrieve UserswithFilters with with valid API Endpoint", "LMS API All Module...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="lms.runner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Admin should be able to update User Role status with valid Url,request body and valid end point&quot;, &quot;...)">runScenario("Admin should be able to update User Role status with valid Url,request body and valid end point", "...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="lms.runner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Authorized admin able to update Program by programID with test data from Excel&quot;, &quot;LMS API All Modul...)">runScenario("Authorized admin able to update Program by programID with test data from Excel", "LMS API All Modul...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="lms.runner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Authorized Admin able to view respective Batch with valid endpoint,valid url,valid programID&quot;, &quot;LMS...)">runScenario("Authorized Admin able to view respective Batch with valid endpoint,valid url,valid programID", "LMS...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="lms.runner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Admin should be able to update User RoleID with valid Url,request body and valid end point&quot;, &quot;LMS A...)">runScenario("Admin should be able to update User RoleID with valid Url,request body and valid end point", "LMS A...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="lms.runner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;: Authorized Admin able to view all Batches&quot;, &quot;LMS API All Modules End To End Positive Scenarios&quot;)">runScenario(": Authorized Admin able to view all Batches", "LMS API All Modules End To End Positive Scenarios")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="lms.runner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Authorized user able to create new User with Roles from Excel test data&quot;, &quot;LMS API All Modules End ...)">runScenario("Authorized user able to create new User with Roles from Excel test data", "LMS API All Modules End ...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="lms.runner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Check if admin able to retrieve count users with with valid API Endpoint&quot;, &quot;LMS API All Modules End...)">runScenario("Check if admin able to retrieve count users with with valid API Endpoint", "LMS API All Modules End...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="lms.runner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Check if admin able to retrieve UserswithRole with with valid API Endpoint&quot;, &quot;LMS API All Modules E...)">runScenario("Check if admin able to retrieve UserswithRole with with valid API Endpoint", "LMS API All Modules E...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="lms.runner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Check if Admin able to logout&quot;, &quot;LMS API All Modules End To End Positive Scenarios&quot;)">runScenario("Check if Admin able to logout", "LMS API All Modules End To End Positive Scenarios")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="lms.runner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Admin is able to update User Login Status with Admin userid&quot;, &quot;LMS API All Modules End To End Posit...)">runScenario("Admin is able to update User Login Status with Admin userid", "LMS API All Modules End To End Posit...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="lms.runner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Authorized Admin able to view respective Batch with valid endpoint,valid url,valid batchName&quot;, &quot;LMS...)">runScenario("Authorized Admin able to view respective Batch with valid endpoint,valid url,valid batchName", "LMS...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="lms.runner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Check if admin is able to assign Admin to with program/batch by Admin Id&quot;, &quot;LMS API All Modules End...)">runScenario("Check if admin is able to assign Admin to with program/batch by Admin Id", "LMS API All Modules End...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -248,6 +327,101 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Default_suite" class="panel Default_suite">
+          <div class="suite-Default_suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">lms.runner.TestRunner</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Check if admin is able to retreive assigned program batches for a user&quot;, &quot;LMS API All Modules End T...)">
+                  </a> <!-- runScenario("Check if admin is able to retreive assigned program batches for a user", "LMS API All Modules End T...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Check if admin is able to retreive assigned program batches for a user","LMS API All Modules End To End Positive Scenarios")</span>
+                  <div class="stack-trace">java.lang.AssertionError: 1 expectation failed.
+Expected status code &lt;200&gt; but was &lt;404&gt;.
+
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:57)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
+	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+	at lms.tests.UPRBTests.GetUserMapRole200Validation(UPRBTests.java:25)
+	at lms.stepDefinitions.ETEPositiveLMS_SD.user_should_be_able_to_get_in_the_response_for_get_users_prgm_batch_user_id_for_a_user(ETEPositiveLMS_SD.java:644)
+	at ✽.User should be able to get 200 in the response for GetUsersPrgmBatchUserId for a user(file:///C:/Users/jyoth/git/Team17_APINinjas/Jyo/Team17_APINinjas_LMSHack/src/test/resources/features/ETEPositiveLMS.feature:118)
+
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Check if admin is able to delete the program batch for a user&quot;, &quot;LMS API All Modules End To End Pos...)">
+                  </a> <!-- runScenario("Check if admin is able to delete the program batch for a user", "LMS API All Modules End To End Pos...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Check if admin is able to delete the program batch for a user","LMS API All Modules End To End Positive Scenarios")</span>
+                  <div class="stack-trace">java.lang.AssertionError: 1 expectation failed.
+Response body doesn&apos;t match expectation.
+Expected: The content to match the given JSON schema.
+error: instance type (object) does not match any allowed primitive type (allowed: [&quot;array&quot;])
+    level: &quot;error&quot;
+    schema: {&quot;loadingURI&quot;:&quot;#&quot;,&quot;pointer&quot;:&quot;&quot;}
+    instance: {&quot;pointer&quot;:&quot;&quot;}
+    domain: &quot;validation&quot;
+    keyword: &quot;type&quot;
+    found: &quot;object&quot;
+    expected: [&quot;array&quot;]
+
+  Actual: {&quot;message&quot;:&quot;Deleted All Programs/Batches assigned to User ID&quot;,&quot;success&quot;:true}
+
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:107)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.body(ValidatableResponseOptionsImpl.java:238)
+	at lms.tests.UPRBTests.GetUserMapRole200Validation(UPRBTests.java:28)
+	at lms.stepDefinitions.ETEPositiveLMS_SD.user_should_be_able_to_get_in_the_response_for_delete_users_prgm_batch(ETEPositiveLMS_SD.java:611)
+	at ✽.User should be able to get 200 in the response for DeleteUsersPrgmBatch(file:///C:/Users/jyoth/git/Team17_APINinjas/Jyo/Team17_APINinjas_LMSHack/src/test/resources/features/ETEPositiveLMS.feature:217)
+
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_suite-class-failed -->
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -256,270 +430,390 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;User should not be able to do CRUD operations on Batch Module with invalid end point&quot;, &quot;LMS API Bat...)">
-                  </a> <!-- runScenario("User should not be able to do CRUD operations on Batch Module with invalid end point", "LMS API Bat...) -->
+                  <a name="runScenario(&quot;Check if admin able to retrieve all ActiveUsers with with valid API Endpoint&quot;, &quot;LMS API All Modules...)">
+                  </a> <!-- runScenario("Check if admin able to retrieve all ActiveUsers with with valid API Endpoint", "LMS API All Modules...) -->
                   <span class="method-name">runScenario</span>
-                  <span class="parameters">("User should not be able to do CRUD operations on Batch Module with invalid end point","LMS API Batch Module - Create Batch Requests - Post")</span>
+                  <span class="parameters">("Check if admin able to retrieve all ActiveUsers with with valid API Endpoint","LMS API All Modules End To End Positive Scenarios")</span>
                   <em>
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;Unauthorized user not able to do CRUD operations on Batch Module&quot;, &quot;LMS API Batch Module - Create B...)">
-                  </a> <!-- runScenario("Unauthorized user not able to do CRUD operations on Batch Module", "LMS API Batch Module - Create B...) -->
+                  <a name="runScenario(&quot;Check if admin able to retrieve all UserRoles with with valid API Endpoint&quot;, &quot;LMS API All Modules E...)">
+                  </a> <!-- runScenario("Check if admin able to retrieve all UserRoles with with valid API Endpoint", "LMS API All Modules E...) -->
                   <span class="method-name">runScenario</span>
-                  <span class="parameters">("Unauthorized user not able to do CRUD operations on Batch Module","LMS API Batch Module - Create Batch Requests - Post")</span>
+                  <span class="parameters">("Check if admin able to retrieve all UserRoles with with valid API Endpoint","LMS API All Modules End To End Positive Scenarios")</span>
                   <em>
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;User should not be able to do CRUD operations on Batch Module with invalid end point&quot;, &quot;LMS API Bat...)">
-                  </a> <!-- runScenario("User should not be able to do CRUD operations on Batch Module with invalid end point", "LMS API Bat...) -->
+                  <a name="runScenario(&quot;Check if admin able to retrieve all User with valid API Endpoint&quot;, &quot;LMS API All Modules End To End ...)">
+                  </a> <!-- runScenario("Check if admin able to retrieve all User with valid API Endpoint", "LMS API All Modules End To End ...) -->
                   <span class="method-name">runScenario</span>
-                  <span class="parameters">("User should not be able to do CRUD operations on Batch Module with invalid end point","LMS API Batch Module - Create Batch Requests - Post")</span>
+                  <span class="parameters">("Check if admin able to retrieve all User with valid API Endpoint","LMS API All Modules End To End Positive Scenarios")</span>
                   <em>
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;User should not be able to do CRUD operations on Batch Module with invalid Url&quot;, &quot;LMS API Batch Mod...)">
-                  </a> <!-- runScenario("User should not be able to do CRUD operations on Batch Module with invalid Url", "LMS API Batch Mod...) -->
+                  <a name="runScenario(&quot;Check if admin able to retrieve program with User details for valid API Endpoint&quot;, &quot;LMS API All Mod...)">
+                  </a> <!-- runScenario("Check if admin able to retrieve program with User details for valid API Endpoint", "LMS API All Mod...) -->
                   <span class="method-name">runScenario</span>
-                  <span class="parameters">("User should not be able to do CRUD operations on Batch Module with invalid Url","LMS API Batch Module - Create Batch Requests - Post")</span>
+                  <span class="parameters">("Check if admin able to retrieve program with User details for valid API Endpoint","LMS API All Modules End To End Positive Scenarios")</span>
                   <em>
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;Unauthorized user not able to do CRUD operations on Batch Module&quot;, &quot;LMS API Batch Module - Create B...)">
-                  </a> <!-- runScenario("Unauthorized user not able to do CRUD operations on Batch Module", "LMS API Batch Module - Create B...) -->
+                  <a name="runScenario(&quot;Admin is able to update Admin details with Admin userid and mandatory fields&quot;, &quot;LMS API All Modules...)">
+                  </a> <!-- runScenario("Admin is able to update Admin details with Admin userid and mandatory fields", "LMS API All Modules...) -->
                   <span class="method-name">runScenario</span>
-                  <span class="parameters">("Unauthorized user not able to do CRUD operations on Batch Module","LMS API Batch Module - Create Batch Requests - Post")</span>
+                  <span class="parameters">("Admin is able to update Admin details with Admin userid and mandatory fields","LMS API All Modules End To End Positive Scenarios")</span>
                   <em>
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;User should not be able to do CRUD operations on Batch Module with invalid end point&quot;, &quot;LMS API Bat...)">
-                  </a> <!-- runScenario("User should not be able to do CRUD operations on Batch Module with invalid end point", "LMS API Bat...) -->
+                  <a name="runScenario(&quot;Check if admin able to retrieve UserswithRoleID with with valid API Endpoint&quot;, &quot;LMS API All Modules...)">
+                  </a> <!-- runScenario("Check if admin able to retrieve UserswithRoleID with with valid API Endpoint", "LMS API All Modules...) -->
                   <span class="method-name">runScenario</span>
-                  <span class="parameters">("User should not be able to do CRUD operations on Batch Module with invalid end point","LMS API Batch Module - Create Batch Requests - Post")</span>
+                  <span class="parameters">("Check if admin able to retrieve UserswithRoleID with with valid API Endpoint","LMS API All Modules End To End Positive Scenarios")</span>
                   <em>
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;User should not be able to do CRUD operations on Batch Module with invalid Url&quot;, &quot;LMS API Batch Mod...)">
-                  </a> <!-- runScenario("User should not be able to do CRUD operations on Batch Module with invalid Url", "LMS API Batch Mod...) -->
+                  <a name="runScenario(&quot;Admin should be able to update Batch with valid Url,request body and valid end point&quot;, &quot;LMS API All...)">
+                  </a> <!-- runScenario("Admin should be able to update Batch with valid Url,request body and valid end point", "LMS API All...) -->
                   <span class="method-name">runScenario</span>
-                  <span class="parameters">("User should not be able to do CRUD operations on Batch Module with invalid Url","LMS API Batch Module - Create Batch Requests - Post")</span>
+                  <span class="parameters">("Admin should be able to update Batch with valid Url,request body and valid end point","LMS API All Modules End To End Positive Scenarios")</span>
                   <em>
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;User should not be able to do CRUD operations on Batch Module with invalid Url&quot;, &quot;LMS API Batch Mod...)">
-                  </a> <!-- runScenario("User should not be able to do CRUD operations on Batch Module with invalid Url", "LMS API Batch Mod...) -->
+                  <a name="runScenario(&quot;Check if admin able to retrieve count users with with valid API Endpoint&quot;, &quot;LMS API All Modules End...)">
+                  </a> <!-- runScenario("Check if admin able to retrieve count users with with valid API Endpoint", "LMS API All Modules End...) -->
                   <span class="method-name">runScenario</span>
-                  <span class="parameters">("User should not be able to do CRUD operations on Batch Module with invalid Url","LMS API Batch Module - Create Batch Requests - Post")</span>
+                  <span class="parameters">("Check if admin able to retrieve count users with with valid API Endpoint","LMS API All Modules End To End Positive Scenarios")</span>
                   <em>
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;User should not be able to do CRUD operations on Batch Module with invalid Url&quot;, &quot;LMS API Batch Mod...)">
-                  </a> <!-- runScenario("User should not be able to do CRUD operations on Batch Module with invalid Url", "LMS API Batch Mod...) -->
+                  <a name="runScenario(&quot;Check if admin is able to retreive all users with assigned program batches&quot;, &quot;LMS API All Modules E...)">
+                  </a> <!-- runScenario("Check if admin is able to retreive all users with assigned program batches", "LMS API All Modules E...) -->
                   <span class="method-name">runScenario</span>
-                  <span class="parameters">("User should not be able to do CRUD operations on Batch Module with invalid Url","LMS API Batch Module - Create Batch Requests - Post")</span>
+                  <span class="parameters">("Check if admin is able to retreive all users with assigned program batches","LMS API All Modules End To End Positive Scenarios")</span>
                   <em>
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;Unauthorized user not able to do CRUD operations on Batch Module&quot;, &quot;LMS API Batch Module - Create B...)">
-                  </a> <!-- runScenario("Unauthorized user not able to do CRUD operations on Batch Module", "LMS API Batch Module - Create B...) -->
+                  <a name="runScenario(&quot;Check if admin able to retrieve all programs with valid API Endpoint&quot;, &quot;LMS API All Modules End To ...)">
+                  </a> <!-- runScenario("Check if admin able to retrieve all programs with valid API Endpoint", "LMS API All Modules End To ...) -->
                   <span class="method-name">runScenario</span>
-                  <span class="parameters">("Unauthorized user not able to do CRUD operations on Batch Module","LMS API Batch Module - Create Batch Requests - Post")</span>
+                  <span class="parameters">("Check if admin able to retrieve all programs with valid API Endpoint","LMS API All Modules End To End Positive Scenarios")</span>
                   <em>
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;Authorized Admin unable to view Batch with invalid batchName from Excel&quot;, &quot;LMS API Batch Module - C...)">
-                  </a> <!-- runScenario("Authorized Admin unable to view Batch with invalid batchName from Excel", "LMS API Batch Module - C...) -->
+                  <a name="runScenario(&quot;Authorized admin able to update Program by programName with test data from Excel&quot;, &quot;LMS API All Mod...)">
+                  </a> <!-- runScenario("Authorized admin able to update Program by programName with test data from Excel", "LMS API All Mod...) -->
                   <span class="method-name">runScenario</span>
-                  <span class="parameters">("Authorized Admin unable to view Batch with invalid batchName from Excel","LMS API Batch Module - Create Batch Requests - Post")</span>
+                  <span class="parameters">("Authorized admin able to update Program by programName with test data from Excel","LMS API All Modules End To End Positive Scenarios")</span>
                   <em>
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;Authorized Admin unable to view Batch with invalid programID from Excel&quot;, &quot;LMS API Batch Module - C...)">
-                  </a> <!-- runScenario("Authorized Admin unable to view Batch with invalid programID from Excel", "LMS API Batch Module - C...) -->
+                  <a name="runScenario(&quot;Check if admin able to retrieve userbyprog with with valid API Endpoint&quot;, &quot;LMS API All Modules End ...)">
+                  </a> <!-- runScenario("Check if admin able to retrieve userbyprog with with valid API Endpoint", "LMS API All Modules End ...) -->
                   <span class="method-name">runScenario</span>
-                  <span class="parameters">("Authorized Admin unable to view Batch with invalid programID from Excel","LMS API Batch Module - Create Batch Requests - Post")</span>
+                  <span class="parameters">("Check if admin able to retrieve userbyprog with with valid API Endpoint","LMS API All Modules End To End Positive Scenarios")</span>
                   <em>
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;Authorized Admin unable to delete batch with invalid batch ID from Excel&quot;, &quot;LMS API Batch Module - ...)">
-                  </a> <!-- runScenario("Authorized Admin unable to delete batch with invalid batch ID from Excel", "LMS API Batch Module - ...) -->
+                  <a name="runScenario(&quot;: Authorized Admin able to view all Batches&quot;, &quot;LMS API All Modules End To End Positive Scenarios&quot;)">
+                  </a> <!-- runScenario(": Authorized Admin able to view all Batches", "LMS API All Modules End To End Positive Scenarios") -->
                   <span class="method-name">runScenario</span>
-                  <span class="parameters">("Authorized Admin unable to delete batch with invalid batch ID from Excel","LMS API Batch Module - Create Batch Requests - Post")</span>
+                  <span class="parameters">(": Authorized Admin able to view all Batches","LMS API All Modules End To End Positive Scenarios")</span>
                   <em>
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;User should not be able to do CRUD operations on Batch Module with invalid end point&quot;, &quot;LMS API Bat...)">
-                  </a> <!-- runScenario("User should not be able to do CRUD operations on Batch Module with invalid end point", "LMS API Bat...) -->
+                  <a name="runScenario(&quot;Authorized Admin able to create new Batch&quot;, &quot;LMS API All Modules End To End Positive Scenarios&quot;)">
+                  </a> <!-- runScenario("Authorized Admin able to create new Batch", "LMS API All Modules End To End Positive Scenarios") -->
                   <span class="method-name">runScenario</span>
-                  <span class="parameters">("User should not be able to do CRUD operations on Batch Module with invalid end point","LMS API Batch Module - Create Batch Requests - Post")</span>
+                  <span class="parameters">("Authorized Admin able to create new Batch","LMS API All Modules End To End Positive Scenarios")</span>
                   <em>
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;Unauthorized user not able to do CRUD operations on Batch Module&quot;, &quot;LMS API Batch Module - Create B...)">
-                  </a> <!-- runScenario("Unauthorized user not able to do CRUD operations on Batch Module", "LMS API Batch Module - Create B...) -->
+                  <a name="runScenario(&quot;Authorized Admin able to delete batch with valid url, end point by valid batch ID&quot;, &quot;LMS API All Mo...)">
+                  </a> <!-- runScenario("Authorized Admin able to delete batch with valid url, end point by valid batch ID", "LMS API All Mo...) -->
                   <span class="method-name">runScenario</span>
-                  <span class="parameters">("Unauthorized user not able to do CRUD operations on Batch Module","LMS API Batch Module - Create Batch Requests - Post")</span>
+                  <span class="parameters">("Authorized Admin able to delete batch with valid url, end point by valid batch ID","LMS API All Modules End To End Positive Scenarios")</span>
                   <em>
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;User should not be able to do CRUD operations on Batch Module with invalid end point&quot;, &quot;LMS API Bat...)">
-                  </a> <!-- runScenario("User should not be able to do CRUD operations on Batch Module with invalid end point", "LMS API Bat...) -->
+                  <a name="runScenario(&quot;Authorized admin able to delete Program by programName&quot;, &quot;LMS API All Modules End To End Positive S...)">
+                  </a> <!-- runScenario("Authorized admin able to delete Program by programName", "LMS API All Modules End To End Positive S...) -->
                   <span class="method-name">runScenario</span>
-                  <span class="parameters">("User should not be able to do CRUD operations on Batch Module with invalid end point","LMS API Batch Module - Create Batch Requests - Post")</span>
+                  <span class="parameters">("Authorized admin able to delete Program by programName","LMS API All Modules End To End Positive Scenarios")</span>
                   <em>
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;User should not be able to do CRUD operations on Batch Module with invalid end point&quot;, &quot;LMS API Bat...)">
-                  </a> <!-- runScenario("User should not be able to do CRUD operations on Batch Module with invalid end point", "LMS API Bat...) -->
+                  <a name="runScenario(&quot;Check if admin able to retrieve count users with with valid API Endpoint&quot;, &quot;LMS API All Modules End...)">
+                  </a> <!-- runScenario("Check if admin able to retrieve count users with with valid API Endpoint", "LMS API All Modules End...) -->
                   <span class="method-name">runScenario</span>
-                  <span class="parameters">("User should not be able to do CRUD operations on Batch Module with invalid end point","LMS API Batch Module - Create Batch Requests - Post")</span>
+                  <span class="parameters">("Check if admin able to retrieve count users with with valid API Endpoint","LMS API All Modules End To End Positive Scenarios")</span>
                   <em>
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;User should not be able to do CRUD operations on Batch Module with invalid end point&quot;, &quot;LMS API Bat...)">
-                  </a> <!-- runScenario("User should not be able to do CRUD operations on Batch Module with invalid end point", "LMS API Bat...) -->
+                  <a name="runScenario(&quot;Authorized admin able to create new Program with test data from Excel&quot;, &quot;LMS API All Modules End To...)">
+                  </a> <!-- runScenario("Authorized admin able to create new Program with test data from Excel", "LMS API All Modules End To...) -->
                   <span class="method-name">runScenario</span>
-                  <span class="parameters">("User should not be able to do CRUD operations on Batch Module with invalid end point","LMS API Batch Module - Create Batch Requests - Post")</span>
+                  <span class="parameters">("Authorized admin able to create new Program with test data from Excel","LMS API All Modules End To End Positive Scenarios")</span>
                   <em>
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;User should not be able to do CRUD operations on Batch Module with invalid Url&quot;, &quot;LMS API Batch Mod...)">
-                  </a> <!-- runScenario("User should not be able to do CRUD operations on Batch Module with invalid Url", "LMS API Batch Mod...) -->
+                  <a name="runScenario(&quot;Authorized Admin able to view respective Batch with valid endpoint,valid url,valid batchID&quot;, &quot;LMS A...)">
+                  </a> <!-- runScenario("Authorized Admin able to view respective Batch with valid endpoint,valid url,valid batchID", "LMS A...) -->
                   <span class="method-name">runScenario</span>
-                  <span class="parameters">("User should not be able to do CRUD operations on Batch Module with invalid Url","LMS API Batch Module - Create Batch Requests - Post")</span>
+                  <span class="parameters">("Authorized Admin able to view respective Batch with valid endpoint,valid url,valid batchID","LMS API All Modules End To End Positive Scenarios")</span>
                   <em>
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;Authorized Admin unable to create new Batch&quot;, &quot;LMS API Batch Module - Create Batch Requests - Post&quot;)">
-                  </a> <!-- runScenario("Authorized Admin unable to create new Batch", "LMS API Batch Module - Create Batch Requests - Post") -->
+                  <a name="runScenario(&quot;Check if admin able to retrieve count users with with valid API Endpoint&quot;, &quot;LMS API All Modules End...)">
+                  </a> <!-- runScenario("Check if admin able to retrieve count users with with valid API Endpoint", "LMS API All Modules End...) -->
                   <span class="method-name">runScenario</span>
-                  <span class="parameters">("Authorized Admin unable to create new Batch","LMS API Batch Module - Create Batch Requests - Post")</span>
+                  <span class="parameters">("Check if admin able to retrieve count users with with valid API Endpoint","LMS API All Modules End To End Positive Scenarios")</span>
                   <em>
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;Unauthorized user not able to do CRUD operations on Batch Module&quot;, &quot;LMS API Batch Module - Create B...)">
-                  </a> <!-- runScenario("Unauthorized user not able to do CRUD operations on Batch Module", "LMS API Batch Module - Create B...) -->
+                  <a name="runScenario(&quot;Check if admin able to retrieve all Userinfo by ID with with valid API Endpoint&quot;, &quot;LMS API All Modu...)">
+                  </a> <!-- runScenario("Check if admin able to retrieve all Userinfo by ID with with valid API Endpoint", "LMS API All Modu...) -->
                   <span class="method-name">runScenario</span>
-                  <span class="parameters">("Unauthorized user not able to do CRUD operations on Batch Module","LMS API Batch Module - Create Batch Requests - Post")</span>
+                  <span class="parameters">("Check if admin able to retrieve all Userinfo by ID with with valid API Endpoint","LMS API All Modules End To End Positive Scenarios")</span>
                   <em>
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;Unauthorized user not able to do CRUD operations on Batch Module&quot;, &quot;LMS API Batch Module - Create B...)">
-                  </a> <!-- runScenario("Unauthorized user not able to do CRUD operations on Batch Module", "LMS API Batch Module - Create B...) -->
+                  <a name="runScenario(&quot;Authorized admin able to delete User&quot;, &quot;LMS API All Modules End To End Positive Scenarios&quot;)">
+                  </a> <!-- runScenario("Authorized admin able to delete User", "LMS API All Modules End To End Positive Scenarios") -->
                   <span class="method-name">runScenario</span>
-                  <span class="parameters">("Unauthorized user not able to do CRUD operations on Batch Module","LMS API Batch Module - Create Batch Requests - Post")</span>
+                  <span class="parameters">("Authorized admin able to delete User","LMS API All Modules End To End Positive Scenarios")</span>
                   <em>
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;User should not be able to do CRUD operations on Batch Module with invalid Url&quot;, &quot;LMS API Batch Mod...)">
-                  </a> <!-- runScenario("User should not be able to do CRUD operations on Batch Module with invalid Url", "LMS API Batch Mod...) -->
+                  <a name="runScenario(&quot;Admin is able to assign User to program/batch by Admin userid&quot;, &quot;LMS API All Modules End To End Pos...)">
+                  </a> <!-- runScenario("Admin is able to assign User to program/batch by Admin userid", "LMS API All Modules End To End Pos...) -->
                   <span class="method-name">runScenario</span>
-                  <span class="parameters">("User should not be able to do CRUD operations on Batch Module with invalid Url","LMS API Batch Module - Create Batch Requests - Post")</span>
+                  <span class="parameters">("Admin is able to assign User to program/batch by Admin userid","LMS API All Modules End To End Positive Scenarios")</span>
                   <em>
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;User should not be able to do CRUD operations on Batch Module with invalid Url&quot;, &quot;LMS API Batch Mod...)">
-                  </a> <!-- runScenario("User should not be able to do CRUD operations on Batch Module with invalid Url", "LMS API Batch Mod...) -->
+                  <a name="runScenario(&quot;Check if admin able to retrieve program by programID with valid API Endpoint&quot;, &quot;LMS API All Modules...)">
+                  </a> <!-- runScenario("Check if admin able to retrieve program by programID with valid API Endpoint", "LMS API All Modules...) -->
                   <span class="method-name">runScenario</span>
-                  <span class="parameters">("User should not be able to do CRUD operations on Batch Module with invalid Url","LMS API Batch Module - Create Batch Requests - Post")</span>
+                  <span class="parameters">("Check if admin able to retrieve program by programID with valid API Endpoint","LMS API All Modules End To End Positive Scenarios")</span>
                   <em>
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;Unauthorized user not able to do CRUD operations on Batch Module&quot;, &quot;LMS API Batch Module - Create B...)">
-                  </a> <!-- runScenario("Unauthorized user not able to do CRUD operations on Batch Module", "LMS API Batch Module - Create B...) -->
+                  <a name="runScenario(&quot;Authorized admin able to delete Program by programID&quot;, &quot;LMS API All Modules End To End Positive Sce...)">
+                  </a> <!-- runScenario("Authorized admin able to delete Program by programID", "LMS API All Modules End To End Positive Sce...) -->
                   <span class="method-name">runScenario</span>
-                  <span class="parameters">("Unauthorized user not able to do CRUD operations on Batch Module","LMS API Batch Module - Create Batch Requests - Post")</span>
+                  <span class="parameters">("Authorized admin able to delete Program by programID","LMS API All Modules End To End Positive Scenarios")</span>
                   <em>
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;Authorized Admin unable to view Batch with invalid batchID from Excel&quot;, &quot;LMS API Batch Module - Cre...)">
-                  </a> <!-- runScenario("Authorized Admin unable to view Batch with invalid batchID from Excel", "LMS API Batch Module - Cre...) -->
+                  <a name="runScenario(&quot;Check if admin able to retrieve user by progbatch with with valid API Endpoint&quot;, &quot;LMS API All Modul...)">
+                  </a> <!-- runScenario("Check if admin able to retrieve user by progbatch with with valid API Endpoint", "LMS API All Modul...) -->
                   <span class="method-name">runScenario</span>
-                  <span class="parameters">("Authorized Admin unable to view Batch with invalid batchID from Excel","LMS API Batch Module - Create Batch Requests - Post")</span>
+                  <span class="parameters">("Check if admin able to retrieve user by progbatch with with valid API Endpoint","LMS API All Modules End To End Positive Scenarios")</span>
                   <em>
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;Authorized Admin unable to update Batch&quot;, &quot;LMS API Batch Module - Create Batch Requests - Post&quot;)">
-                  </a> <!-- runScenario("Authorized Admin unable to update Batch", "LMS API Batch Module - Create Batch Requests - Post") -->
+                  <a name="runScenario(&quot;Check if admin able to retrieve UserswithFilters with with valid API Endpoint&quot;, &quot;LMS API All Module...)">
+                  </a> <!-- runScenario("Check if admin able to retrieve UserswithFilters with with valid API Endpoint", "LMS API All Module...) -->
                   <span class="method-name">runScenario</span>
-                  <span class="parameters">("Authorized Admin unable to update Batch","LMS API Batch Module - Create Batch Requests - Post")</span>
+                  <span class="parameters">("Check if admin able to retrieve UserswithFilters with with valid API Endpoint","LMS API All Modules End To End Positive Scenarios")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Admin should be able to update User Role status with valid Url,request body and valid end point&quot;, &quot;...)">
+                  </a> <!-- runScenario("Admin should be able to update User Role status with valid Url,request body and valid end point", "...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Admin should be able to update User Role status with valid Url,request body and valid end point","LMS API All Modules End To End Positive Scenarios")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Authorized admin able to update Program by programID with test data from Excel&quot;, &quot;LMS API All Modul...)">
+                  </a> <!-- runScenario("Authorized admin able to update Program by programID with test data from Excel", "LMS API All Modul...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Authorized admin able to update Program by programID with test data from Excel","LMS API All Modules End To End Positive Scenarios")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Authorized Admin able to view respective Batch with valid endpoint,valid url,valid programID&quot;, &quot;LMS...)">
+                  </a> <!-- runScenario("Authorized Admin able to view respective Batch with valid endpoint,valid url,valid programID", "LMS...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Authorized Admin able to view respective Batch with valid endpoint,valid url,valid programID","LMS API All Modules End To End Positive Scenarios")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Admin should be able to update User RoleID with valid Url,request body and valid end point&quot;, &quot;LMS A...)">
+                  </a> <!-- runScenario("Admin should be able to update User RoleID with valid Url,request body and valid end point", "LMS A...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Admin should be able to update User RoleID with valid Url,request body and valid end point","LMS API All Modules End To End Positive Scenarios")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;: Authorized Admin able to view all Batches&quot;, &quot;LMS API All Modules End To End Positive Scenarios&quot;)">
+                  </a> <!-- runScenario(": Authorized Admin able to view all Batches", "LMS API All Modules End To End Positive Scenarios") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">(": Authorized Admin able to view all Batches","LMS API All Modules End To End Positive Scenarios")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Authorized user able to create new User with Roles from Excel test data&quot;, &quot;LMS API All Modules End ...)">
+                  </a> <!-- runScenario("Authorized user able to create new User with Roles from Excel test data", "LMS API All Modules End ...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Authorized user able to create new User with Roles from Excel test data","LMS API All Modules End To End Positive Scenarios")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Check if admin able to retrieve count users with with valid API Endpoint&quot;, &quot;LMS API All Modules End...)">
+                  </a> <!-- runScenario("Check if admin able to retrieve count users with with valid API Endpoint", "LMS API All Modules End...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Check if admin able to retrieve count users with with valid API Endpoint","LMS API All Modules End To End Positive Scenarios")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Check if admin able to retrieve UserswithRole with with valid API Endpoint&quot;, &quot;LMS API All Modules E...)">
+                  </a> <!-- runScenario("Check if admin able to retrieve UserswithRole with with valid API Endpoint", "LMS API All Modules E...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Check if admin able to retrieve UserswithRole with with valid API Endpoint","LMS API All Modules End To End Positive Scenarios")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Check if Admin able to logout&quot;, &quot;LMS API All Modules End To End Positive Scenarios&quot;)">
+                  </a> <!-- runScenario("Check if Admin able to logout", "LMS API All Modules End To End Positive Scenarios") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Check if Admin able to logout","LMS API All Modules End To End Positive Scenarios")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Admin is able to update User Login Status with Admin userid&quot;, &quot;LMS API All Modules End To End Posit...)">
+                  </a> <!-- runScenario("Admin is able to update User Login Status with Admin userid", "LMS API All Modules End To End Posit...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Admin is able to update User Login Status with Admin userid","LMS API All Modules End To End Positive Scenarios")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Authorized Admin able to view respective Batch with valid endpoint,valid url,valid batchName&quot;, &quot;LMS...)">
+                  </a> <!-- runScenario("Authorized Admin able to view respective Batch with valid endpoint,valid url,valid batchName", "LMS...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Authorized Admin able to view respective Batch with valid endpoint,valid url,valid batchName","LMS API All Modules End To End Positive Scenarios")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Check if admin is able to assign Admin to with program/batch by Admin Id&quot;, &quot;LMS API All Modules End...)">
+                  </a> <!-- runScenario("Check if admin is able to assign Admin to with program/batch by Admin Id", "LMS API All Modules End...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Check if admin is able to assign Admin to with program/batch by Admin Id","LMS API All Modules End To End Positive Scenarios")</span>
                   <em>
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
@@ -529,7 +823,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\jyoth\AppData\Local\Temp\testng-eclipse--305140462\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\jyoth\AppData\Local\Temp\testng-eclipse-1952582775\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -586,120 +880,176 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(27);
+data.addRows(41);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'runScenario')
 data.setCell(0, 2, 'lms.runner.TestRunner')
-data.setCell(0, 3, 17690);
+data.setCell(0, 3, 5840);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'runScenario')
 data.setCell(1, 2, 'lms.runner.TestRunner')
-data.setCell(1, 3, 12428);
+data.setCell(1, 3, 2170);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'runScenario')
 data.setCell(2, 2, 'lms.runner.TestRunner')
-data.setCell(2, 3, 4427);
+data.setCell(2, 3, 1550);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'runScenario')
 data.setCell(3, 2, 'lms.runner.TestRunner')
-data.setCell(3, 3, 4322);
+data.setCell(3, 3, 1524);
 data.setCell(4, 0, 4)
 data.setCell(4, 1, 'runScenario')
 data.setCell(4, 2, 'lms.runner.TestRunner')
-data.setCell(4, 3, 4308);
+data.setCell(4, 3, 1523);
 data.setCell(5, 0, 5)
 data.setCell(5, 1, 'runScenario')
 data.setCell(5, 2, 'lms.runner.TestRunner')
-data.setCell(5, 3, 4304);
+data.setCell(5, 3, 1506);
 data.setCell(6, 0, 6)
 data.setCell(6, 1, 'runScenario')
 data.setCell(6, 2, 'lms.runner.TestRunner')
-data.setCell(6, 3, 1189);
+data.setCell(6, 3, 1452);
 data.setCell(7, 0, 7)
 data.setCell(7, 1, 'runScenario')
 data.setCell(7, 2, 'lms.runner.TestRunner')
-data.setCell(7, 3, 1133);
+data.setCell(7, 3, 1445);
 data.setCell(8, 0, 8)
 data.setCell(8, 1, 'runScenario')
 data.setCell(8, 2, 'lms.runner.TestRunner')
-data.setCell(8, 3, 1124);
+data.setCell(8, 3, 1422);
 data.setCell(9, 0, 9)
 data.setCell(9, 1, 'runScenario')
 data.setCell(9, 2, 'lms.runner.TestRunner')
-data.setCell(9, 3, 1102);
+data.setCell(9, 3, 1317);
 data.setCell(10, 0, 10)
 data.setCell(10, 1, 'runScenario')
 data.setCell(10, 2, 'lms.runner.TestRunner')
-data.setCell(10, 3, 1095);
+data.setCell(10, 3, 1298);
 data.setCell(11, 0, 11)
 data.setCell(11, 1, 'runScenario')
 data.setCell(11, 2, 'lms.runner.TestRunner')
-data.setCell(11, 3, 1064);
+data.setCell(11, 3, 1280);
 data.setCell(12, 0, 12)
 data.setCell(12, 1, 'runScenario')
 data.setCell(12, 2, 'lms.runner.TestRunner')
-data.setCell(12, 3, 1051);
+data.setCell(12, 3, 1270);
 data.setCell(13, 0, 13)
 data.setCell(13, 1, 'runScenario')
 data.setCell(13, 2, 'lms.runner.TestRunner')
-data.setCell(13, 3, 1035);
+data.setCell(13, 3, 1247);
 data.setCell(14, 0, 14)
 data.setCell(14, 1, 'runScenario')
 data.setCell(14, 2, 'lms.runner.TestRunner')
-data.setCell(14, 3, 1032);
+data.setCell(14, 3, 1213);
 data.setCell(15, 0, 15)
 data.setCell(15, 1, 'runScenario')
 data.setCell(15, 2, 'lms.runner.TestRunner')
-data.setCell(15, 3, 1030);
+data.setCell(15, 3, 1213);
 data.setCell(16, 0, 16)
 data.setCell(16, 1, 'runScenario')
 data.setCell(16, 2, 'lms.runner.TestRunner')
-data.setCell(16, 3, 1027);
+data.setCell(16, 3, 1211);
 data.setCell(17, 0, 17)
 data.setCell(17, 1, 'runScenario')
 data.setCell(17, 2, 'lms.runner.TestRunner')
-data.setCell(17, 3, 1024);
+data.setCell(17, 3, 1198);
 data.setCell(18, 0, 18)
 data.setCell(18, 1, 'runScenario')
 data.setCell(18, 2, 'lms.runner.TestRunner')
-data.setCell(18, 3, 1022);
+data.setCell(18, 3, 1184);
 data.setCell(19, 0, 19)
 data.setCell(19, 1, 'runScenario')
 data.setCell(19, 2, 'lms.runner.TestRunner')
-data.setCell(19, 3, 1011);
+data.setCell(19, 3, 1174);
 data.setCell(20, 0, 20)
 data.setCell(20, 1, 'runScenario')
 data.setCell(20, 2, 'lms.runner.TestRunner')
-data.setCell(20, 3, 1006);
+data.setCell(20, 3, 1173);
 data.setCell(21, 0, 21)
 data.setCell(21, 1, 'runScenario')
 data.setCell(21, 2, 'lms.runner.TestRunner')
-data.setCell(21, 3, 989);
+data.setCell(21, 3, 1171);
 data.setCell(22, 0, 22)
 data.setCell(22, 1, 'runScenario')
 data.setCell(22, 2, 'lms.runner.TestRunner')
-data.setCell(22, 3, 987);
+data.setCell(22, 3, 1167);
 data.setCell(23, 0, 23)
 data.setCell(23, 1, 'runScenario')
 data.setCell(23, 2, 'lms.runner.TestRunner')
-data.setCell(23, 3, 986);
+data.setCell(23, 3, 1143);
 data.setCell(24, 0, 24)
 data.setCell(24, 1, 'runScenario')
 data.setCell(24, 2, 'lms.runner.TestRunner')
-data.setCell(24, 3, 984);
+data.setCell(24, 3, 1134);
 data.setCell(25, 0, 25)
 data.setCell(25, 1, 'runScenario')
 data.setCell(25, 2, 'lms.runner.TestRunner')
-data.setCell(25, 3, 981);
+data.setCell(25, 3, 1134);
 data.setCell(26, 0, 26)
 data.setCell(26, 1, 'runScenario')
 data.setCell(26, 2, 'lms.runner.TestRunner')
-data.setCell(26, 3, 979);
+data.setCell(26, 3, 1133);
+data.setCell(27, 0, 27)
+data.setCell(27, 1, 'runScenario')
+data.setCell(27, 2, 'lms.runner.TestRunner')
+data.setCell(27, 3, 1130);
+data.setCell(28, 0, 28)
+data.setCell(28, 1, 'runScenario')
+data.setCell(28, 2, 'lms.runner.TestRunner')
+data.setCell(28, 3, 1115);
+data.setCell(29, 0, 29)
+data.setCell(29, 1, 'runScenario')
+data.setCell(29, 2, 'lms.runner.TestRunner')
+data.setCell(29, 3, 1113);
+data.setCell(30, 0, 30)
+data.setCell(30, 1, 'runScenario')
+data.setCell(30, 2, 'lms.runner.TestRunner')
+data.setCell(30, 3, 1106);
+data.setCell(31, 0, 31)
+data.setCell(31, 1, 'runScenario')
+data.setCell(31, 2, 'lms.runner.TestRunner')
+data.setCell(31, 3, 1097);
+data.setCell(32, 0, 32)
+data.setCell(32, 1, 'runScenario')
+data.setCell(32, 2, 'lms.runner.TestRunner')
+data.setCell(32, 3, 1095);
+data.setCell(33, 0, 33)
+data.setCell(33, 1, 'runScenario')
+data.setCell(33, 2, 'lms.runner.TestRunner')
+data.setCell(33, 3, 1089);
+data.setCell(34, 0, 34)
+data.setCell(34, 1, 'runScenario')
+data.setCell(34, 2, 'lms.runner.TestRunner')
+data.setCell(34, 3, 1069);
+data.setCell(35, 0, 35)
+data.setCell(35, 1, 'runScenario')
+data.setCell(35, 2, 'lms.runner.TestRunner')
+data.setCell(35, 3, 1060);
+data.setCell(36, 0, 36)
+data.setCell(36, 1, 'runScenario')
+data.setCell(36, 2, 'lms.runner.TestRunner')
+data.setCell(36, 3, 1058);
+data.setCell(37, 0, 37)
+data.setCell(37, 1, 'runScenario')
+data.setCell(37, 2, 'lms.runner.TestRunner')
+data.setCell(37, 3, 1043);
+data.setCell(38, 0, 38)
+data.setCell(38, 1, 'runScenario')
+data.setCell(38, 2, 'lms.runner.TestRunner')
+data.setCell(38, 3, 1042);
+data.setCell(39, 0, 39)
+data.setCell(39, 1, 'runScenario')
+data.setCell(39, 2, 'lms.runner.TestRunner')
+data.setCell(39, 3, 1039);
+data.setCell(40, 0, 40)
+data.setCell(40, 1, 'runScenario')
+data.setCell(40, 2, 'lms.runner.TestRunner')
+data.setCell(40, 3, 1038);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <span class="suite-total-time">Total running time: 55 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -727,120 +1077,180 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">lms.runner.TestRunner</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
-                <span class="method-name">setUpClass(org.testng.TestRunner@760d9d4a)</span>
+                <span class="method-name">setUpClass(org.testng.TestRunner@61ae22d4)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <span class="method-name">runScenario("Authorized Admin unable to create new Batch", "LMS API Batch Module - Create Batch Requests - Post")</span>
-                <span class="method-start">1250 ms</span>
+                <span class="method-name">runScenario("Authorized admin able to create new Program with test data from Excel", "LMS API All Modules End To...)</span>
+                <span class="method-start">1080 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">runScenario("Authorized Admin unable to view Batch with invalid batchID from Excel", "LMS API Batch Module - Cre...)</span>
-                <span class="method-start">18948 ms</span>
+                <span class="method-name">runScenario("Check if admin able to retrieve all programs with valid API Endpoint", "LMS API All Modules End To ...)</span>
+                <span class="method-start">6929 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">runScenario("Authorized Admin unable to view Batch with invalid programID from Excel", "LMS API Batch Module - C...)</span>
-                <span class="method-start">23378 ms</span>
+                <span class="method-name">runScenario("Check if admin able to retrieve program by programID with valid API Endpoint", "LMS API All Modules...)</span>
+                <span class="method-start">8038 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">runScenario("Authorized Admin unable to view Batch with invalid batchName from Excel", "LMS API Batch Module - C...)</span>
-                <span class="method-start">27688 ms</span>
+                <span class="method-name">runScenario("Check if admin able to retrieve program with User details for valid API Endpoint", "LMS API All Mod...)</span>
+                <span class="method-start">9098 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">runScenario("Authorized Admin unable to update Batch", "LMS API Batch Module - Create Batch Requests - Post")</span>
-                <span class="method-start">32013 ms</span>
+                <span class="method-name">runScenario("Authorized admin able to update Program by programID with test data from Excel", "LMS API All Modul...)</span>
+                <span class="method-start">10244 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">runScenario("Authorized Admin unable to delete batch with invalid batch ID from Excel", "LMS API Batch Module - ...)</span>
-                <span class="method-start">44444 ms</span>
+                <span class="method-name">runScenario("Authorized admin able to update Program by programName with test data from Excel", "LMS API All Mod...)</span>
+                <span class="method-start">11770 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">runScenario("User should not be able to do CRUD operations on Batch Module with invalid Url", "LMS API Batch Mod...)</span>
-                <span class="method-start">48750 ms</span>
+                <span class="method-name">runScenario("Authorized Admin able to create new Batch", "LMS API All Modules End To End Positive Scenarios")</span>
+                <span class="method-start">13043 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">runScenario("User should not be able to do CRUD operations on Batch Module with invalid Url", "LMS API Batch Mod...)</span>
-                <span class="method-start">49787 ms</span>
+                <span class="method-name">runScenario(": Authorized Admin able to view all Batches", "LMS API All Modules End To End Positive Scenarios")</span>
+                <span class="method-start">14292 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">runScenario("User should not be able to do CRUD operations on Batch Module with invalid Url", "LMS API Batch Mod...)</span>
-                <span class="method-start">50800 ms</span>
+                <span class="method-name">runScenario(": Authorized Admin able to view all Batches", "LMS API All Modules End To End Positive Scenarios")</span>
+                <span class="method-start">15429 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">runScenario("User should not be able to do CRUD operations on Batch Module with invalid Url", "LMS API Batch Mod...)</span>
-                <span class="method-start">51829 ms</span>
+                <span class="method-name">runScenario("Authorized Admin able to view respective Batch with valid endpoint,valid url,valid batchID", "LMS A...)</span>
+                <span class="method-start">16606 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">runScenario("User should not be able to do CRUD operations on Batch Module with invalid Url", "LMS API Batch Mod...)</span>
-                <span class="method-start">52811 ms</span>
+                <span class="method-name">runScenario("Authorized Admin able to view respective Batch with valid endpoint,valid url,valid programID", "LMS...)</span>
+                <span class="method-start">17741 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">runScenario("User should not be able to do CRUD operations on Batch Module with invalid Url", "LMS API Batch Mod...)</span>
-                <span class="method-start">53877 ms</span>
+                <span class="method-name">runScenario("Authorized Admin able to view respective Batch with valid endpoint,valid url,valid batchName", "LMS...)</span>
+                <span class="method-start">18780 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">runScenario("User should not be able to do CRUD operations on Batch Module with invalid Url", "LMS API Batch Mod...)</span>
-                <span class="method-start">54867 ms</span>
+                <span class="method-name">runScenario("Admin should be able to update Batch with valid Url,request body and valid end point", "LMS API All...)</span>
+                <span class="method-start">19842 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">runScenario("User should not be able to do CRUD operations on Batch Module with invalid end point", "LMS API Bat...)</span>
-                <span class="method-start">55920 ms</span>
+                <span class="method-name">runScenario("Authorized user able to create new User with Roles from Excel test data", "LMS API All Modules End ...)</span>
+                <span class="method-start">21296 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">runScenario("User should not be able to do CRUD operations on Batch Module with invalid end point", "LMS API Bat...)</span>
-                <span class="method-start">57055 ms</span>
+                <span class="method-name">runScenario("Admin is able to update Admin details with Admin userid and mandatory fields", "LMS API All Modules...)</span>
+                <span class="method-start">23484 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">runScenario("User should not be able to do CRUD operations on Batch Module with invalid end point", "LMS API Bat...)</span>
-                <span class="method-start">58247 ms</span>
+                <span class="method-name">runScenario("Check if admin is able to assign Admin to with program/batch by Admin Id", "LMS API All Modules End...)</span>
+                <span class="method-start">25012 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">runScenario("User should not be able to do CRUD operations on Batch Module with invalid end point", "LMS API Bat...)</span>
-                <span class="method-start">59279 ms</span>
+                <span class="method-name">runScenario("Check if admin is able to retreive all users with assigned program batches", "LMS API All Modules E...)</span>
+                <span class="method-start">26584 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">runScenario("User should not be able to do CRUD operations on Batch Module with invalid end point", "LMS API Bat...)</span>
-                <span class="method-start">60265 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("Check if admin is able to retreive assigned program batches for a user", "LMS API All Modules End T...)</span>
+                <span class="method-start">27800 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">runScenario("User should not be able to do CRUD operations on Batch Module with invalid end point", "LMS API Bat...)</span>
-                <span class="method-start">61245 ms</span>
+                <span class="method-name">runScenario("Check if admin able to retrieve all UserRoles with with valid API Endpoint", "LMS API All Modules E...)</span>
+                <span class="method-start">29016 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">runScenario("User should not be able to do CRUD operations on Batch Module with invalid end point", "LMS API Bat...)</span>
-                <span class="method-start">62232 ms</span>
+                <span class="method-name">runScenario("Check if admin able to retrieve all User with valid API Endpoint", "LMS API All Modules End To End ...)</span>
+                <span class="method-start">30152 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">runScenario("Unauthorized user not able to do CRUD operations on Batch Module", "LMS API Batch Module - Create B...)</span>
-                <span class="method-start">63256 ms</span>
+                <span class="method-name">runScenario("Check if admin able to retrieve all Userinfo by ID with with valid API Endpoint", "LMS API All Modu...)</span>
+                <span class="method-start">31598 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">runScenario("Unauthorized user not able to do CRUD operations on Batch Module", "LMS API Batch Module - Create B...)</span>
-                <span class="method-start">64359 ms</span>
+                <span class="method-name">runScenario("Check if admin able to retrieve all ActiveUsers with with valid API Endpoint", "LMS API All Modules...)</span>
+                <span class="method-start">32771 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">runScenario("Unauthorized user not able to do CRUD operations on Batch Module", "LMS API Batch Module - Create B...)</span>
-                <span class="method-start">65366 ms</span>
+                <span class="method-name">runScenario("Check if admin able to retrieve count users with with valid API Endpoint", "LMS API All Modules End...)</span>
+                <span class="method-start">33946 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">runScenario("Unauthorized user not able to do CRUD operations on Batch Module", "LMS API Batch Module - Create B...)</span>
-                <span class="method-start">66359 ms</span>
+                <span class="method-name">runScenario("Check if admin able to retrieve count users with with valid API Endpoint", "LMS API All Modules End...)</span>
+                <span class="method-start">35114 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">runScenario("Unauthorized user not able to do CRUD operations on Batch Module", "LMS API Batch Module - Create B...)</span>
-                <span class="method-start">67384 ms</span>
+                <span class="method-name">runScenario("Check if admin able to retrieve count users with with valid API Endpoint", "LMS API All Modules End...)</span>
+                <span class="method-start">36158 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">runScenario("Unauthorized user not able to do CRUD operations on Batch Module", "LMS API Batch Module - Create B...)</span>
-                <span class="method-start">68417 ms</span>
+                <span class="method-name">runScenario("Check if admin able to retrieve count users with with valid API Endpoint", "LMS API All Modules End...)</span>
+                <span class="method-start">37209 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">runScenario("Unauthorized user not able to do CRUD operations on Batch Module", "LMS API Batch Module - Create B...)</span>
-                <span class="method-start">69542 ms</span>
+                <span class="method-name">runScenario("Check if admin able to retrieve user by progbatch with with valid API Endpoint", "LMS API All Modul...)</span>
+                <span class="method-start">38344 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Check if admin able to retrieve userbyprog with with valid API Endpoint", "LMS API All Modules End ...)</span>
+                <span class="method-start">39557 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Check if admin able to retrieve UserswithRole with with valid API Endpoint", "LMS API All Modules E...)</span>
+                <span class="method-start">40648 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Check if admin able to retrieve UserswithRoleID with with valid API Endpoint", "LMS API All Modules...)</span>
+                <span class="method-start">41766 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Check if admin able to retrieve UserswithFilters with with valid API Endpoint", "LMS API All Module...)</span>
+                <span class="method-start">43274 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Admin is able to update User Login Status with Admin userid", "LMS API All Modules End To End Posit...)</span>
+                <span class="method-start">44697 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Admin is able to assign User to program/batch by Admin userid", "LMS API All Modules End To End Pos...)</span>
+                <span class="method-start">46016 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Admin should be able to update User RoleID with valid Url,request body and valid end point", "LMS A...)</span>
+                <span class="method-start">47297 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Admin should be able to update User Role status with valid Url,request body and valid end point", "...)</span>
+                <span class="method-start">48596 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("Check if admin is able to delete the program batch for a user", "LMS API All Modules End To End Pos...)</span>
+                <span class="method-start">49781 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Authorized admin able to delete User", "LMS API All Modules End To End Positive Scenarios")</span>
+                <span class="method-start">50981 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Authorized Admin able to delete batch with valid url, end point by valid batch ID", "LMS API All Mo...)</span>
+                <span class="method-start">52095 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Authorized admin able to delete Program by programID", "LMS API All Modules End To End Positive Sce...)</span>
+                <span class="method-start">53135 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Authorized admin able to delete Program by programName", "LMS API All Modules End To End Positive S...)</span>
+                <span class="method-start">54236 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Check if Admin able to logout", "LMS API All Modules End To End Positive Scenarios")</span>
+                <span class="method-start">55306 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">70641 ms</span>
+                <span class="method-start">56409 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

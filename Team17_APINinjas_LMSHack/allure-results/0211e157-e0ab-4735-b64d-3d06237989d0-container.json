@@ -1,0 +1,1 @@
+{"uuid":"0211e157-e0ab-4735-b64d-3d06237989d0","name":"Scenario: Check if admin able to retrieve all UserRoles with with valid API Endpoint","children":["45d067e5-12b8-4213-a70a-0fad43d13c86"],"befores":[],"afters":[],"start":1711955840681,"stop":1711955841782}
