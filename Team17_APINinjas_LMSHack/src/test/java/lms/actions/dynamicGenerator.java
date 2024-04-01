@@ -2,9 +2,12 @@ package lms.actions;
 
 public class dynamicGenerator {
 	
-	private static int PositiveProgramcounter = 78;
-	private static int PositiveBatchcounter = 37;
+	private static int PositiveProgramcounter = 50;
+	private static int PositiveBatchcounter = 40;
+	private static int UserPhonecounter = 10;
+	private static int UserEmailcounter = 10;
 	private static int Negcounter = 8;
+	
 	
 	public static String generateProgramName() {
         String baseProgName = "March24-ApINinjas-QA-";
@@ -25,10 +28,23 @@ public class dynamicGenerator {
         Negcounter++;
         return baseName + paddedCounter;
     }
+    
+    public static String generatePhoneNumber(String baseNumber) {
+        String paddedCounter = String.format("%03d", UserPhonecounter); // To ensure counter is 3 digits padded with zeros
+        UserPhonecounter++; // To increment counter for the next call
+        return baseNumber.replaceAll("xxx", paddedCounter);
+    }
+    public static String generateUserLoginEmail(String baseEmail) {
+        String paddedCounter = String.format("%03d", UserEmailcounter); // To ensure counter is 3 digits padded with zeros
+        UserEmailcounter++; // To increment counter for the next call
+        return baseEmail.replaceAll("xxx", paddedCounter);
+    }
 
     public static void resetCounter() {
     	PositiveBatchcounter = 1;
     	PositiveProgramcounter = 1;
+    	UserEmailcounter = 1;
+    	UserPhonecounter = 1;
     	Negcounter = 1; // Reset counters to 1 if and when needed
     } 
 }

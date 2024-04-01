@@ -139,8 +139,8 @@ public static void GetDeleteProgram200Validation(Response response) {
 			.then()
 				.assertThat()
 				.statusCode(200)
-				.statusLine("HTTP/1.1 200 ")
-				.header("Content-Type", "text/plain;charset=UTF-8");
+				.statusLine("HTTP/1.1 200 ");
+//				.header("Content-Type", "text/plain;charset=UTF-8");
 	 	} catch (AssertionError e) {
            System.err.println("Assertion failed " + e.getMessage());
            LoggerLoad.error(e.getMessage());

@@ -37,7 +37,7 @@ public class BatchActions extends ExcelReader {
 	static String userLoginEmailId = PropertiesFile.readPropertiesFile("userLoginEmailId");
 	static String password = PropertiesFile.readPropertiesFile("password");
 	
-public static RequestSpecification getLoginRequest() throws JsonProcessingException {
+	public static RequestSpecification getLoginRequest() throws JsonProcessingException {
 		
 		LoginPojo uLP = new LoginPojo(userLoginEmailId,password);
 		ObjectMapper objectMapper = new ObjectMapper(); 
@@ -122,7 +122,6 @@ public static List<RequestSpecification> getPostPutBatchRequestsDD(String url, S
            }
            bName = dynamicGenerator.generateBatchName();
            pId = Integer.parseInt(Env_Var.programID); 
-//         int pId = Integer.parseInt(Env_Var.programID);
            bStatus = row.get("batchStatus");
            PoststatusList.add(row.get("ExpectedStatusCodePost"));
     	   }
@@ -138,7 +137,6 @@ public static List<RequestSpecification> getPostPutBatchRequestsDD(String url, S
     	               }
     	           }
     	         bName = dynamicGenerator.generateBatchName();
- //   	         pId = 16228; 
     	         pId = Integer.parseInt(Env_Var.programID);
     	         bStatus = row.get("updateBatchStatus");
     	         PutstatusList.add(row.get("ExpectedStatusCodePut"));
@@ -218,16 +216,11 @@ public static List<RequestSpecification> getPutBatchRequestsDDNegative(String ur
 	ExcelReader excelReader = new ExcelReader();
 	 List<Map<String, String>> testData = excelReader.readTestDataFromExcel(FileNameConstants.EXCEL_TEST_DATA, "PostPutTestData-BatchJyo");
        List<RequestSpecification> requestSpecifications = new ArrayList<>();
-//       int columnCount = 0;
-       // Iterate over each row of test data
+//       int columnCount = 0;       // Iterate over each row of test data
        System.out.println("Number of rows in the Put Test Data are: "+ testData.size());
        for (Map<String, String> row : testData) {
            String bDes = row.get("updateBatchDescription"); // Extract fields from each row
            String bName = row.get("updateBatchName");
-//           if (columnCount < 3) {
-//           	bName = dynamicGenerator.generateBatchName(bName);    
-//           }
-//           columnCount++;
            
            String classesStr = row.get("updateNoOfClasses");
            int classes = 0; // Default value in case of null or conversion failure
