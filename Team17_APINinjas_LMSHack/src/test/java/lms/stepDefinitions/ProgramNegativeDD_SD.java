@@ -27,7 +27,8 @@ public class ProgramNegativeDD_SD {
 //background steps
 	 @Given("Admin logs in with valid Username and password for Program Module Negative")
 	 public void admin_logs_in_with_valid_username_and_password_for_batch_module_negative() throws JsonProcessingException {
-		 this.request = ProgramActions.getLoginRequest();
+		System.out.println("Admin Logs witn valid username and pasword") ;
+		this.request = ProgramActions.getLoginRequest();
 	 }
 
 	 @When("Admin send Post Login request for Program Module Negative")
