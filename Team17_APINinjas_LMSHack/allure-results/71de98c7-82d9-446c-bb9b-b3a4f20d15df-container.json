@@ -1,0 +1,1 @@
+{"uuid":"71de98c7-82d9-446c-bb9b-b3a4f20d15df","name":"Scenario: Check if admin able to retrieve all ActiveUsers with with valid API Endpoint","children":["0c035d2b-7502-47ec-9b17-b8ba3205dc91"],"befores":[],"afters":[],"start":1712002029625,"stop":1712002030811}

@@ -1977,3 +1977,126 @@ Expected status code <201> but was <400>.
 [INFO ] 2024-04-01 09:26:49.639 [main] LoggerLoad - ******************Execution of Delete Program by Name Scenarios started
 [INFO ] 2024-04-01 09:26:49.991 [main] LoggerLoad - ********Admin Enters valid Username and Passowrd for Authentication*
 [INFO ] 2024-04-01 09:26:50.420 [main] LoggerLoad - ***************** Admin has logged in Successfully*
+[INFO ] 2024-04-01 13:06:35.945 [main] LoggerLoad - ********Admin Enters valid Username and Passowrd for Authentication*
+[INFO ] 2024-04-01 13:06:40.159 [main] LoggerLoad - ***************** Admin has logged in Successfully*
+[INFO ] 2024-04-01 13:06:40.163 [main] LoggerLoad - ******************Execution of Post Program Scenarios started
+[INFO ] 2024-04-01 13:06:41.799 [main] LoggerLoad - Created Program Id is: 17265
+[INFO ] 2024-04-01 13:06:41.799 [main] LoggerLoad - Created Program Name is: March24-ApINinjas-QA-118
+[INFO ] 2024-04-01 13:06:41.961 [main] LoggerLoad - ********Admin Enters valid Username and Passowrd for Authentication*
+[INFO ] 2024-04-01 13:06:42.632 [main] LoggerLoad - ***************** Admin has logged in Successfully*
+[INFO ] 2024-04-01 13:06:42.636 [main] LoggerLoad - ******************Execution of Get all Programs Scenarios started
+[INFO ] 2024-04-01 13:06:43.247 [main] LoggerLoad - ********Admin Enters valid Username and Passowrd for Authentication*
+[INFO ] 2024-04-01 13:06:43.912 [main] LoggerLoad - ***************** Admin has logged in Successfully*
+[INFO ] 2024-04-01 13:06:43.915 [main] LoggerLoad - ******************Execution of Get by ProgramID Scenarios started
+[INFO ] 2024-04-01 13:06:44.500 [main] LoggerLoad - ********Admin Enters valid Username and Passowrd for Authentication*
+[INFO ] 2024-04-01 13:06:45.247 [main] LoggerLoad - ***************** Admin has logged in Successfully*
+[INFO ] 2024-04-01 13:06:45.255 [main] LoggerLoad - ******************Execution of Get Program with User Scenarios started
+[INFO ] 2024-04-01 13:06:46.107 [main] LoggerLoad - ********Admin Enters valid Username and Passowrd for Authentication*
+[INFO ] 2024-04-01 13:06:46.804 [main] LoggerLoad - ***************** Admin has logged in Successfully*
+[INFO ] 2024-04-01 13:06:46.807 [main] LoggerLoad - ******************Execution of Update by Program ID Scenarios started
+[INFO ] 2024-04-01 13:06:46.955 [main] LoggerLoad - Program ID that is being Updated is: 17265
+[INFO ] 2024-04-01 13:06:47.534 [main] LoggerLoad - Created Program Id is: 17265
+[INFO ] 2024-04-01 13:06:47.534 [main] LoggerLoad - Created Program Name is: March24-ApINinjas-QA-119
+[INFO ] 2024-04-01 13:06:47.571 [main] LoggerLoad - ********Admin Enters valid Username and Passowrd for Authentication*
+[INFO ] 2024-04-01 13:06:48.252 [main] LoggerLoad - ***************** Admin has logged in Successfully*
+[INFO ] 2024-04-01 13:06:48.254 [main] LoggerLoad - ******************Execution of Update by Program Name Scenarios started
+[INFO ] 2024-04-01 13:06:48.371 [main] LoggerLoad - Program Name that is being Updated is: March24-ApINinjas-QA-119
+[INFO ] 2024-04-01 13:06:48.984 [main] LoggerLoad - Created Program Id is: 17265
+[INFO ] 2024-04-01 13:06:48.984 [main] LoggerLoad - Created Program Name is: March24-ApINinjas-QA-120
+[INFO ] 2024-04-01 13:06:49.018 [main] LoggerLoad - ********Admin Enters valid Username and Passowrd for Authentication*
+[INFO ] 2024-04-01 13:06:49.643 [main] LoggerLoad - ***************** Admin has logged in Successfully*
+[INFO ] 2024-04-01 13:06:49.645 [main] LoggerLoad - ******************Execution of Post Batch Scenarios started
+[INFO ] 2024-04-01 13:06:50.322 [main] LoggerLoad - Created Batch Id is: 9593
+[INFO ] 2024-04-01 13:06:50.322 [main] LoggerLoad - Created Batch Name is: March24-ApINinjas-QA-QA1-110
+[INFO ] 2024-04-01 13:06:50.322 [main] LoggerLoad - This Batch is created under the Program ID: 17265
+[INFO ] 2024-04-01 13:06:50.360 [main] LoggerLoad - ********Admin Enters valid Username and Passowrd for Authentication*
+[INFO ] 2024-04-01 13:06:51.031 [main] LoggerLoad - ***************** Admin has logged in Successfully*
+[INFO ] 2024-04-01 13:06:51.034 [main] LoggerLoad - ******************Execution of Get Batches Scenarios started
+[INFO ] 2024-04-01 13:06:51.902 [main] LoggerLoad - ********Admin Enters valid Username and Passowrd for Authentication*
+[INFO ] 2024-04-01 13:06:52.557 [main] LoggerLoad - ***************** Admin has logged in Successfully*
+[INFO ] 2024-04-01 13:06:52.559 [main] LoggerLoad - ******************Execution of Get Batches Scenarios started
+[INFO ] 2024-04-01 13:06:53.309 [main] LoggerLoad - ********Admin Enters valid Username and Passowrd for Authentication*
+[INFO ] 2024-04-01 13:06:53.918 [main] LoggerLoad - ***************** Admin has logged in Successfully*
+[INFO ] 2024-04-01 13:06:53.922 [main] LoggerLoad - ******************Execution of Get by BatchID Scenario started
+[INFO ] 2024-04-01 13:06:54.500 [main] LoggerLoad - ********Admin Enters valid Username and Passowrd for Authentication*
+[INFO ] 2024-04-01 13:06:55.145 [main] LoggerLoad - ***************** Admin has logged in Successfully*
+[INFO ] 2024-04-01 13:06:55.155 [main] LoggerLoad - ******************Execution of Get by ProgramID Scenario started
+[INFO ] 2024-04-01 13:06:55.761 [main] LoggerLoad - ********Admin Enters valid Username and Passowrd for Authentication*
+[INFO ] 2024-04-01 13:06:56.395 [main] LoggerLoad - ***************** Admin has logged in Successfully*
+[INFO ] 2024-04-01 13:06:56.397 [main] LoggerLoad - ******************Execution of Get by Batch Name Scenario started
+[INFO ] 2024-04-01 13:06:57.019 [main] LoggerLoad - ********Admin Enters valid Username and Passowrd for Authentication*
+[INFO ] 2024-04-01 13:06:57.650 [main] LoggerLoad - ***************** Admin has logged in Successfully*
+[INFO ] 2024-04-01 13:06:57.652 [main] LoggerLoad - ******************Execution of Update Batch Scenario started
+[INFO ] 2024-04-01 13:06:57.759 [main] LoggerLoad - Batch ID that is being Updated is: 9593
+[INFO ] 2024-04-01 13:06:58.334 [main] LoggerLoad - ********Admin Enters valid Username and Passowrd for Authentication*
+[INFO ] 2024-04-01 13:06:58.963 [main] LoggerLoad - ***************** Admin has logged in Successfully*
+[INFO ] 2024-04-01 13:07:00.102 [main] LoggerLoad - ********Admin Enters valid Username and Passowrd for Authentication*
+[INFO ] 2024-04-01 13:07:00.737 [main] LoggerLoad - ***************** Admin has logged in Successfully*
+[INFO ] 2024-04-01 13:07:01.404 [main] LoggerLoad - ********Admin Enters valid Username and Passowrd for Authentication*
+[INFO ] 2024-04-01 13:07:02.039 [main] LoggerLoad - ***************** Admin has logged in Successfully*
+[INFO ] 2024-04-01 13:07:02.041 [main] LoggerLoad - Execution of Valid PUT for PrgmBatchStatus Scenarios started
+[INFO ] 2024-04-01 13:07:02.777 [main] LoggerLoad - ********Admin Enters valid Username and Passowrd for Authentication*
+[INFO ] 2024-04-01 13:07:03.425 [main] LoggerLoad - ***************** Admin has logged in Successfully*
+[INFO ] 2024-04-01 13:07:03.427 [main] LoggerLoad - Execution of Valid GetALL for PrgmBatchStatus Scenarios started
+[INFO ] 2024-04-01 13:07:04.135 [main] LoggerLoad - ********Admin Enters valid Username and Passowrd for Authentication*
+[INFO ] 2024-04-01 13:07:04.762 [main] LoggerLoad - ***************** Admin has logged in Successfully*
+[INFO ] 2024-04-01 13:07:04.763 [main] LoggerLoad - Execution of Valid Get by UserID for PrgmBatchStatus Scenarios started
+[INFO ] 2024-04-01 13:07:05.320 [main] LoggerLoad - ********Admin Enters valid Username and Passowrd for Authentication*
+[INFO ] 2024-04-01 13:07:05.995 [main] LoggerLoad - ***************** Admin has logged in Successfully*
+[INFO ] 2024-04-01 13:07:06.540 [main] LoggerLoad - ********Admin Enters valid Username and Passowrd for Authentication*
+[INFO ] 2024-04-01 13:07:07.188 [main] LoggerLoad - ***************** Admin has logged in Successfully*
+[INFO ] 2024-04-01 13:07:08.345 [main] LoggerLoad - ********Admin Enters valid Username and Passowrd for Authentication*
+[INFO ] 2024-04-01 13:07:09.039 [main] LoggerLoad - ***************** Admin has logged in Successfully*
+[INFO ] 2024-04-01 13:07:09.626 [main] LoggerLoad - ********Admin Enters valid Username and Passowrd for Authentication*
+[INFO ] 2024-04-01 13:07:10.259 [main] LoggerLoad - ***************** Admin has logged in Successfully*
+[INFO ] 2024-04-01 13:07:10.841 [main] LoggerLoad - ********Admin Enters valid Username and Passowrd for Authentication*
+[INFO ] 2024-04-01 13:07:11.460 [main] LoggerLoad - ***************** Admin has logged in Successfully*
+[INFO ] 2024-04-01 13:07:11.463 [main] LoggerLoad - ******************Execution of Get User Scenarios started
+[INFO ] 2024-04-01 13:07:12.026 [main] LoggerLoad - ********Admin Enters valid Username and Passowrd for Authentication*
+[INFO ] 2024-04-01 13:07:12.645 [main] LoggerLoad - ***************** Admin has logged in Successfully*
+[INFO ] 2024-04-01 13:07:12.649 [main] LoggerLoad - ******************Execution of Get User Scenarios started
+[INFO ] 2024-04-01 13:07:13.209 [main] LoggerLoad - ********Admin Enters valid Username and Passowrd for Authentication*
+[INFO ] 2024-04-01 13:07:13.826 [main] LoggerLoad - ***************** Admin has logged in Successfully*
+[INFO ] 2024-04-01 13:07:13.829 [main] LoggerLoad - ******************Execution of Get User Scenarios started
+[INFO ] 2024-04-01 13:07:14.340 [main] LoggerLoad - ********Admin Enters valid Username and Passowrd for Authentication*
+[INFO ] 2024-04-01 13:07:14.964 [main] LoggerLoad - ***************** Admin has logged in Successfully*
+[INFO ] 2024-04-01 13:07:14.967 [main] LoggerLoad - ******************Execution of Get User Scenarios started
+[INFO ] 2024-04-01 13:07:15.520 [main] LoggerLoad - ********Admin Enters valid Username and Passowrd for Authentication*
+[INFO ] 2024-04-01 13:07:16.137 [main] LoggerLoad - ***************** Admin has logged in Successfully*
+[INFO ] 2024-04-01 13:07:16.644 [main] LoggerLoad - ********Admin Enters valid Username and Passowrd for Authentication*
+[INFO ] 2024-04-01 13:07:17.317 [main] LoggerLoad - ***************** Admin has logged in Successfully*
+[INFO ] 2024-04-01 13:07:17.856 [main] LoggerLoad - ********Admin Enters valid Username and Passowrd for Authentication*
+[INFO ] 2024-04-01 13:07:18.460 [main] LoggerLoad - ***************** Admin has logged in Successfully*
+[INFO ] 2024-04-01 13:07:19.006 [main] LoggerLoad - ********Admin Enters valid Username and Passowrd for Authentication*
+[INFO ] 2024-04-01 13:07:19.599 [main] LoggerLoad - ***************** Admin has logged in Successfully*
+[INFO ] 2024-04-01 13:07:20.298 [main] LoggerLoad - ********Admin Enters valid Username and Passowrd for Authentication*
+[INFO ] 2024-04-01 13:07:20.888 [main] LoggerLoad - ***************** Admin has logged in Successfully*
+[INFO ] 2024-04-01 13:07:21.977 [main] LoggerLoad - ********Admin Enters valid Username and Passowrd for Authentication*
+[INFO ] 2024-04-01 13:07:22.599 [main] LoggerLoad - ***************** Admin has logged in Successfully*
+[INFO ] 2024-04-01 13:07:23.282 [main] LoggerLoad - ********Admin Enters valid Username and Passowrd for Authentication*
+[INFO ] 2024-04-01 13:07:23.921 [main] LoggerLoad - ***************** Admin has logged in Successfully*
+[INFO ] 2024-04-01 13:07:24.570 [main] LoggerLoad - ********Admin Enters valid Username and Passowrd for Authentication*
+[INFO ] 2024-04-01 13:07:25.166 [main] LoggerLoad - ***************** Admin has logged in Successfully*
+[INFO ] 2024-04-01 13:07:25.168 [main] LoggerLoad - ******************Execution of Update User Role ID Scenario started
+[INFO ] 2024-04-01 13:07:25.241 [main] LoggerLoad - Updating role status of User with role ID: U1379
+[INFO ] 2024-04-01 13:07:25.780 [main] LoggerLoad - ********Admin Enters valid Username and Passowrd for Authentication*
+[INFO ] 2024-04-01 13:07:26.361 [main] LoggerLoad - ***************** Admin has logged in Successfully*
+[INFO ] 2024-04-01 13:07:26.363 [main] LoggerLoad - ******************Execution of Update User Role Status Scenario started
+[INFO ] 2024-04-01 13:07:26.422 [main] LoggerLoad - Updating role status of User with role ID: U1379
+[INFO ] 2024-04-01 13:07:27.008 [main] LoggerLoad - ********Admin Enters valid Username and Passowrd for Authentication*
+[INFO ] 2024-04-01 13:07:27.621 [main] LoggerLoad - ***************** Admin has logged in Successfully*
+[INFO ] 2024-04-01 13:07:27.625 [main] LoggerLoad - Execution of Valid Delete for PrgmBatchStatus Scenarios started
+[INFO ] 2024-04-01 13:07:28.163 [main] LoggerLoad - ********Admin Enters valid Username and Passowrd for Authentication*
+[INFO ] 2024-04-01 13:07:28.818 [main] LoggerLoad - ***************** Admin has logged in Successfully*
+[INFO ] 2024-04-01 13:07:29.403 [main] LoggerLoad - ********Admin Enters valid Username and Passowrd for Authentication*
+[INFO ] 2024-04-01 13:07:30.047 [main] LoggerLoad - ***************** Admin has logged in Successfully*
+[INFO ] 2024-04-01 13:07:30.050 [main] LoggerLoad - ******************Execution of Delete Batch Scenario started
+[INFO ] 2024-04-01 13:07:30.057 [main] LoggerLoad - Batch ID that is being deleted is: 9593
+[INFO ] 2024-04-01 13:07:30.611 [main] LoggerLoad - ********Admin Enters valid Username and Passowrd for Authentication*
+[INFO ] 2024-04-01 13:07:31.219 [main] LoggerLoad - ***************** Admin has logged in Successfully*
+[INFO ] 2024-04-01 13:07:31.221 [main] LoggerLoad - ******************Execution of Delete Program by ID Scenarios started
+[INFO ] 2024-04-01 13:07:31.748 [main] LoggerLoad - ********Admin Enters valid Username and Passowrd for Authentication*
+[INFO ] 2024-04-01 13:07:32.363 [main] LoggerLoad - ***************** Admin has logged in Successfully*
+[INFO ] 2024-04-01 13:07:32.366 [main] LoggerLoad - ******************Execution of Delete Program by Name Scenarios started
+[INFO ] 2024-04-01 13:07:32.886 [main] LoggerLoad - ********Admin Enters valid Username and Passowrd for Authentication*
+[INFO ] 2024-04-01 13:07:33.527 [main] LoggerLoad - ***************** Admin has logged in Successfully*
