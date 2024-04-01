@@ -113,8 +113,8 @@ Feature: LMS API All Modules End To End Positive Scenarios
 
   @GetUserProgramBatchUserId
   Scenario Outline: Check if admin is able to retreive assigned program batches for a user
-    Given Admin creates GET Request to retrieve assigned to programs/batches for a user "userID"
-    When Admin sends HTTPS Request for GetUsersPrgmBatchUserId for a user "userID"
+    Given Admin creates GET Request to retrieve assigned to programs/batches for a user
+    When Admin sends HTTPS Request for GetUsersPrgmBatchUserId for a user
     Then User should be able to get 200 in the response for GetUsersPrgmBatchUserId for a user
 
   #User Module Get scenarios:
@@ -212,8 +212,8 @@ Feature: LMS API All Modules End To End Positive Scenarios
   #Delete requests All Modules
   @DeleteUserProgramBatchUserId
   Scenario Outline: Check if admin is able to delete the program batch for a user
-    Given Admin creates Delete Request to delete user assigned to programs/batches for a user "U404"
-    When Admin sends HTTPS Request for DeleteUsersPrgmBatch for a user "U404"
+    Given Admin creates Delete Request to delete user assigned to programs/batches for a user
+    When Admin sends HTTPS Request for DeleteUsersPrgmBatch for a user
     Then User should be able to get 200 in the response for DeleteUsersPrgmBatch
 
   @Delete_User

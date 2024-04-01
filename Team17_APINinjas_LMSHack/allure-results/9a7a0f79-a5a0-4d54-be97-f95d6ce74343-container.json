@@ -1,0 +1,1 @@
+{"uuid":"9a7a0f79-a5a0-4d54-be97-f95d6ce74343","name":"Scenario: Check if admin able to retrieve all Userinfo by ID with with valid API Endpoint","children":["96c78c88-e1bf-4d00-b674-500d9de42e34"],"befores":[],"afters":[],"start":1711988792693,"stop":1711988793516}

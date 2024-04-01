@@ -157,7 +157,7 @@ public class UPRBActions {
 		return responses;
 	}
 
-	public static RequestSpecification deleteRPBMUserIdRequest(String userid) throws JsonProcessingException {
+	public static RequestSpecification deleteRPBMUserIdRequest() throws JsonProcessingException {
 		//adminRoleMapAllPojo(int batchId,int programId,String roleId,String userId,String userRoleProgramBatchStatus)
 
 //		usersMapRoleDeleteUserIdPojo uLP = new usersMapRoleDeleteUserIdPojo(userid);
@@ -167,9 +167,10 @@ public class UPRBActions {
 		request = RestAssured
 				.given()
 				.headers("Authorization", Env_Var.token)
-				.contentType(ContentType.JSON)
+				.contentType(ContentType.JSON).pathParam("userId", Env_Var.userID);
+				
 //				.body(requestBody)
-				.baseUri(Routes.deleteUserRoleMap_Url);
+				//.baseUri(Routes.deleteUserRoleMap_Url);
 
 
 		System.out.println("Request from deleteRPBMUserIdRequest");
@@ -177,11 +178,11 @@ public class UPRBActions {
 		return request;
 	}
 
-	public static Response deleteUserRoleMapUserIdResponse(RequestSpecification request, String userid){
+	public static Response deleteUserRoleMapUserIdResponse(RequestSpecification request){
 		response = 
 				request
 				.when()
-				.delete("/{userid}",userid);
+				.delete(Routes.deleteUserRoleMap_Url);
 
 
 		System.out.println("Response from deleteUserRoleMapUserIdResponse");
@@ -310,13 +311,14 @@ public class UPRBActions {
 
 
 
-	public static RequestSpecification getRPBMUserIdRequest(String userid) throws JsonProcessingException {
+	public static RequestSpecification getRPBMUserIdRequest() throws JsonProcessingException {
 		request = RestAssured
 				.given()
 				.headers("Authorization", Env_Var.token)
 				.contentType(ContentType.JSON)
 				//			.body(requestBody)
-				.baseUri(Routes.userGetRoleMap_Url);
+				//.baseUri(Routes.userGetRoleMap_Url);
+				.pathParam("userId", Env_Var.userID);
 
 		System.out.println("Request from getRPBMUserIdRequest");
 		System.out.println("Request " + request.log().body());
@@ -324,11 +326,11 @@ public class UPRBActions {
 		return request;
 	}
 
-	public static Response getUserRoleMapUserIdResponse(RequestSpecification request, String userid){
+	public static Response getUserRoleMapUserIdResponse(RequestSpecification request){
 		response = 
 				request
 				.when()
-				.get("/{userid}",userid);
+				.get(Routes.userGetRoleMap_Url);
 
 
 		System.out.println("Response from getUserRoleMapUserIdResponse");

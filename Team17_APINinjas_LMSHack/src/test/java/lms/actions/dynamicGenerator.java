@@ -2,11 +2,11 @@ package lms.actions;
 
 public class dynamicGenerator {
 	
-	private static int PositiveProgramcounter = 50;
-	private static int PositiveBatchcounter = 40;
-	private static int UserPhonecounter = 10;
-	private static int UserEmailcounter = 10;
-	private static int Negcounter = 8;
+	private static int PositiveProgramcounter =98;
+	private static int PositiveBatchcounter = 88;
+	private static int UserPhonecounter = 42;
+	private static int UserEmailcounter = 42;
+	private static int Negcounter = 10;
 	
 	
 	public static String generateProgramName() {

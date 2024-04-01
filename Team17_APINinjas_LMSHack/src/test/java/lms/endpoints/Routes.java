@@ -142,7 +142,7 @@ public class Routes {
 
 
 	//Program Batch Status Role Map GET USERID
-	public static String userGetRoleMap_Url = base_url+"/userRoleProgramBatchMap";
+	public static String userGetRoleMap_Url = base_url+"/userRoleProgramBatchMap/{userId}";
 	//Invalid URL
 	public static String userGetRoleMap_InvalidUrl = Invalid_base_url+"/userRoleProgramBatchMap";
 	//Invalid EP
@@ -150,7 +150,7 @@ public class Routes {
 
 
 	//Program Batch Status Role Map DELETE
-	public static String deleteUserRoleMap_Url = base_url+"/userRoleProgramBatchMap/deleteAll";
+	public static String deleteUserRoleMap_Url = base_url+"/userRoleProgramBatchMap/deleteAll/{userId}";
 	//Invalid URL
 	public static String deleteUserRoleMap_InvalidUrl = Invalid_base_url+"/userRoleProgramBatchMap/deleteAll";
 	//Invalid EP
