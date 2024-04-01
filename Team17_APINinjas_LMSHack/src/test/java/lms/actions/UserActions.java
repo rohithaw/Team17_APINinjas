@@ -18,6 +18,7 @@ import io.restassured.specification.RequestSpecification;
 import lms.GlobalVariables.Env_Var;
 import lms.endpoints.Routes;
 import lms.payload.BatchPojo;
+import lms.payload.ExpectedResponse;
 import lms.payload.UserLoginPojo;
 import lms.payload.UserPojo;
 import lms.payload.UserProgramBatchPojo;
@@ -115,10 +116,10 @@ public class UserActions {
 	}
 
 	//DD Create USER request
-	public static List<RequestSpecification> getPostCreateUserRequestDD(String token) throws IOException {
+	public static List<RequestSpecification> getPostCreateUserRequestDD(String token, String sheetName) throws IOException {
 		ExcelReader excelReader = new ExcelReader();
 		List<RequestSpecification> requests = new ArrayList<RequestSpecification>();
-		List<Map<String, String>> testData = excelReader.readTestDataFromExcel(FileNameConstants.EXCEL_TEST_DATA,"PostUser");
+		List<Map<String, String>> testData = excelReader.readTestDataFromExcel(FileNameConstants.EXCEL_TEST_DATA, sheetName);
 		for (Map<String, String> row : testData) {
 			System.out.println(row);
 			UserPojo userpj = mapRowToUserPojo(row);
@@ -132,6 +133,10 @@ public class UserActions {
 			requests.add(userRequest);
 		}
 		return requests;
+	}
+	
+	public static List<RequestSpecification> getPostCreateUserRequestDD(String token) throws IOException {
+		return getPostCreateUserRequestDD(token, "PostUser");
 	}
 
 	//DD create USER Response
@@ -449,6 +454,21 @@ public static List<Response> getPutUpdateUserProgramBatchStatusResponsesDD(List<
 		userPBList.add(userPBpj);
 		pgmbatchpj.setUserRoleProgramBatches(userPBList);
 		return pgmbatchpj;
+	}
+
+	public static List<ExpectedResponse> getExpectedResponsesDD(String sheetName) throws IOException {
+		ExcelReader excelReader = new ExcelReader();
+		List<ExpectedResponse> expResponses = new ArrayList<ExpectedResponse>();
+		List<Map<String, String>> testData = excelReader.readTestDataFromExcel(FileNameConstants.EXCEL_TEST_DATA, sheetName);
+		for (Map<String, String> row : testData) {
+			ExpectedResponse expResp = new ExpectedResponse();
+			if(row.containsKey("expectedResponseCode") && StringUtils.isNotEmpty(row.get("expectedResponseCode"))) {
+				expResp.setStatusCode(Integer.parseInt(row.get("expectedResponseCode")));
+			}
+			//Add/set more expected
+			expResponses.add(expResp);
+		}
+		return expResponses;
 	}
 
 }	

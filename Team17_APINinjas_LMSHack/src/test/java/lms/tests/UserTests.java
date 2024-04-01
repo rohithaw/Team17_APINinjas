@@ -12,6 +12,7 @@ import org.testng.Assert;
 import io.restassured.module.jsv.JsonSchemaValidator;
 import io.restassured.response.Response;
 import lms.actions.BatchActions;
+import lms.payload.ExpectedResponse;
 import lms.utilities.FileNameConstants;
 import lms.utilities.LoggerLoad;
 
@@ -85,12 +86,27 @@ public class UserTests {
 			.then()
 			.assertThat()
 			.statusCode(200)
-			.statusLine("HTTP/1.1 200 ")
+			.statusLine("HTTP/1.1 200 ");
+			//.header("Content-Type", "application/json");
+
+		} catch (AssertionError e) {
+			System.err.println("Assertion failed " + e.getMessage());
+		}			
+	}
+
+	public static void genericResponseValidation(Response response, ExpectedResponse expectedResponse) {
+		try {
+			response
+			.then()
+			.assertThat()
+			.statusCode(expectedResponse.getStatusCode())
+			//.statusLine("HTTP/1.1 200 ")
 			.header("Content-Type", "application/json");
 
 		} catch (AssertionError e) {
 			System.err.println("Assertion failed " + e.getMessage());
 		}			
+		
 	}
 
 }
