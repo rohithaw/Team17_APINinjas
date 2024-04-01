@@ -2,7 +2,7 @@ package lms.actions;
 
 public class dynamicGenerator {
 	
-	private static int counter = 14;
+	private static int counter = 102;
 	
 	public static String generateProgramName() {
         String baseProgName = "March24-ApINinjas-QA-";
@@ -11,10 +11,16 @@ public class dynamicGenerator {
         return baseProgName + paddedCounter;
     }
 
-    public static String generateBatchName(String baseName) {
+    public static String generatePhoneNumber(String baseNumber) {
         String paddedCounter = String.format("%03d", counter); // To ensure counter is 3 digits padded with zeros
         counter++; // To increment counter for the next call
-        return baseName + paddedCounter;
+        return baseNumber.replaceAll("xxx", paddedCounter);
+    }
+    
+    public static String generateUserLoginEmail(String baseEmail) {
+        String paddedCounter = String.format("%03d", counter); // To ensure counter is 3 digits padded with zeros
+        counter++; // To increment counter for the next call
+        return baseEmail.replaceAll("xxx", paddedCounter);
     }
 
     public static void resetCounter() {

@@ -9,16 +9,14 @@ public class UserLoginPojo {
     private List<String> roleIds;
     private String status;
     private String userLoginEmail;
-    public UserLoginPojo() {
-    	
-    }
-    public UserLoginPojo(String lstatus, String pwd, List<String> rIds, String status, String email) {
+    
+   /* public UserLoginPojo(String lstatus, String pwd, List<String> rIds, String status, String email) {
     	setLoginStatus(lstatus);
     	setPassword(pwd);
     	setRoleIds(rIds);
     	setStatus(status);
     	setUserLoginEmail(email);
-    }
+    }*/
 	public String getLoginStatus() {
 		return loginStatus;
 	}
@@ -49,6 +47,4 @@ public class UserLoginPojo {
 	public void setUserLoginEmail(String userLoginEmail) {
 		this.userLoginEmail = userLoginEmail;
 	}
-
-
 }

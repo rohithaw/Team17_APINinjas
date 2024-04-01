@@ -17,6 +17,8 @@ public class UserPojo {
     private List<UserRoleMapPojo> userRoleMaps;
     private String userTimeZone;
     private String userVisaStatus;
+    private String userLoginEmail;
+    private List<String>userRoleList;
     public UserPojo() {
     	
     }
@@ -100,8 +102,8 @@ public class UserPojo {
 	public long getUserPhoneNumber() {
 		return userPhoneNumber;
 	}
-	public void setUserPhoneNumber(long userPhoneNumber) {
-		this.userPhoneNumber = userPhoneNumber;
+	public void setUserPhoneNumber(long phone) {
+		this.userPhoneNumber = phone;
 	}
 	public String getUserTimeZone() {
 		return userTimeZone;
@@ -127,4 +129,18 @@ public class UserPojo {
 	public void setUserRoleMaps(List<UserRoleMapPojo> userRoleMaps) {
 		this.userRoleMaps = userRoleMaps;
 	}
+	public String getUserLoginEmail() {
+		return userLoginEmail;
+	}
+	public void setUserLoginEmail(String userLoginEmail) {
+		this.userLoginEmail = userLoginEmail;
+	}
+	public List<String> getUserRoleList() {
+		return userRoleList;
+	}
+	public void setUserRoleList(List<String> userRoleList) {
+		this.userRoleList = userRoleList;
+	}
+	
+	
 }

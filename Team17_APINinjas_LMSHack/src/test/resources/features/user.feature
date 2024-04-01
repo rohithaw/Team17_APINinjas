@@ -11,19 +11,23 @@ Feature: LMS API User Module
     When User sends POST User request.
     Then User receives expected status in Post User response
    
-    #Positive-2scenarios
-  @PUT_Admin_Info
+  @PUT_byUserID
   Scenario: Admin is able to update Admin details with Admin userid and mandatory fields
   Given Admin creates PUT Request with valid data in request body with values only in mandatory fields
   When Admin sends PUT User request
-  Then Admin receives 200 OK status in Put User response
-  # Scenario: Admin is able to update Admin details with Admin userid  and valid data in all fields
+  Then Admin receives expected status in Put User response
+ 
+   @PUT_byLoginStatus
+  Scenario: Admin is able to update User Login Status with Admin userid 
+  Given Admin creates PUT Request with valid data in request body for LoginStatus 
+  When Admin sends PUT User request LoginStatus
+  Then  Admin receives expected status in Put User response
   
-  #Negative-3scenarios
-  #Scenario: Admin is able to update Admin details with  Admin userid and invalid data
-  #Given Admin creates PUT Request with invalid data in request body 
-  #When Admin sends PUT User request
-  #Then Admin receives 400 Bad Request Status with message and boolean success details
-  # Scenario: Admin is able to update Admin details with invalid AdminId
-  # Scenario: Admin is able to update Admin details with No authorization
+  @PUT_byRoleProgramBatchStatus
+  Scenario: Admin is able to assign User to program/batch by Admin userid 
+  Given Admin creates PUT Request with valid data in request body for RoleProgramBatchStatus
+  When Admin sends PUT User request for RoleProgramBatchStatus
+  Then Admin receives expected status in Put User response
+  
+  
   
