@@ -9,6 +9,9 @@ public class FileNameConstants {
 	public static final String UserLogin_JSON_SCHEMA = BASE_PATH+ "SchemaValidation/UserLoginjsonSchema.txt";	
 	//public static final String EXCEL_TEST_DATA = BASE_PATH+ "LMSPractice_RestAssuredTestData.xlsx";
 	
+	//Excel Test data
+		public static final String ProgramEXCEL_TEST_DATA = BASE_PATH+ "LMSHackProgramTestDate.xlsx";
+	
 	public static final String configFile_PATH = BASE_PATH+ "Config/config.properties";
 
 }
