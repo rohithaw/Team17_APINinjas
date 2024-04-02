@@ -2,23 +2,23 @@ package lms.actions;
 
 public class dynamicGenerator {
 	
-	private static int PositiveProgramcounter =130;
-	private static int PositiveBatchcounter = 120;
-	private static int UserPhonecounter = 62;
-	private static int UserEmailcounter = 12;
+	private static int PositiveProgramcounter =1;
+	private static int PositiveBatchcounter = 1;
+	private static int UserPhonecounter = 1;
+	private static int UserEmailcounter = 1;
 
 	private static int Negcounter = 10;
 	
 	
 	public static String generateProgramName() {
-        String baseProgName = "March24-ApINinjas-QA-";
+        String baseProgName = "March24-ApINinjas-Qa-";
         String paddedCounter = String.format("%03d", PositiveProgramcounter);
         PositiveProgramcounter++; 
         return baseProgName + paddedCounter;
     }
 
     public static String generateBatchName() {
-    	String baseBatchName = "March24-ApINinjas-QA-QA1-";
+    	String baseBatchName = "March24-ApINinjas-Qa-QA01-";
         String paddedCounter = String.format("%03d", PositiveBatchcounter); // To ensure counter is 3 digits padded with zeros
         PositiveBatchcounter++; // To increment counter for the next call
         return baseBatchName + paddedCounter;

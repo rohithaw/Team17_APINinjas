@@ -686,6 +686,28 @@ public class ETEPositiveLMS_SD {
 	public void admin_sends_put_user_request_for_role_program_batch_status() {
 		this.responses = UserActions.getPutUpdateUserProgramBatchStatusResponsesDD(requests);
 	}
+	
+	@Given("Admin creates GET Request to retrieve assigned to programs\\/batches for a user {string}")
+	public void admin_creates_get_request_to_retrieve_assigned_to_programs_batches_for_a_user(String string) throws JsonProcessingException {
+		LoggerLoad.info("Execution of Valid Get by UserID for PrgmBatchStatus Scenarios started");
+		this.request = UPRBActions.getRPBMUserIdRequest( );
+	}
+
+	@When("Admin sends HTTPS Request for GetUsersPrgmBatchUserId for a user {string}")
+	public void admin_sends_https_request_for_get_users_prgm_batch_user_id_for_a_user(String string) {
+		this.response = UPRBActions.getUserRoleMapUserIdResponse(request);
+	}
+
+	@Given("Admin creates Delete Request to delete user assigned to programs\\/batches for a user {string}")
+	public void admin_creates_delete_request_to_delete_user_assigned_to_programs_batches_for_a_user(String string) throws JsonProcessingException {
+		LoggerLoad.info("Execution of Valid Delete for PrgmBatchStatus Scenarios started");
+		this.request = UPRBActions.deleteRPBMUserIdRequest( );
+	}
+
+	@When("Admin sends HTTPS Request for DeleteUsersPrgmBatch for a user {string}")
+	public void admin_sends_https_request_for_delete_users_prgm_batch_for_a_user(String string) {
+		this.response = UPRBActions.deleteUserRoleMapUserIdResponse(request);
+	}
 }
 
 

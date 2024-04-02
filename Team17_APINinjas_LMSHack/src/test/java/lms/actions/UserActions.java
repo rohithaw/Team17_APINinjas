@@ -177,29 +177,29 @@ public class UserActions {
 	}
 
 	//DD Update USER request
-	public static List<RequestSpecification> getPutUpdateUserRequestDD(String token, String sheetName) throws IOException {
-		ExcelReader excelReader = new ExcelReader();
-		List<RequestSpecification> requests = new ArrayList<RequestSpecification>();
-		List<Map<String, String>> testData = excelReader.readTestDataFromExcel(FileNameConstants.EXCEL_TEST_DATA,sheetName);
-		for (Map<String, String> row : testData) {
-			System.out.println(row);
-			UserPojo userpj = mapUpdateRowToUserPojo(row);
-			ObjectMapper objectMapper = new ObjectMapper();
-			objectMapper.setSerializationInclusion(JsonInclude.Include.NON_NULL);
-			String requestBody = objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(userpj);
-			System.out.println("PUT User request body is : " + requestBody);
-			RequestSpecification userRequest = RestAssured.given().headers("Authorization", token)
-					.contentType(ContentType.JSON).body(requestBody).pathParam("userId", userpj.getUserUserId());
-			userRequest.log();
-			requests.add(userRequest);
+		public static List<RequestSpecification> getPutUpdateUserRequestDD(String token, String sheetName) throws IOException {
+			ExcelReader excelReader = new ExcelReader();
+			List<RequestSpecification> requests = new ArrayList<RequestSpecification>();
+			List<Map<String, String>> testData = excelReader.readTestDataFromExcel(FileNameConstants.EXCEL_TEST_DATA,sheetName);
+			for (Map<String, String> row : testData) {
+				System.out.println(row);
+				UserPojo userpj = mapUpdateRowToUserPojo(row);
+				ObjectMapper objectMapper = new ObjectMapper();
+				objectMapper.setSerializationInclusion(JsonInclude.Include.NON_NULL);
+				String requestBody = objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(userpj);
+				System.out.println("PUT User request body is : " + requestBody);
+				RequestSpecification userRequest = RestAssured.given().headers("Authorization", token)
+						.contentType(ContentType.JSON).body(requestBody).pathParam("userId", Env_Var.userID);
+				userRequest.log();
+				requests.add(userRequest);
+			}
+			return requests;
 		}
-		return requests;
-	}
-	
-	
-	public static List<RequestSpecification> getPutUpdateUserRequestDD(String token) throws IOException {
-		return getPutUpdateUserRequestDD(token, "PutUser");
-	}
+		
+		
+		public static List<RequestSpecification> getPutUpdateUserRequestDD(String token) throws IOException {
+			return getPutUpdateUserRequestDD(token, "PutUser");
+		}
 
 	//DD Update USER Response
 	public static List<Response> getPutUpdateUserResponsesDD(List<RequestSpecification> requests) {
