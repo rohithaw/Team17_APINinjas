@@ -61,27 +61,67 @@ public class UserActions {
 	
 	//In progress
 	public static List<RequestSpecification> putUserRoleIDRequestsDD(String url, String token, String sheetName) throws IOException {
-		String RoleID;
 
 		ExcelReader excelReader = new ExcelReader();
 		List<Map<String, String>> testData = excelReader.readTestDataFromExcel(FileNameConstants.EXCEL_TEST_DATA, sheetName);
 		List<RequestSpecification> requestSpecifications = new ArrayList<>();
 		for (Map<String, String> row : testData) {
+			UserPutRoleIDPojo uPRID = preparePutRoleIDRequestBody(row);
+			ObjectMapper objectMapper = new ObjectMapper();
+			objectMapper.setSerializationInclusion(JsonInclude.Include.NON_NULL);
+			String requestBody = objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(uPRID);
+			System.out.println("PUT User request body is : " + requestBody);
+			RequestSpecification userRequest = RestAssured.given().headers("Authorization", token)
+					.contentType(ContentType.JSON).body(requestBody).pathParam("userId", uPRID.getUserId());
+			userRequest.log();
+			
 
-			RoleID = row.get("updateRoleID"); // Extract fields from each row
-			PutstatusList.add(row.get("ExpectedStatusCodePut"));    	   
-			// Prepare request body
-			String requestBody = preparePutRoleIDRequestBody(List.of(RoleID));
-			request =  
-					RestAssured
-					.given()
-					.headers("Authorization", token)
-					.contentType(ContentType.JSON)
-					.body(requestBody)
-					.baseUri(url);	
-			requestSpecifications.add(request);		    		     
+//			UserPutRoleIDPojo uPRID = preparePutRoleIDRequestBody(row);
+//			//PutstatusList.add(row.get("ExpectedStatusCodePut"));    	   
+//			ObjectMapper objectMapper = new ObjectMapper(); 
+//			 String requestBody = objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(uPRID);		
+//			System.out.println(requestBody);
+//			// Prepare request body
+//			
+//			request =  
+//					RestAssured
+//					.given()
+//					.headers("Authorization", token)
+//					.contentType(ContentType.JSON)
+//					.body(requestBody).pathParam("userId", uPRID.getUserId());
+					//.baseUri(url);	
+			requestSpecifications.add(userRequest);		    		     
 		}
 		return requestSpecifications;
+	}
+	
+	private static UserPutRoleIDPojo preparePutRoleIDRequestBody(Map<String, String> row) throws JsonProcessingException {
+
+		UserPutRoleIDPojo uPRID = new UserPutRoleIDPojo();
+		String roleIds = row.get("roleIds"); // Extract fields from each row
+		if(StringUtils.isNotEmpty(roleIds)) {
+		    uPRID.setUserRoleList(Arrays.asList(roleIds.split(",")));
+		}
+		return uPRID;
+	}
+	
+	public static List<Response> getPutUserRoleIDStatusResponseDD(List<RequestSpecification> requests) {
+		List<Response> responses = new ArrayList<>();
+
+		for (RequestSpecification request : requests) {
+			Response userPostResponse = request.when().put(Routes.PutUserRID_Url_Path_Param);
+			System.out.println(userPostResponse);
+			userPostResponse.prettyPrint();
+			responses.add(userPostResponse);
+		}
+		return responses;
+//		List<Response> responses = new ArrayList<>();
+//
+//		for (RequestSpecification request : requests) {
+//			response = request.when().put(Routes.PutUserRID_Url_Path_Param);
+//			responses.add(response);
+//		}		
+//		return responses;
 	}
 
 	public static List<RequestSpecification> putUserRoleStatusRequestsDD(String url, String token) throws IOException {
@@ -175,7 +215,10 @@ public class UserActions {
 		}
 		return responses;
 	}
-
+	
+	
+	
+//Start
 	//DD Update USER request
 	public static List<RequestSpecification> getPutUpdateUserRequestDD(String token, String sheetName) throws IOException {
 		ExcelReader excelReader = new ExcelReader();
@@ -189,6 +232,7 @@ public class UserActions {
 			String requestBody = objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(userpj);
 			System.out.println("PUT User request body is : " + requestBody);
 			RequestSpecification userRequest = RestAssured.given().headers("Authorization", token)
+					//.contentType(ContentType.JSON).body(requestBody).pathParam("userId", Env_Var.userID);
 					.contentType(ContentType.JSON).body(requestBody).pathParam("userId", userpj.getUserUserId());
 			userRequest.log();
 			requests.add(userRequest);
@@ -200,6 +244,45 @@ public class UserActions {
 	public static List<RequestSpecification> getPutUpdateUserRequestDD(String token) throws IOException {
 		return getPutUpdateUserRequestDD(token, "PutUser");
 	}
+	
+	//Convert Excel Row to POJO(DataDriven)-->update user by userId
+		private static UserPojo mapUpdateRowToUserPojo(Map<String, String> row) {
+			// Creating the entire UserPojo object
+			UserPojo userpj = new UserPojo();
+			String userId= StringUtils.isEmpty(row.get("userId")) ? null : row.get("userId");
+			System.out.println("UserId from excel "+userId);
+			
+			String finalUserId = Env_Var.userID == null ?  userId  : Env_Var.userID;
+			//userpj.setUserUserId(Env_Var.userID);
+			userpj.setUserUserId(finalUserId);
+			userpj.setUserComments(row.get("comments"));
+			userpj.setUserEduPg(row.get("eduUg"));
+			userpj.setUserEduUg(row.get("eduPg"));
+			userpj.setUserFirstName(row.get("firstName"));
+			//userpj.setUserUserId(StringUtils.isEmpty(row.get("userId")) ? null : row.get("userId"));
+			userpj.setUserLastName(row.get("lastName"));
+			userpj.setUserLinkedinUrl(row.get("linkedinUrl"));
+			userpj.setUserLocation(row.get("location"));
+			userpj.setUserMiddleName(row.get("middleName"));
+
+			String baseNumber = row.get("phoneNumber") == null ? null : row.get("phoneNumber");
+			String fullNumber = baseNumber;
+			if(baseNumber != null && baseNumber.endsWith("xxx")) {
+				fullNumber = dynamicGenerator.generatePhoneNumber(baseNumber);
+			}
+			userpj.setUserPhoneNumber(Long.parseLong(fullNumber));
+			String fullEmail =  row.get("userLogin.userLoginEmail") == null ? null : row.get("userLogin.userLoginEmail");
+			if(fullEmail != null && fullEmail.contains("xxx")) {
+				fullEmail = dynamicGenerator.generateUserLoginEmail(fullEmail);
+			}
+			userpj.setUserLoginEmail(fullEmail);
+			//userpj.setUserPhoneNumber(row.get("phoneNumber") == null?null :Long.parseLong(row.get("phoneNumber")));
+			userpj.setUserTimeZone(row.get("timeZone"));
+			userpj.setUserVisaStatus(row.get("visaStatus"));
+			return userpj;
+		}
+		
+//End------>
 
 	//DD Update USER Response
 	public static List<Response> getPutUpdateUserResponsesDD(List<RequestSpecification> requests) {
@@ -329,38 +412,7 @@ public class UserActions {
 		return userpj;
 	}
 
-	//Convert Excel Row to POJO(DataDriven)-->update user by userId
-	private static UserPojo mapUpdateRowToUserPojo(Map<String, String> row) {
-		// Creating the entire UserPojo object
-		UserPojo userpj = new UserPojo();
-		userpj.setUserUserId(userID);
-		userpj.setUserComments(row.get("comments"));
-		userpj.setUserEduPg(row.get("eduUg"));
-		userpj.setUserEduUg(row.get("eduPg"));
-		userpj.setUserFirstName(row.get("firstName"));
-		userpj.setUserUserId(StringUtils.isEmpty(row.get("userId")) ? null : row.get("userId"));
-		userpj.setUserLastName(row.get("lastName"));
-		userpj.setUserLinkedinUrl(row.get("linkedinUrl"));
-		userpj.setUserLocation(row.get("location"));
-		userpj.setUserMiddleName(row.get("middleName"));
-
-		String baseNumber = row.get("phoneNumber") == null ? null : row.get("phoneNumber");
-		String fullNumber = baseNumber;
-		if(baseNumber != null && baseNumber.endsWith("xxx")) {
-			fullNumber = dynamicGenerator.generatePhoneNumber(baseNumber);
-		}
-		userpj.setUserPhoneNumber(Long.parseLong(fullNumber));
-		String fullEmail =  row.get("userLogin.userLoginEmail") == null ? null : row.get("userLogin.userLoginEmail");
-		if(fullEmail != null && fullEmail.contains("xxx")) {
-			fullEmail = dynamicGenerator.generateUserLoginEmail(fullEmail);
-		}
-		userpj.setUserLoginEmail(fullEmail);
-		//userpj.setUserPhoneNumber(row.get("phoneNumber") == null?null :Long.parseLong(row.get("phoneNumber")));
-		userpj.setUserTimeZone(row.get("timeZone"));
-		userpj.setUserVisaStatus(row.get("visaStatus"));
-		return userpj;
-	}
-
+	
 	public static void setUserDetails(Response response) {
 		if (response.path("userId") != null) {
 			userID = response.path("userId").toString();

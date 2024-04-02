@@ -109,6 +109,7 @@ public class Routes {
 	public static String PutUserRID_Url = base_url+"/users/roleId";
 	public static String PutUserRID_InvalidUrl = Invalid_base_url+"/users/roleId";
 	public static String PutUserRID__InvalidEP = base_url+"/uroleID";
+	public static String PutUserRID_Url_Path_Param = base_url+"/users/roleId/{userId}";
 
 	//PUT User Role Status
 	public static String PutUserRStatus_Url = base_url+"/users/roleStatus";

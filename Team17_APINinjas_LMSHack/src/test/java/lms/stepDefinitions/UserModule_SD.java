@@ -89,6 +89,16 @@ RequestSpecification request;
 		this.responses = UserActions.getPutUpdateUserResponsesDD(requests);
 	}
 
+	@Given("Admin sets Put User RoleID request with valid Url, invalid endpoint and valid request body from {string}")
+	public void admin_sets_put_user_role_id_request_with_valid_url_invalid_endpoint_and_valid_request_body_from(String sheetName) throws IOException {
+		this.requests = UserActions.putUserRoleIDRequestsDD( token,sheetName);
+		this.expectedResponses = UserActions.getExpectedResponsesDD(sheetName); //From excel sheet--new
+	}
+
+	@When("Admin sends Put User RoleID request in User Module")
+	public void admin_sends_put_user_role_id_request_in_user_module() {
+		this.responses = UserActions.getPutUserRoleIDStatusResponseDD(requests);
+	}
 	
 }
 	
