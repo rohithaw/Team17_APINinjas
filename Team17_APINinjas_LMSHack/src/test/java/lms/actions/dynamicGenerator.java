@@ -9,7 +9,6 @@ public class dynamicGenerator {
 
 	private static int Negcounter = 10;
 	
-	
 	public static String generateProgramName() {
         String baseProgName = "March24-ApINinjas-Qa-";
         String paddedCounter = String.format("%03d", PositiveProgramcounter);
