@@ -522,6 +522,13 @@ public static List<Response> getPutUpdateUserProgramBatchStatusResponsesDD(List<
 		return expResponses;
 	}
 
-
+	public static RequestSpecification getGetDeleteUserRequestNoAuth(String url) throws JsonProcessingException {
+		request =
+				RestAssured
+					.given()
+						.contentType(ContentType.JSON)						
+						.baseUri(url);
+	return request;
+	}
 
 }	

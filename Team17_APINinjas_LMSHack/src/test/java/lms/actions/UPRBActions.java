@@ -109,7 +109,7 @@ public class UPRBActions {
 			}
 			prgmid = Integer.parseInt(Env_Var.programID);
 			batchid = Integer.parseInt(Env_Var.batchID);
-//			roleid = Env_Var.roleID;
+			//			roleid = Env_Var.roleID;
 			// Prepare request body
 			String requestBody = prepareRequestBody(prgmid, batchid, roleid, status);
 			request =  
@@ -144,7 +144,7 @@ public class UPRBActions {
 
 	public static List<Response> putProgramBatchStatusResponsesDD(List<RequestSpecification> requests, String userid) {
 
-		
+
 		List<Response> responses = new ArrayList<>();
 
 		for (RequestSpecification request : requests) {
@@ -160,17 +160,17 @@ public class UPRBActions {
 	public static RequestSpecification deleteRPBMUserIdRequest() throws JsonProcessingException {
 		//adminRoleMapAllPojo(int batchId,int programId,String roleId,String userId,String userRoleProgramBatchStatus)
 
-//		usersMapRoleDeleteUserIdPojo uLP = new usersMapRoleDeleteUserIdPojo(userid);
-//		ObjectMapper objectMapper = new ObjectMapper(); 
-//		String requestBody = objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(uLP);		
+		//		usersMapRoleDeleteUserIdPojo uLP = new usersMapRoleDeleteUserIdPojo(userid);
+		//		ObjectMapper objectMapper = new ObjectMapper(); 
+		//		String requestBody = objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(uLP);		
 
 		request = RestAssured
 				.given()
 				.headers("Authorization", Env_Var.token)
 				.contentType(ContentType.JSON).pathParam("userId", Env_Var.userID);
-				
-//				.body(requestBody)
-				//.baseUri(Routes.deleteUserRoleMap_Url);
+
+		//				.body(requestBody)
+		//.baseUri(Routes.deleteUserRoleMap_Url);
 
 
 		System.out.println("Request from deleteRPBMUserIdRequest");
@@ -238,11 +238,6 @@ public class UPRBActions {
 	}
 
 
-
-
-
-
-
 	public static RequestSpecification getRPBMRequest() throws JsonProcessingException {
 
 		request = RestAssured
@@ -302,15 +297,6 @@ public class UPRBActions {
 		return request;
 	}
 
-
-
-
-
-
-
-
-
-
 	public static RequestSpecification getRPBMUserIdRequest() throws JsonProcessingException {
 		request = RestAssured
 				.given()
@@ -367,5 +353,75 @@ public class UPRBActions {
 
 		return response;
 	}
+
+	public static List<RequestSpecification> putRPBMUserIdRequestDD_Neg(String url, String token) throws IOException {
+		int prgmid = 0;
+		int batchid = 0;
+		String status = null;
+		String roleid = null;
+		String s;
+		ExcelReader excelReader = new ExcelReader();
+		List<Map<String, String>> testData = excelReader.readTestDataFromExcel(FileNameConstants.EXCEL_TEST_DATA, "NegativeTestDataPrgmBatchStatus");
+		List<RequestSpecification> requestSpecifications = new ArrayList<>();
+		for (Map<String, String> row : testData) {
+			System.out.println("Inside For " + row.toString());
+			String pidStr = row.get("ProgramID");
+			System.out.println("pidStr " + pidStr);
+			if (pidStr != null && !pidStr.isEmpty()) {
+				try {
+					System.out.println("Inside Program id statement");
+					prgmid = Integer.parseInt(pidStr.split("\\.")[0]);
+				} catch (NumberFormatException e) {
+					System.err.println("Error converting ProgramId to int: " + e.getMessage());
+				}
+			}
+			String batchidStr = row.get("BatchID");
+			System.out.println("batchidStr " + batchidStr);
+			if (batchidStr != null && !batchidStr.isEmpty()) {
+				try {
+					System.out.println("Inside Batch id statement");
+					batchid = Integer.parseInt(batchidStr.split("\\.")[0]);
+				} catch (NumberFormatException e) {
+					System.err.println("Error converting BatchId to int: " + e.getMessage());
+				}
+			}
+			System.out.println("batch id " + batchid );
+			status = row.get("Status");
+			roleid = row.get("RoleID");
+
+			status = "Active";
+			//			prgmid = Integer.parseInt(Env_Var.programID);
+			//			batchid = Integer.parseInt(Env_Var.batchID);
+			//			roleid = "R02";
+
+			PutstatusList.add(row.get("ExpectedStatusCodePut"));
+		}
+		// Prepare request body
+		String requestBody = prepareRequestBody(prgmid, batchid, roleid, status);
+
+		request =
+				RestAssured
+				.given()
+				.headers("Authorization", Env_Var.token)
+				.contentType(ContentType.JSON)
+				.body(requestBody)
+				.baseUri(url);	
+		requestSpecifications.add(request);		    		
+		System.out.println("***********************************");
+		System.out.println("Request " + request.toString());
+		System.out.println("Request " + request.log().body());
+		return requestSpecifications;
+	}
+
+	public static RequestSpecification PutPrgmBatchStatusRequestNoAuth(String url) throws JsonProcessingException{
+
+		request =
+				RestAssured
+				.given()					
+				.contentType(ContentType.JSON)					
+				.baseUri(url);	
+		return request;
+	}
+
 
 }
