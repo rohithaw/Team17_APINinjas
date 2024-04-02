@@ -6,7 +6,7 @@ public class dynamicGenerator {
 	private static int PositiveBatchcounter = 115;
 	private static int UserPhonecounter = 50;
 	private static int UserEmailcounter = 50;
-	private static int Negcounter = 10;
+	private static int Negcounter = 18;
 	
 	
 	public static String generateProgramName() {

@@ -2,10 +2,10 @@
 Feature: LMS API Batch Module - Create Batch Requests - Post
 
   Background: Admin able to get Token for Authorization
-  Given Admin logs in with valid Username and password for Batch Module Negative
-  When Admin send Post Login request for Batch Module Negative
-  Then Admin should be able to get 200 in the response and generate Token for Batch Module Negative
-  
+    Given Admin logs in with valid Username and password for Batch Module Negative
+    When Admin send Post Login request for Batch Module Negative
+    Then Admin should be able to get 200 in the response and generate Token for Batch Module Negative
+
   @POST_Batch_DD_Negative
   Scenario: Authorized Admin unable to create new Batch
     Given Authorized Admin sets Post Batch request with valid Url,valid endpoint, invalid request body
