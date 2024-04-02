@@ -6,11 +6,11 @@ Feature: LMS API User Modules Scenarios
     When Admin send Post Login request for User Module
     Then Admin should be able to login and generate token for User Module
     
-   #@POST_User_Negative
-  #Scenario: Authorized user able to create new User with Roles from Excel test data
-    #Given Authorized User sets Post User request with valid Url,valid endpoint, request body from excel from "PostUserNegative"
-    #When User sends POST User request NN
-    #Then User receives expected responses
+   @POST_User_Negative
+  Scenario: Authorized user able to create new User with Roles from Excel test data
+    Given Authorized User sets Post User request with valid Url,valid endpoint, request body from excel from "PostUserNegative"
+    When User sends POST User request NN
+    Then User receives expected responses
     
   @PUT_byLoginStatus_Negative
   Scenario: Admin is able to update User Login Status with Admin userid
