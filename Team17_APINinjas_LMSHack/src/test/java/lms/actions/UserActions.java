@@ -61,6 +61,17 @@ public class UserActions {
 		} 
 		return request;
 	}
+	
+	
+	public static RequestSpecification getGetDeleteUserRequestNoAuth(String url) throws JsonProcessingException {
+		request =  
+				RestAssured
+					.given()
+						.contentType(ContentType.JSON)						
+						.baseUri(url);
+
+	return request;
+	}
 
 //	public static RequestSpecification getUserStatusRequest(String url, boolean Auth, String token,String id) throws JsonProcessingException {
 //		if(Auth) {
@@ -77,5 +88,25 @@ public class UserActions {
 		response = request.when().get();
 		return response;
 	}
+	
+//	public static RequestSpecification getGetDeleteUserRequest(String url, boolean Auth, String token) throws JsonProcessingException {
+//		if(Auth) {
+//		request =  
+//				RestAssured
+//					.given()
+//						.headers("Authorization", token)
+//						.contentType(ContentType.JSON)						
+//						.baseUri(url);
+//		} else {
+//			request =  
+//					RestAssured
+//						.given()
+//							.contentType(ContentType.JSON)						
+//							.baseUri(url);
+//			
+//		}
+//		return request;
+//	}
+
 
 }

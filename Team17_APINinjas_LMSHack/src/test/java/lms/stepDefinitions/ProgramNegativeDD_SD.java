@@ -74,15 +74,18 @@ public class ProgramNegativeDD_SD {
 		 
 		 @Given("Admin sets Put Program request with valid Url, invalid endpoint and invalid request body")
 		 public void admin_sets_put_Program_request_with_valid_url_invalid_endpoint_and_invalid_request_body() throws IOException {
-			 LoggerLoad.info("Execution of Update Program Scenarios started");
-			 this.requests = ProgramActions.getPutProgramRequestsDDNegative(Routes.PutNegProgramByProgID_Url, token);
+			
+			 
+			 LoggerLoad.info("Execution of Update Batch Scenarios started");
+			 this.requests = ProgramActions.getPutProgramRequestsDDNegative(Routes.PutProgramByProgID_Url, token);
 		 }
 
 		 @When("Admin sends PUT Program request for Negative scenarios")
 		 public void admin_sends_put_Program_request_for_negative_scenarios() {
-//			 System.out.println("Program ID that is being Updated is: "+ "programID");
-//			 this.responses = ProgramActions.getPutIDProgramResponsesDD(requests,programID);
-			 this.responses = ProgramActions.getPostProgramResponsesDD(requests);
+			 
+			 System.out.println("Program ID that is being Updated is: "+ programID);
+			 this.responses = ProgramActions.getPutIDProgramResponsesDD(requests, programID);
+			// this.responses = ProgramActions.getPutIDProgramResponsesDD(requests, programID);
 		 }
 
 		 @Then("Admin receives expected status in Put Program Negative response")
