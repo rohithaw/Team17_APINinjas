@@ -6,6 +6,7 @@ public class dynamicGenerator {
 	private static int PositiveBatchcounter = 116;
 	private static int UserPhonecounter = 60;
 	private static int UserEmailcounter = 10;
+
 	private static int Negcounter = 10;
 	
 	

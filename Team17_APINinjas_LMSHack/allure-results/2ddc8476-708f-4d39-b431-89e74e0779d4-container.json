@@ -1,1 +1,0 @@
-{"uuid":"2ddc8476-708f-4d39-b431-89e74e0779d4","name":"Scenario Outline: User should not be able to do CRUD operations on Batch Module with invalid Url","children":["91e7e871-bd7f-44ab-8f70-21bd59a9af04"],"befores":[],"afters":[],"start":1711845485632,"stop":1711845486667}
