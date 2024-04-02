@@ -2,10 +2,13 @@ package lms.payload;
 
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 public class UserRoleProgramBatchPojo {
 	
 	private Integer programId;
     private String roleId;
+    @JsonIgnore
     private String userId;
     private List<UserProgramBatchPojo> userRoleProgramBatches;
 

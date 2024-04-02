@@ -2,7 +2,11 @@ package lms.payload;
 
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 public class UserLoginPojo {
+	@JsonIgnore
+	private String userId;
     private String loginStatus;
     private String password;
     private List<String> roleIds;
@@ -59,6 +63,14 @@ public class UserLoginPojo {
 
 	public void setUserLoginEmail(String userLoginEmail) {
 		this.userLoginEmail = userLoginEmail;
+	}
+
+	public String getUserId() {
+		return userId;
+	}
+
+	public void setUserId(String userId) {
+		this.userId = userId;
 	}
     
     

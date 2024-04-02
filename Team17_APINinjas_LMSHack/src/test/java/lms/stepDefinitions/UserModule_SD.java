@@ -49,16 +49,35 @@ RequestSpecification request;
 	public void user_sends_post_user_request_NN() {
 		this.responses = UserActions.getPostUserResponsesDD(requests); //Actual--old
 	}
-	@Then("User receives expected status in Post User response NN")
-	public void user_receives_expected_status_in_post_user_response_NN() {
+	@Then("User receives expected responses")
+	public void user_receives_expected_responses() {
 		for(int i=0; i< responses.size();i++) {
 			UserTests.genericResponseValidation(responses.get(i), expectedResponses.get(i));//new
 		}
-
-
 	}
 	
+	@Given("Admin creates PUT Request with valid data in request body for LoginStatus from {string}")
+	public void admin_creates_put_request_with_valid_data_in_request_body_for_login_status_from(String sheetName) throws IOException {
+		this.requests = UserActions.getPutUpdateUserLoginStatusRequestDD( token, sheetName);
+		this.expectedResponses = UserActions.getExpectedResponsesDD(sheetName); //From excel sheet--new
+	}
+
+	@Given("Admin creates PUT Request with valid data in request body for RoleProgramBatchStatus from {string}")
+	public void admin_creates_put_request_with_valid_data_in_request_body_for_role_program_batch_status_from(String sheetName) throws IOException {
+		this.requests = UserActions.getPutUpdateUserProgramBatchStatusRequestDD( token, sheetName);
+		this.expectedResponses = UserActions.getExpectedResponsesDD(sheetName); //From excel sheet--new
+	}
 	
+	@When("Admin sends PUT User request LoginStatus for User Module")
+	public void admin_sends_put_user_request_login_status_for_user_module() {
+		this.responses = UserActions.getPutUpdateUserLoginStatusResponsesDD(requests);
+	}
+
+	@When("Admin sends PUT User request for RoleProgramBatchStatus for User Module")
+	public void admin_sends_put_user_request_for_role_program_batch_status_for_user_module() {
+		this.responses = UserActions.getPutUpdateUserProgramBatchStatusResponsesDD(requests);
+	}
+
 }
 	
 	

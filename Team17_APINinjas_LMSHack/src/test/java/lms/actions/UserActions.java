@@ -186,10 +186,10 @@ public class UserActions {
 
 
 	//DD Update user Login status request
-	public static List<RequestSpecification> getPutUpdateUserLoginStatusRequestDD(String token) throws IOException {
+	public static List<RequestSpecification> getPutUpdateUserLoginStatusRequestDD(String token, String sheetName) throws IOException {
 		ExcelReader excelReader = new ExcelReader();
 		List<RequestSpecification> requests = new ArrayList<RequestSpecification>();
-		List<Map<String, String>> testData = excelReader.readTestDataFromExcel(FileNameConstants.EXCEL_TEST_DATA,"PutLoginStatus");
+		List<Map<String, String>> testData = excelReader.readTestDataFromExcel(FileNameConstants.EXCEL_TEST_DATA,sheetName);
 		for (Map<String, String> row : testData) {
 			System.out.println(row);
 			UserLoginPojo loginpj = mapUpdateRowToUserLoginPojo(row);
@@ -198,11 +198,16 @@ public class UserActions {
 			String requestBody = objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(loginpj);
 			System.out.println("PUT User request body is : " + requestBody);
 			RequestSpecification userRequest = RestAssured.given().headers("Authorization", token)
-					.contentType(ContentType.JSON).body(requestBody).pathParam("userId", userID);
+					.contentType(ContentType.JSON).body(requestBody).pathParam("userId", loginpj.getUserId());
 			userRequest.log();
 			requests.add(userRequest);
 		}
 		return requests;
+	}
+	
+	public static List<RequestSpecification> getPutUpdateUserLoginStatusRequestDD(String token) throws IOException {
+		return getPutUpdateUserLoginStatusRequestDD(token,"PutLoginStatus");
+		
 	}
 
 	//DD Update User Login Status Response
@@ -233,6 +238,11 @@ public class UserActions {
 			fullEmail = dynamicGenerator.generateUserLoginEmail(fullEmail);
 		}
 		userLoginpj.setUserLoginEmail(fullEmail);
+		String userId= StringUtils.isEmpty(row.get("userId")) ? null : row.get("userId");
+		System.out.println("UserId from excel "+userId);
+		
+		String finalUserId = Env_Var.userID == null ?  userId  : Env_Var.userID;
+		userLoginpj.setUserId(finalUserId);
 		return userLoginpj;
 	}
 
@@ -390,10 +400,10 @@ public class UserActions {
 	}
 	
 	//DD Update user Program Batch Status request
-	public static List<RequestSpecification> getPutUpdateUserProgramBatchStatusRequestDD(String token) throws IOException {
+	public static List<RequestSpecification> getPutUpdateUserProgramBatchStatusRequestDD(String token,String sheetName) throws IOException {
 	ExcelReader excelReader = new ExcelReader();
 	List<RequestSpecification> requests = new ArrayList<RequestSpecification>();
-	List<Map<String, String>> testData = excelReader.readTestDataFromExcel(FileNameConstants.EXCEL_TEST_DATA,"PutProgramBatchStatus");
+	List<Map<String, String>> testData = excelReader.readTestDataFromExcel(FileNameConstants.EXCEL_TEST_DATA,sheetName);
 	for (Map<String, String> row : testData) {
 		System.out.println(row);
 		UserRoleProgramBatchPojo pgmbatchpj = mapUpdateRowToUserRoleProgramBatchPojo(row);
@@ -402,12 +412,16 @@ public class UserActions {
 		String requestBody = objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(pgmbatchpj);
 		System.out.println("PUT User request body is : " + requestBody);
 		RequestSpecification userRequest = RestAssured.given().headers("Authorization", token)
-				.contentType(ContentType.JSON).body(requestBody).pathParam("userId", userID);
+				.contentType(ContentType.JSON).body(requestBody).pathParam("userId", pgmbatchpj.getUserId());
 		userRequest.log();
 		requests.add(userRequest);
 	}
 	return requests;
 }
+	
+	public static List<RequestSpecification> getPutUpdateUserProgramBatchStatusRequestDD(String token) throws IOException {
+	return getPutUpdateUserProgramBatchStatusRequestDD(token,"PutProgramBatchStatus");
+	}
 
 //DD Update User  Program Batch  Status Response
 public static List<Response> getPutUpdateUserProgramBatchStatusResponsesDD(List<RequestSpecification> requests) {
@@ -428,26 +442,26 @@ public static List<Response> getPutUpdateUserProgramBatchStatusResponsesDD(List<
 		// Creating a UserLoginPojo object
 		UserRoleProgramBatchPojo pgmbatchpj = new UserRoleProgramBatchPojo();
 		Integer programId= StringUtils.isEmpty(row.get("programId")) ? null : Integer.parseInt(row.get("programId"));
-		//pgmbatchpj.setProgramId(programId);
-		
-		
-		pgmbatchpj.setProgramId(Integer.parseInt(Env_Var.programID));
+		Integer finalProgramId = Env_Var.programID == null ?  programId  : Integer.parseInt(Env_Var.programID);
+		pgmbatchpj.setProgramId(finalProgramId);
 		
 		System.out.println("RoleId from excel "+row.get("roleId"));
 		String roleId= StringUtils.isEmpty(row.get("roleId")) ? null : row.get("roleId");
 		System.out.println("RoleId from excel final "+roleId);
 		pgmbatchpj.setRoleId(roleId);		
 		
-		
 		String userId= StringUtils.isEmpty(row.get("userId")) ? null : row.get("userId");
-		pgmbatchpj.setUserId(userId);		
+		System.out.println("UserId from excel "+userId);
+		
+		String finalUserId = Env_Var.userID == null ?  userId  : Env_Var.userID;
+		pgmbatchpj.setUserId(finalUserId);		
 		
 		// Creating a list of UserRoleMapPojo objects
 		List<UserProgramBatchPojo> userPBList = new ArrayList<>();
 		UserProgramBatchPojo userPBpj = new UserProgramBatchPojo();
 		Integer batchId= StringUtils.isEmpty(row.get("batchId")) ? null : Integer.parseInt(row.get("batchId"));
-		//userPBpj.setBatchId(batchId);
-		userPBpj.setBatchId(Integer.parseInt(Env_Var.batchID));
+		Integer finalBatchId = Env_Var.batchID == null ?  batchId  : Integer.parseInt(Env_Var.batchID);
+		userPBpj.setBatchId(finalBatchId);
 		
 		String userRoleProgramBatchStatus= StringUtils.isEmpty(row.get("userRoleProgramBatchStatus")) ? null : row.get("userRoleProgramBatchStatus");
 		userPBpj.setUserRoleProgramBatchStatus(userRoleProgramBatchStatus);
