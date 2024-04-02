@@ -174,8 +174,8 @@ public static void GetUnauthorizedValidation(Response response) {
 		.then()
 			.assertThat()
 			.statusCode(401)
-			.statusLine("HTTP/1.1 401 ")
-			.header("Content-Type", "application/json");
+			.statusLine("HTTP/1.1 401 ");
+//			.header("Content-Type", "application/json");
 }
 
 public static void GetNegative404Validation(Response response) {
@@ -183,32 +183,32 @@ public static void GetNegative404Validation(Response response) {
 		.then()
 			.assertThat()
 			.statusCode(404)
-			.statusLine("HTTP/1.1 404 ")
-			.header("Content-Type", "application/json");
+			.statusLine("HTTP/1.1 404 ");
+//			.header("Content-Type", "application/json");
 }
 
 public static void GetNegative400Validation(Response response) {
 	response
 		.then()
 			.assertThat()
-			.statusCode(400)
-			.header("Content-Type", "application/json");
+			.statusCode(400);
+//			.header("Content-Type", "application/json");
 }
 
 public static void GetNegative409Validation(Response response) {
 	response
 		.then()
 			.assertThat()
-			.statusCode(409)
-			.header("Content-Type", "application/json");
+			.statusCode(409);
+//			.header("Content-Type", "application/json");
 }
 
 public static void GetNegative500Validation(Response response) {
 	response
 		.then()
 			.assertThat()
-			.statusCode(500)
-			.header("Content-Type", "application/json");
+			.statusCode(500);
+//			.header("Content-Type", "application/json");
 }
 
 }

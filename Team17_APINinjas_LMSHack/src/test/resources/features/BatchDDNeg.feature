@@ -1,4 +1,4 @@
-@BatchModuleNegative
+@LMS, @BatchModuleNegative
 Feature: LMS API Batch Module - Create Batch Requests - Post
 
   Background: Admin able to get Token for Authorization

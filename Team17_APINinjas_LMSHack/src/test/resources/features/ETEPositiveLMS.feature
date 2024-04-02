@@ -1,4 +1,4 @@
-@ETEPositiveLMS
+@LMS, @ETEPositiveLMS
 Feature: LMS API All Modules End To End Positive Scenarios
 
   Background: Admin able to get Token for Authorization

@@ -12,7 +12,7 @@ public class Routes {
 	public static String Login_Url = base_url+"/login";	
 	public static String Login_InvalidUrl = Invalid_base_url+"/login";
 	public static String Login_InvalidEP = base_url+"/Login";
-	
+
 	//Logout Get request
 	public static String Logout_Url = base_url+"/logoutlms";	
 
@@ -53,10 +53,10 @@ public class Routes {
 	public static String DeleteBatch_InvalidEP = base_url+"/batch/";
 	public static String DeleteBatch_ID = base_url+"/batches";
 
-	// Program Module:
+	//PROGRAM MODULE
 	//POST PROGRAM
 	public static String CreateProgram_Url = base_url+"/saveprogram";
-	public static String CreateProgram_InvalidUrl= Invalid_base_url+"/saveprogram";
+	public static String CreateProgram_InvalidUrl= Invalid_base_url;
 	public static String CreateProgram_InvalidERP = base_url+"/SaveProgram";
 
 
@@ -64,11 +64,10 @@ public class Routes {
 	public static String GetProgram_Url = base_url+"/allPrograms";
 	public static String GetProgram_InvalidUrl = Invalid_base_url+"/allPrograms";
 	public static String GetProgram_InvalidEP = base_url+"/AllProgramss";
-
 	//GET Program BY PROGRAMID
 	public static String GetProgramByProgramID_Url = base_url+"/programs";
-	public static String GetProgramByProgramID_InvalidUrl = Invalid_base_url+"/programs/{{programId}}";
-	public static String GetProgramByProgramID_InvalidEP = base_url+"/Program/{programId}";
+	public static String GetProgramByProgramID_InvalidUrl = Invalid_base_url+"/programs";
+	public static String GetProgramByProgramID_InvalidEP = base_url+"/Program";
 
 
 	//GET PRogram By PROGRAM WITH USERS
@@ -78,23 +77,24 @@ public class Routes {
 
 	//PUT program By PROGRAMNAME
 	public static String PutProgramByProgName_Url = base_url+"/program";
-	public static String PutProgramByProgName_InvalidUrl = Invalid_base_url+"/program/{programName}";
-	public static String PutProgramByProgName_InvalidEP = base_url+"/pPrograms/{programName}";
+	public static String PutProgramByProgName_InvalidUrl = Invalid_base_url+"/program";
+	public static String PutProgramByProgName_InvalidEP = base_url+"/pPrograms";
 
 	//PUT program By PROGRAMID
 	public static String PutProgramByProgID_Url = base_url+"/putprogram";
-	public static String PutProgramByProgID_InvalidUrl = Invalid_base_url+"/putprogram/{programId}";
-	public static String PutProgramByProgID_InvalidEP = base_url+"/Putprograms/{programId}";
+	public static String PutNegProgramByProgID_Url = base_url+"/putprogram";
+	public static String PutProgramByProgID_InvalidUrl = Invalid_base_url+"/putprogram";
+	public static String PutProgramByProgID_InvalidEP = base_url+"/Putprograms";
 
 	//DELETE Program By ProgramID
 	public static String DeleteProgramByProgID_Url = base_url+"/deletebyprogid";
-	public static String DeleteProgramByProgID_InvalidUrl = base_url+"/deletebyprogid/{programId}";		
-	public static String DeleteProgramByProgID_InvalidEP = base_url+"/DeletebyprogiD/{programId}";	
+	public static String DeleteProgramByProgID_InvalidUrl = Invalid_base_url+"/deletebyprogid";		
+	public static String DeleteProgramByProgID_InvalidEP = base_url+"/DeletebyprogiD";	
 
 	//DELETE Program By ProgramName
 	public static String DeleteProgramByProgName_Url = base_url+"/deletebyprogname";
-	public static String DeleteProgramByProgName_InvalidUrl = base_url+"/deletebyprogname/{programName}";		
-	public static String DeleteProgramByProgName_InvalidEP = base_url+"/DeletebyProgname/{programName}";
+	public static String DeleteProgramByProgName_InvalidUrl = Invalid_base_url+"/deletebyprogname";		
+	public static String DeleteProgramByProgName_InvalidEP = base_url+"/DeletebyProgname";
 
 	//User Module:
 	//POST Create User
@@ -118,18 +118,50 @@ public class Routes {
 
 	//Get User
 	public static String GetUserRoles_Url = base_url+"/roles";
+	public static String GetUserRoles_InvalidEP = base_url+"/Roles";
+	public static String GetUserRoles_InvalidUrl =Invalid_base_url+"/roles";
+	
 	public static String GetAllUsers_Url = base_url+"/users";
+	public static String GetAllUsers_InvalidEP = base_url+"/Users";
+	public static String GetAllUsers_InvalidUrl = Invalid_base_url+"/users";
+	
 	public static String GetUserbyID_Url = base_url+"/users";
+	public static String GetUserbyID_InvalidEP = base_url+"/Users";
+	public static String GetUserbyID_InvalidUrl = Invalid_base_url+"/users";
+	
 	public static String GetUserbyActiveUser_Url = base_url+"/users/activeUsers";
+	public static String GetUserbyActiveUse_InvalidEP = base_url+"/users/ActiveUsers";
+	public static String GetUserbyActiveUse_InvalidUrl = Invalid_base_url+"/users/activeUsers";	
+	
+	//public static String GetUserbyStatus_Url = base_url+"/users/byStatus?id=all";
 	public static String GetUserbyStatus_Url = base_url+"/users/byStatus?id";
+	public static String GetUserbyStatus_InvalidEP = base_url+"/users/ByStatus?id";
+	public static String GetUserbyStatus_InvalidUrl = Invalid_base_url+"/users/byStatus?id";
+	
 	public static String GetUserbyBatchID_Url = base_url+"/users/programBatch";
+	public static String GetUserbyBatchID_InvalidEP = base_url+"/users/ProgramBatch";
+	public static String GetUserbyBatchID_InvalidUrl = Invalid_base_url+"/users/programBatch";
+	
 	public static String GetUserbyProgID_Url = base_url+"/users/programs";
+	public static String GetUserbyProgID_InvalidEP = base_url+"/users/Programs";
+	public static String GetUserbyProgID_InvalidUrl = Invalid_base_url+"/users/programs";	
+	
 	public static String GetUserwithRoles_Url = base_url+"/users/roles";
+	public static String GetUserwithRoles_InvalidEP = base_url+"/users/Roles";
+	public static String GetUserwithRoles_InvalidUrl = Invalid_base_url+"/users/roles";	
+	
 	public static String GetUserbyRoleID_Url = base_url+"/users/roles";
+	public static String GetUserbyRoleID_InvalidEP = base_url+"/users/Roles";
+	public static String GetUserbyRoleID_InvalidUrl = Invalid_base_url+"/users/roles";
+
 	public static String GetUserbyFilterUser_Url = base_url+"/v2/users";
+	public static String GetUserbyFilterUser_InvalidEP = base_url+"/v2/Users";
+	public static String GetUserbyFilterUser_InvalidUrl = Invalid_base_url+"/v2/users";
 	
 	//Delete User
 	public static String DeleteUserbyUserID_Url = base_url+"/users";
+	public static String DeleteUserbyUserID_InvalidEP = base_url+"/Users";
+	public static String DeleteUserbyUserID_InvalidUrl = Invalid_base_url+"/users";
 
 	//Program Batch Status Role Map GET ALL
 	//*****************************
@@ -164,5 +196,17 @@ public class Routes {
 	public static String PutUserRoleMap_InvalidUrl = Invalid_base_url+"/StatusRoleMap";
 	//Invalid EP
 	public static String PutUserRoleMap_InvalidEP = base_url+"/batch/";
+	
+	//Invalid URL
+	public static String GetLogout_InvalidUrl = Invalid_base_url+"/logoutlms";
+	//Invalid EP
+	public static String GetLogout_InvalidEP = base_url+"/logoutlms//";
+	
+	
+	//Login POST
+	//Invalid URL
+	public static String GetLogin_InvalidUrl = Invalid_base_url+"/logoutlms";
+	//Invalid EP
+	public static String GetLogin_InvalidEP = base_url+"/logoutlms//";
 
 }

@@ -220,6 +220,7 @@ public class UserActions {
 	
 //Start
 	//DD Update USER request
+<<<<<<< HEAD
 	public static List<RequestSpecification> getPutUpdateUserRequestDD(String token, String sheetName) throws IOException {
 		ExcelReader excelReader = new ExcelReader();
 		List<RequestSpecification> requests = new ArrayList<RequestSpecification>();
@@ -283,6 +284,31 @@ public class UserActions {
 		}
 		
 //End------>
+=======
+		public static List<RequestSpecification> getPutUpdateUserRequestDD(String token, String sheetName) throws IOException {
+			ExcelReader excelReader = new ExcelReader();
+			List<RequestSpecification> requests = new ArrayList<RequestSpecification>();
+			List<Map<String, String>> testData = excelReader.readTestDataFromExcel(FileNameConstants.EXCEL_TEST_DATA,sheetName);
+			for (Map<String, String> row : testData) {
+				System.out.println(row);
+				UserPojo userpj = mapUpdateRowToUserPojo(row);
+				ObjectMapper objectMapper = new ObjectMapper();
+				objectMapper.setSerializationInclusion(JsonInclude.Include.NON_NULL);
+				String requestBody = objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(userpj);
+				System.out.println("PUT User request body is : " + requestBody);
+				RequestSpecification userRequest = RestAssured.given().headers("Authorization", token)
+						.contentType(ContentType.JSON).body(requestBody).pathParam("userId", Env_Var.userID);
+				userRequest.log();
+				requests.add(userRequest);
+			}
+			return requests;
+		}
+		
+		
+		public static List<RequestSpecification> getPutUpdateUserRequestDD(String token) throws IOException {
+			return getPutUpdateUserRequestDD(token, "PutUser");
+		}
+>>>>>>> 879e8ec71b9f8d69d2c7c863e82a1db10f84a4b7
 
 	//DD Update USER Response
 	public static List<Response> getPutUpdateUserResponsesDD(List<RequestSpecification> requests) {
@@ -574,6 +600,13 @@ public static List<Response> getPutUpdateUserProgramBatchStatusResponsesDD(List<
 		return expResponses;
 	}
 
-
+	public static RequestSpecification getGetDeleteUserRequestNoAuth(String url) throws JsonProcessingException {
+		request =
+				RestAssured
+					.given()
+						.contentType(ContentType.JSON)						
+						.baseUri(url);
+	return request;
+	}
 
 }	
