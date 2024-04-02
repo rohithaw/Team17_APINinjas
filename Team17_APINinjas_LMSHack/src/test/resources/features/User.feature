@@ -23,3 +23,11 @@ Feature: LMS API User Modules Scenarios
     Given Admin creates PUT Request with valid data in request body for RoleProgramBatchStatus from "PutProgramBatchStatusNegative"
     When Admin sends PUT User request for RoleProgramBatchStatus for User Module
     Then User receives expected responses
+    
+     @PUT_byUserID_Negative
+  Scenario: Admin is able to update Admin details with Admin userid 
+    Given Admin creates PUT Request with valid data in request body from "PutUserIdNegative"
+    When Admin sends PUT User request for Admin details update in User Module
+    Then User receives expected responses
+    
+    

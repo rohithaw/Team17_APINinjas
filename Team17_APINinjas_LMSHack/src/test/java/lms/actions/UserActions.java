@@ -58,6 +58,31 @@ public class UserActions {
 		}
 		return requestSpecifications;
 	}
+	
+	//In progress
+	public static List<RequestSpecification> putUserRoleIDRequestsDD(String url, String token, String sheetName) throws IOException {
+		String RoleID;
+
+		ExcelReader excelReader = new ExcelReader();
+		List<Map<String, String>> testData = excelReader.readTestDataFromExcel(FileNameConstants.EXCEL_TEST_DATA, sheetName);
+		List<RequestSpecification> requestSpecifications = new ArrayList<>();
+		for (Map<String, String> row : testData) {
+
+			RoleID = row.get("updateRoleID"); // Extract fields from each row
+			PutstatusList.add(row.get("ExpectedStatusCodePut"));    	   
+			// Prepare request body
+			String requestBody = preparePutRoleIDRequestBody(List.of(RoleID));
+			request =  
+					RestAssured
+					.given()
+					.headers("Authorization", token)
+					.contentType(ContentType.JSON)
+					.body(requestBody)
+					.baseUri(url);	
+			requestSpecifications.add(request);		    		     
+		}
+		return requestSpecifications;
+	}
 
 	public static List<RequestSpecification> putUserRoleStatusRequestsDD(String url, String token) throws IOException {
 		String RoleID;
@@ -152,10 +177,10 @@ public class UserActions {
 	}
 
 	//DD Update USER request
-	public static List<RequestSpecification> getPutUpdateUserRequestDD(String token) throws IOException {
+	public static List<RequestSpecification> getPutUpdateUserRequestDD(String token, String sheetName) throws IOException {
 		ExcelReader excelReader = new ExcelReader();
 		List<RequestSpecification> requests = new ArrayList<RequestSpecification>();
-		List<Map<String, String>> testData = excelReader.readTestDataFromExcel(FileNameConstants.EXCEL_TEST_DATA,"PutUser");
+		List<Map<String, String>> testData = excelReader.readTestDataFromExcel(FileNameConstants.EXCEL_TEST_DATA,sheetName);
 		for (Map<String, String> row : testData) {
 			System.out.println(row);
 			UserPojo userpj = mapUpdateRowToUserPojo(row);
@@ -164,11 +189,16 @@ public class UserActions {
 			String requestBody = objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(userpj);
 			System.out.println("PUT User request body is : " + requestBody);
 			RequestSpecification userRequest = RestAssured.given().headers("Authorization", token)
-					.contentType(ContentType.JSON).body(requestBody).pathParam("userId", userID);
+					.contentType(ContentType.JSON).body(requestBody).pathParam("userId", userpj.getUserUserId());
 			userRequest.log();
 			requests.add(userRequest);
 		}
 		return requests;
+	}
+	
+	
+	public static List<RequestSpecification> getPutUpdateUserRequestDD(String token) throws IOException {
+		return getPutUpdateUserRequestDD(token, "PutUser");
 	}
 
 	//DD Update USER Response
@@ -204,6 +234,7 @@ public class UserActions {
 		}
 		return requests;
 	}
+
 	
 	public static List<RequestSpecification> getPutUpdateUserLoginStatusRequestDD(String token) throws IOException {
 		return getPutUpdateUserLoginStatusRequestDD(token,"PutLoginStatus");
@@ -289,6 +320,12 @@ public class UserActions {
 		userpj.setUserRoleMaps(userRoleMaps);
 		userpj.setUserTimeZone(row.get("timeZone"));
 		userpj.setUserVisaStatus(row.get("visaStatus"));
+		
+		String userId= StringUtils.isEmpty(row.get("userId")) ? null : row.get("userId");
+		System.out.println("UserId from excel "+userId);
+		
+		String finalUserId = Env_Var.userID == null ?  userId  : Env_Var.userID;
+		userpj.setUserUserId(finalUserId);		
 		return userpj;
 	}
 
@@ -484,5 +521,7 @@ public static List<Response> getPutUpdateUserProgramBatchStatusResponsesDD(List<
 		}
 		return expResponses;
 	}
+
+
 
 }	

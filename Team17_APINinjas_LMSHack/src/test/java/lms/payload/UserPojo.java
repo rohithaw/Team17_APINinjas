@@ -1,12 +1,15 @@
 package lms.payload;
 
 import java.util.List;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 public class UserPojo {
 	
     private String userComments;
     private String userEduPg;
     private String userEduUg;
     private String userFirstName;
+    @JsonIgnore
     private String userUserId;
     private String userLastName;
     private String userLinkedinUrl;

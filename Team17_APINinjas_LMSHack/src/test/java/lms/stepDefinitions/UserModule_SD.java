@@ -77,7 +77,19 @@ RequestSpecification request;
 	public void admin_sends_put_user_request_for_role_program_batch_status_for_user_module() {
 		this.responses = UserActions.getPutUpdateUserProgramBatchStatusResponsesDD(requests);
 	}
+	
+	@Given("Admin creates PUT Request with valid data in request body from {string}")
+	public void admin_creates_put_request_with_valid_data_in_request_body_from(String sheetName) throws IOException {
+		this.requests = UserActions.getPutUpdateUserRequestDD( token,sheetName);
+		this.expectedResponses = UserActions.getExpectedResponsesDD(sheetName); //From excel sheet--new
+	}
 
+	@When("Admin sends PUT User request for Admin details update in User Module")
+	public void admin_sends_put_user_request_for_admin_details_update_in_user_module() {
+		this.responses = UserActions.getPutUpdateUserResponsesDD(requests);
+	}
+
+	
 }
 	
 	
