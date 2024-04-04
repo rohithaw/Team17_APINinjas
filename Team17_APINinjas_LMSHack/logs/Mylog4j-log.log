@@ -1,0 +1,273 @@
+[ERROR] 2024-03-30 21:01:28.841 [main] LoggerLoad - 1 expectation failed.
+Expected status code <200> but was <400>.
+
+[ERROR] 2024-03-30 22:31:35.244 [main] LoggerLoad - 1 expectation failed.
+Expected status code <400> but was <404>.
+
+[INFO ] 2024-03-31 10:51:24.644 [main] LoggerLoad - Execution of Invalid Url PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 10:51:36.772 [main] LoggerLoad - Execution of Invalid Url PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 10:56:32.258 [main] LoggerLoad - Execution of Invalid Url PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 11:01:48.216 [main] LoggerLoad - Execution of Invalid Url PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 11:02:02.669 [main] LoggerLoad - Execution of Invalid Url PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 11:03:55.991 [main] LoggerLoad - Execution of Invalid Url PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 11:15:04.967 [main] LoggerLoad - Execution of Invalid Url PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 11:17:42.764 [main] LoggerLoad - Execution of Invalid Url PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 11:18:16.959 [main] LoggerLoad - Execution of Invalid Url PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 11:37:04.463 [main] LoggerLoad - Execution of Invalid Url PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 11:39:38.057 [main] LoggerLoad - Execution of Invalid Url PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 11:45:40.473 [main] LoggerLoad - Execution of Invalid Url PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 11:45:52.718 [main] LoggerLoad - Execution of Invalid Url PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 11:48:23.955 [main] LoggerLoad - Execution of Invalid Url PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 11:50:06.476 [main] LoggerLoad - Execution of Invalid Url PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 11:51:10.487 [main] LoggerLoad - Execution of Invalid Url PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 11:52:53.968 [main] LoggerLoad - Execution of Invalid Url PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 11:53:06.400 [main] LoggerLoad - Execution of Invalid Url PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 11:53:51.181 [main] LoggerLoad - Execution of Invalid Url PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 11:59:25.003 [main] LoggerLoad - Execution of Invalid Url PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 12:00:25.614 [main] LoggerLoad - Execution of Invalid Url PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 12:01:18.498 [main] LoggerLoad - Execution of Invalid Url PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 12:10:02.928 [main] LoggerLoad - Execution of Invalid Url PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 12:10:10.326 [main] LoggerLoad - Execution of Invalid Url PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 12:11:09.281 [main] LoggerLoad - Execution of Invalid Url PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 12:20:41.995 [main] LoggerLoad - Execution of Invalid Url PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 12:21:53.681 [main] LoggerLoad - Execution of Invalid Url PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 12:22:30.113 [main] LoggerLoad - Execution of Invalid Url PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 12:22:57.977 [main] LoggerLoad - Execution of Invalid Url PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 12:26:12.984 [main] LoggerLoad - Execution of Invalid Url PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 13:53:59.755 [main] LoggerLoad - Execution of Invalid Url PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 13:54:47.585 [main] LoggerLoad - Execution of Invalid Url PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 14:01:58.323 [main] LoggerLoad - Execution of Invalid Url PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 14:12:18.013 [main] LoggerLoad - Execution of Invalid endpoint PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 14:13:21.616 [main] LoggerLoad - Execution of Invalid endpoint PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 14:15:03.369 [main] LoggerLoad - Execution of Invalid endpoint PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 14:18:07.623 [main] LoggerLoad - Execution of Invalid endpoint PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 14:33:27.221 [main] LoggerLoad - Execution of No_Auth endpoint PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 15:48:13.321 [main] LoggerLoad - Execution of Invalid Url PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 15:49:55.518 [main] LoggerLoad - Execution of Invalid Url PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 15:51:02.869 [main] LoggerLoad - Execution of Invalid Url PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 15:57:25.744 [main] LoggerLoad - Execution of Invalid Url PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 15:59:58.208 [main] LoggerLoad - Execution of Invalid Url PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 16:07:40.859 [main] LoggerLoad - Execution of Invalid Url PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 16:09:12.615 [main] LoggerLoad - Execution of Invalid Url PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 16:09:26.019 [main] LoggerLoad - Execution of Invalid Url PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 16:27:07.558 [main] LoggerLoad - Execution of Invalid endpoint PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 16:39:12.447 [main] LoggerLoad - Execution of Invalid endpoint PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 16:41:50.013 [main] LoggerLoad - Execution of Invalid endpoint PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 16:46:09.388 [main] LoggerLoad - Execution of No_Auth endpoint PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 16:47:24.945 [main] LoggerLoad - Execution of No_Auth endpoint PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 16:49:14.930 [main] LoggerLoad - Execution of Invalid Url PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 16:49:14.982 [main] LoggerLoad - Execution of Invalid endpoint PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 16:49:15.030 [main] LoggerLoad - Execution of No_Auth endpoint PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 16:49:15.072 [main] LoggerLoad - Execution of Invalid Url PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 16:49:15.079 [main] LoggerLoad - Execution of Invalid endpoint PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 16:49:15.085 [main] LoggerLoad - Execution of No_Auth endpoint PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 16:49:55.076 [main] LoggerLoad - Execution of Invalid Url PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 16:49:55.581 [main] LoggerLoad - Execution of Invalid endpoint PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 16:49:56.192 [main] LoggerLoad - Execution of No_Auth endpoint PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 16:49:56.677 [main] LoggerLoad - Execution of Invalid Url PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 16:49:57.154 [main] LoggerLoad - Execution of Invalid endpoint PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 16:49:57.619 [main] LoggerLoad - Execution of No_Auth endpoint PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 17:10:12.178 [main] LoggerLoad - Execution of Invalid Url GET UserID PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 17:23:50.741 [main] LoggerLoad - Execution of Invalid Endpoint GET UserID PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 17:26:14.184 [main] LoggerLoad - Execution of Invalid Endpoint GET UserID PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 17:31:40.251 [main] LoggerLoad - Execution of No_Auth GET UserId PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 17:32:41.696 [main] LoggerLoad - Execution of Invalid Url PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 17:32:42.198 [main] LoggerLoad - Execution of Invalid endpoint PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 17:32:42.711 [main] LoggerLoad - Execution of No_Auth endpoint PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 17:32:43.181 [main] LoggerLoad - Execution of Invalid Url GET ALL PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 17:32:43.640 [main] LoggerLoad - Execution of Invalid endpoint GET ALL PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 17:32:44.152 [main] LoggerLoad - Execution of No_Auth endpoint GET ALL PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 17:32:44.631 [main] LoggerLoad - Execution of Invalid Url GET UserID PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 17:32:45.068 [main] LoggerLoad - Execution of Invalid Endpoint GET UserID PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 17:32:45.519 [main] LoggerLoad - Execution of No_Auth GET UserId PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 17:55:00.252 [main] LoggerLoad - Execution of Invalid Url Delete PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 17:58:25.157 [main] LoggerLoad - Execution of Invalid Url Delete PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 17:58:50.431 [main] LoggerLoad - Execution of Invalid Url Delete PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 18:02:19.120 [main] LoggerLoad - Execution of Invalid Endpoing Delete PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 18:08:16.604 [main] LoggerLoad - Execution of Invalid Endpoing Delete PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 18:09:27.462 [main] LoggerLoad - Execution of Invalid Url PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 18:09:27.523 [main] LoggerLoad - Execution of Invalid endpoint PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 18:09:27.567 [main] LoggerLoad - Execution of No_Auth endpoint PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 18:09:27.618 [main] LoggerLoad - Execution of Invalid Url GET ALL PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 18:09:27.626 [main] LoggerLoad - Execution of Invalid endpoint GET ALL PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 18:09:27.632 [main] LoggerLoad - Execution of No_Auth endpoint GET ALL PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 18:09:27.668 [main] LoggerLoad - Execution of Invalid Url GET UserID PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 18:09:27.675 [main] LoggerLoad - Execution of Invalid Endpoint GET UserID PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 18:09:27.680 [main] LoggerLoad - Execution of No_Auth GET UserId PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 18:09:27.693 [main] LoggerLoad - Execution of Invalid Url Delete PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 18:09:27.703 [main] LoggerLoad - Execution of Invalid Endpoing Delete PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 18:09:27.711 [main] LoggerLoad - Execution of Invalid Endpoing Delete PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 18:10:51.028 [main] LoggerLoad - Execution of Invalid Url PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 18:10:51.082 [main] LoggerLoad - Execution of Invalid endpoint PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 18:10:51.130 [main] LoggerLoad - Execution of No_Auth endpoint PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 18:10:51.178 [main] LoggerLoad - Execution of Invalid Url GET ALL PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 18:10:51.186 [main] LoggerLoad - Execution of Invalid endpoint GET ALL PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 18:10:51.192 [main] LoggerLoad - Execution of No_Auth endpoint GET ALL PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 18:10:51.226 [main] LoggerLoad - Execution of Invalid Url GET UserID PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 18:10:51.232 [main] LoggerLoad - Execution of Invalid Endpoint GET UserID PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 18:10:51.236 [main] LoggerLoad - Execution of No_Auth GET UserId PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 18:10:51.248 [main] LoggerLoad - Execution of Invalid Url Delete PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 18:10:51.263 [main] LoggerLoad - Execution of Invalid Endpoing Delete PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 18:10:51.283 [main] LoggerLoad - Execution of Invalid Endpoing Delete PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 18:11:48.828 [main] LoggerLoad - Execution of Invalid Url PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 18:11:49.335 [main] LoggerLoad - Execution of Invalid endpoint PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 18:11:49.966 [main] LoggerLoad - Execution of No_Auth endpoint PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 18:12:21.488 [main] LoggerLoad - Execution of Invalid Url PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 18:12:21.994 [main] LoggerLoad - Execution of Invalid endpoint PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 18:12:22.591 [main] LoggerLoad - Execution of No_Auth endpoint PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 18:12:23.069 [main] LoggerLoad - Execution of Invalid Url GET ALL PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 18:12:23.523 [main] LoggerLoad - Execution of Invalid endpoint GET ALL PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 18:12:23.977 [main] LoggerLoad - Execution of No_Auth endpoint GET ALL PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 18:13:27.417 [main] LoggerLoad - Execution of Invalid Url PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 18:13:27.926 [main] LoggerLoad - Execution of Invalid endpoint PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 18:13:28.511 [main] LoggerLoad - Execution of No_Auth endpoint PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 18:13:28.973 [main] LoggerLoad - Execution of Invalid Url GET ALL PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 18:13:29.427 [main] LoggerLoad - Execution of Invalid endpoint GET ALL PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 18:13:29.886 [main] LoggerLoad - Execution of No_Auth endpoint GET ALL PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 18:13:30.369 [main] LoggerLoad - Execution of Invalid Url GET UserID PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 18:13:30.843 [main] LoggerLoad - Execution of Invalid Endpoint GET UserID PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 18:13:31.597 [main] LoggerLoad - Execution of No_Auth GET UserId PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 18:14:11.921 [main] LoggerLoad - Execution of Invalid Url PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 18:14:12.427 [main] LoggerLoad - Execution of Invalid endpoint PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 18:14:13.041 [main] LoggerLoad - Execution of No_Auth endpoint PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 18:14:13.529 [main] LoggerLoad - Execution of Invalid Url GET ALL PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 18:14:13.997 [main] LoggerLoad - Execution of Invalid endpoint GET ALL PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 18:14:14.453 [main] LoggerLoad - Execution of No_Auth endpoint GET ALL PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 18:14:14.933 [main] LoggerLoad - Execution of Invalid Url GET UserID PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 18:14:15.377 [main] LoggerLoad - Execution of Invalid Endpoint GET UserID PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 18:14:15.818 [main] LoggerLoad - Execution of No_Auth GET UserId PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 18:14:16.298 [main] LoggerLoad - Execution of Invalid Url Delete PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 18:14:16.807 [main] LoggerLoad - Execution of Invalid Endpoing Delete PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 18:14:17.508 [main] LoggerLoad - Execution of Invalid Endpoing Delete PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 18:49:57.045 [main] LoggerLoad - Execution of Invalid Url PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 18:49:57.564 [main] LoggerLoad - Execution of Invalid endpoint PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 18:49:58.218 [main] LoggerLoad - Execution of No_Auth endpoint PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 18:49:58.695 [main] LoggerLoad - Execution of Invalid Url GET ALL PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 18:49:59.178 [main] LoggerLoad - Execution of Invalid endpoint GET ALL PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 18:49:59.645 [main] LoggerLoad - Execution of No_Auth endpoint GET ALL PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 18:50:00.134 [main] LoggerLoad - Execution of Invalid Url GET UserID PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 18:50:00.584 [main] LoggerLoad - Execution of Invalid Endpoint GET UserID PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 18:50:01.032 [main] LoggerLoad - Execution of No_Auth GET UserId PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 18:50:01.519 [main] LoggerLoad - Execution of Invalid Url Delete PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 18:50:01.990 [main] LoggerLoad - Execution of Invalid Endpoing Delete PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 18:50:02.464 [main] LoggerLoad - Execution of Invalid Endpoing Delete PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 22:23:44.465 [main] LoggerLoad - Execution of Valid PUT for PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 22:23:44.848 [main] LoggerLoad - Execution of Valid GetALL for PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 22:23:44.865 [main] LoggerLoad - Execution of Valid Get by UserID for PrgmBatchStatus Scenarios started
+[INFO ] 2024-03-31 22:23:44.880 [main] LoggerLoad - Execution of Valid Delete for PrgmBatchStatus Scenarios started
+[INFO ] 2024-04-01 09:24:17.835 [main] LoggerLoad - Execution of Valid PUT for PrgmBatchStatus Scenarios started
+[ERROR] 2024-04-01 09:24:18.803 [main] LoggerLoad - 1 expectation failed.
+Expected status code <200> but was <404>.
+
+[INFO ] 2024-04-01 09:24:18.811 [main] LoggerLoad - Execution of Valid GetALL for PrgmBatchStatus Scenarios started
+[INFO ] 2024-04-01 09:24:19.536 [main] LoggerLoad - Execution of Valid Get by UserID for PrgmBatchStatus Scenarios started
+[INFO ] 2024-04-01 09:24:20.006 [main] LoggerLoad - Execution of Valid Delete for PrgmBatchStatus Scenarios started
+[INFO ] 2024-04-01 09:34:18.053 [main] LoggerLoad - Execution of Valid PUT for PrgmBatchStatus Scenarios started
+[ERROR] 2024-04-01 09:34:18.957 [main] LoggerLoad - 1 expectation failed.
+Expected status code <200> but was <400>.
+
+[INFO ] 2024-04-01 09:34:18.963 [main] LoggerLoad - Execution of Valid GetALL for PrgmBatchStatus Scenarios started
+[INFO ] 2024-04-01 09:34:19.651 [main] LoggerLoad - Execution of Valid Get by UserID for PrgmBatchStatus Scenarios started
+[INFO ] 2024-04-01 09:34:21.030 [main] LoggerLoad - Execution of Valid Delete for PrgmBatchStatus Scenarios started
+[INFO ] 2024-04-01 09:37:45.683 [main] LoggerLoad - Execution of Valid PUT for PrgmBatchStatus Scenarios started
+[INFO ] 2024-04-01 09:37:46.038 [main] LoggerLoad - Execution of Valid GetALL for PrgmBatchStatus Scenarios started
+[INFO ] 2024-04-01 09:37:46.048 [main] LoggerLoad - Execution of Valid Get by UserID for PrgmBatchStatus Scenarios started
+[INFO ] 2024-04-01 09:37:46.057 [main] LoggerLoad - Execution of Valid Delete for PrgmBatchStatus Scenarios started
+[INFO ] 2024-04-01 09:38:03.343 [main] LoggerLoad - Execution of Valid PUT for PrgmBatchStatus Scenarios started
+[INFO ] 2024-04-01 09:38:03.700 [main] LoggerLoad - Execution of Valid GetALL for PrgmBatchStatus Scenarios started
+[INFO ] 2024-04-01 09:38:03.710 [main] LoggerLoad - Execution of Valid Get by UserID for PrgmBatchStatus Scenarios started
+[INFO ] 2024-04-01 09:38:03.717 [main] LoggerLoad - Execution of Valid Delete for PrgmBatchStatus Scenarios started
+[INFO ] 2024-04-01 09:39:02.414 [main] LoggerLoad - Execution of Valid PUT for PrgmBatchStatus Scenarios started
+[ERROR] 2024-04-01 09:39:03.340 [main] LoggerLoad - 1 expectation failed.
+Expected status code <200> but was <400>.
+
+[INFO ] 2024-04-01 09:39:03.350 [main] LoggerLoad - Execution of Valid GetALL for PrgmBatchStatus Scenarios started
+[INFO ] 2024-04-01 09:39:04.052 [main] LoggerLoad - Execution of Valid Get by UserID for PrgmBatchStatus Scenarios started
+[INFO ] 2024-04-01 09:39:04.500 [main] LoggerLoad - Execution of Valid Delete for PrgmBatchStatus Scenarios started
+[INFO ] 2024-04-01 09:41:06.065 [main] LoggerLoad - Execution of Valid PUT for PrgmBatchStatus Scenarios started
+[INFO ] 2024-04-01 09:41:06.956 [main] LoggerLoad - Execution of Valid GetALL for PrgmBatchStatus Scenarios started
+[INFO ] 2024-04-01 09:41:07.669 [main] LoggerLoad - Execution of Valid Get by UserID for PrgmBatchStatus Scenarios started
+[INFO ] 2024-04-01 09:41:08.118 [main] LoggerLoad - Execution of Valid Delete for PrgmBatchStatus Scenarios started
+[INFO ] 2024-04-01 09:51:56.356 [main] LoggerLoad - Execution of Valid PUT for PrgmBatchStatus Scenarios started
+[INFO ] 2024-04-01 09:51:57.266 [main] LoggerLoad - Execution of Valid GetALL for PrgmBatchStatus Scenarios started
+[INFO ] 2024-04-01 09:51:57.954 [main] LoggerLoad - Execution of Valid Get by UserID for PrgmBatchStatus Scenarios started
+[INFO ] 2024-04-01 09:51:58.416 [main] LoggerLoad - Execution of Valid Delete for PrgmBatchStatus Scenarios started
+[INFO ] 2024-04-01 20:09:44.762 [main] LoggerLoad - Execution of Logout with invalid URL Scenarios started
+[INFO ] 2024-04-01 20:09:45.248 [main] LoggerLoad - Execution of Invalid Endpoing Logout Scenarios started
+[INFO ] 2024-04-01 20:09:45.724 [main] LoggerLoad - Execution of Noauth Logout Scenarios started
+[INFO ] 2024-04-01 20:11:18.593 [main] LoggerLoad - Execution of Logout with invalid URL Scenarios started
+[INFO ] 2024-04-01 20:11:18.621 [main] LoggerLoad - Execution of Invalid Endpoing Logout Scenarios started
+[INFO ] 2024-04-01 20:11:18.635 [main] LoggerLoad - Execution of Noauth Logout Scenarios started
+[INFO ] 2024-04-01 20:11:42.117 [main] LoggerLoad - Execution of Logout with invalid URL Scenarios started
+[INFO ] 2024-04-01 20:11:42.605 [main] LoggerLoad - Execution of Invalid Endpoing Logout Scenarios started
+[INFO ] 2024-04-01 20:11:43.095 [main] LoggerLoad - Execution of Noauth Logout Scenarios started
+[INFO ] 2024-04-01 20:13:47.879 [main] LoggerLoad - Execution of Logout with invalid URL Scenarios started
+[INFO ] 2024-04-01 20:13:48.256 [main] LoggerLoad - Execution of Invalid Endpoing Logout Scenarios started
+[INFO ] 2024-04-01 20:13:48.264 [main] LoggerLoad - Execution of Noauth Logout Scenarios started
+[INFO ] 2024-04-01 20:14:13.684 [main] LoggerLoad - Execution of Logout with invalid URL Scenarios started
+[INFO ] 2024-04-01 20:14:14.243 [main] LoggerLoad - Execution of Invalid Endpoing Logout Scenarios started
+[INFO ] 2024-04-01 20:14:14.722 [main] LoggerLoad - Execution of Noauth Logout Scenarios started
+[INFO ] 2024-04-01 20:15:56.734 [main] LoggerLoad - Execution of Logout with invalid URL Scenarios started
+[INFO ] 2024-04-01 20:15:57.233 [main] LoggerLoad - Execution of Invalid Endpoing Logout Scenarios started
+[INFO ] 2024-04-01 20:15:57.692 [main] LoggerLoad - Execution of Noauth Logout Scenarios started
+[INFO ] 2024-04-01 20:50:17.473 [main] LoggerLoad - Execution of Invalid Password Login Scenarios started
+[INFO ] 2024-04-01 20:50:18.349 [main] LoggerLoad - Execution of Logout with invalid URL Scenarios started
+[INFO ] 2024-04-01 20:50:18.384 [main] LoggerLoad - Execution of Invalid Endpoing Logout Scenarios started
+[INFO ] 2024-04-01 20:50:18.393 [main] LoggerLoad - Execution of Noauth Logout Scenarios started
+[INFO ] 2024-04-01 20:54:04.848 [main] LoggerLoad - Execution of Invalid Password Login Scenarios started
+[INFO ] 2024-04-01 20:54:06.336 [main] LoggerLoad - Execution of Logout with invalid URL Scenarios started
+[INFO ] 2024-04-01 20:54:06.364 [main] LoggerLoad - Execution of Invalid Endpoing Logout Scenarios started
+[INFO ] 2024-04-01 20:54:06.380 [main] LoggerLoad - Execution of Noauth Logout Scenarios started
+[INFO ] 2024-04-01 20:55:00.368 [main] LoggerLoad - Execution of Invalid Password Login Scenarios started
+[INFO ] 2024-04-01 20:55:15.432 [main] LoggerLoad - Execution of Invalid Password Login Scenarios started
+[INFO ] 2024-04-01 21:34:18.968 [main] LoggerLoad - Execution of Invalid Endpoint Login Scenarios started
+[INFO ] 2024-04-01 21:35:04.672 [main] LoggerLoad - Execution of Invalid Endpoint Login Scenarios started
+[INFO ] 2024-04-01 21:35:49.233 [main] LoggerLoad - Execution of Invalid Endpoint Login Scenarios started
+[INFO ] 2024-04-01 21:36:23.081 [main] LoggerLoad - Execution of Invalid Endpoint Login Scenarios started
+[INFO ] 2024-04-01 21:37:04.164 [main] LoggerLoad - Execution of Invalid Endpoint Login Scenarios started
+[INFO ] 2024-04-01 21:38:21.858 [main] LoggerLoad - Execution of Invalid Endpoint Login Scenarios started
+[INFO ] 2024-04-01 21:44:25.303 [main] LoggerLoad - Execution of Invalid Endpoint Login Scenarios started
+[INFO ] 2024-04-01 21:46:35.156 [main] LoggerLoad - Execution of Invalid Password Login Scenarios started
+[INFO ] 2024-04-01 21:52:33.111 [main] LoggerLoad - Execution of Invalid Password Login Scenarios started
+[INFO ] 2024-04-01 21:52:35.030 [main] LoggerLoad - Execution of Logout with invalid URL Scenarios started
+[INFO ] 2024-04-01 21:52:35.063 [main] LoggerLoad - Execution of Invalid Endpoing Logout Scenarios started
+[INFO ] 2024-04-01 21:52:35.076 [main] LoggerLoad - Execution of Noauth Logout Scenarios started
+[INFO ] 2024-04-01 21:54:20.926 [main] LoggerLoad - Execution of Logout with invalid URL Scenarios started
+[INFO ] 2024-04-01 21:54:21.440 [main] LoggerLoad - Execution of Invalid Endpoing Logout Scenarios started
+[INFO ] 2024-04-01 21:54:21.903 [main] LoggerLoad - Execution of Noauth Logout Scenarios started
+[INFO ] 2024-04-01 21:57:25.348 [main] LoggerLoad - Execution of Logout with invalid URL Scenarios started
+[INFO ] 2024-04-01 21:57:25.879 [main] LoggerLoad - Execution of Invalid Endpoing Logout Scenarios started
+[INFO ] 2024-04-01 21:57:26.339 [main] LoggerLoad - Execution of Noauth Logout Scenarios started
+[INFO ] 2024-04-01 22:04:36.891 [main] LoggerLoad - Execution of Invalid Password Login Scenarios started
+[INFO ] 2024-04-01 22:06:20.528 [main] LoggerLoad - Execution of Invalid Password Login Scenarios started
+[INFO ] 2024-04-01 22:07:34.843 [main] LoggerLoad - Execution of Invalid Password Login Scenarios started
+[INFO ] 2024-04-01 22:12:19.620 [main] LoggerLoad - Execution of Invalid Password Login Scenarios started
+[INFO ] 2024-04-01 22:14:54.628 [main] LoggerLoad - Execution of Invalid Endpoint Login Scenarios started
+[INFO ] 2024-04-01 22:16:06.677 [main] LoggerLoad - Execution of Invalid Endpoint Login Scenarios started
+[INFO ] 2024-04-01 22:18:22.775 [main] LoggerLoad - Execution of Invalid Endpoint Login Scenarios started
+[INFO ] 2024-04-01 22:19:08.437 [main] LoggerLoad - Execution of Invalid Endpoint Login Scenarios started
+[INFO ] 2024-04-01 22:35:38.503 [main] LoggerLoad - Execution of Invalid URL Login Scenarios started
+[INFO ] 2024-04-01 22:36:57.471 [main] LoggerLoad - Execution of Invalid URL Login Scenarios started
+[INFO ] 2024-04-01 22:39:56.148 [main] LoggerLoad - Execution of Invalid URL Login Scenarios started
+[INFO ] 2024-04-01 22:40:31.582 [main] LoggerLoad - Execution of Invalid URL Login Scenarios started
+[INFO ] 2024-04-01 22:41:06.204 [main] LoggerLoad - Execution of Invalid URL Login Scenarios started
+[INFO ] 2024-04-01 22:41:42.842 [main] LoggerLoad - Execution of Invalid URL Login Scenarios started
+[INFO ] 2024-04-01 22:42:29.739 [main] LoggerLoad - Execution of Invalid Password Login Scenarios started
+[INFO ] 2024-04-01 22:42:31.221 [main] LoggerLoad - Execution of Invalid Password Login Scenarios started
+[INFO ] 2024-04-01 22:42:31.828 [main] LoggerLoad - Execution of Invalid Endpoint Login Scenarios started
+[INFO ] 2024-04-01 22:42:32.337 [main] LoggerLoad - Execution of Invalid URL Login Scenarios started
+[ERROR] 2024-04-01 22:44:31.608 [main] LoggerLoad - 1 expectation failed.
+Expected status code <404> but was <200>.
+
+[INFO ] 2024-04-01 22:44:31.617 [main] LoggerLoad - Execution of Invalid Url PrgmBatchStatus Scenarios started
+[INFO ] 2024-04-01 22:44:32.148 [main] LoggerLoad - Execution of Invalid endpoint PrgmBatchStatus Scenarios started
+[INFO ] 2024-04-01 22:44:32.777 [main] LoggerLoad - Execution of No_Auth endpoint PrgmBatchStatus Scenarios started
+[INFO ] 2024-04-01 22:44:33.269 [main] LoggerLoad - Execution of Invalid Url GET ALL PrgmBatchStatus Scenarios started
+[INFO ] 2024-04-01 22:44:33.732 [main] LoggerLoad - Execution of Invalid endpoint GET ALL PrgmBatchStatus Scenarios started
+[INFO ] 2024-04-01 22:44:34.212 [main] LoggerLoad - Execution of No_Auth endpoint GET ALL PrgmBatchStatus Scenarios started
+[INFO ] 2024-04-01 22:44:34.704 [main] LoggerLoad - Execution of Invalid Url GET UserID PrgmBatchStatus Scenarios started
+[INFO ] 2024-04-01 22:44:35.177 [main] LoggerLoad - Execution of Invalid Endpoint GET UserID PrgmBatchStatus Scenarios started
+[INFO ] 2024-04-01 22:44:35.659 [main] LoggerLoad - Execution of No_Auth GET UserId PrgmBatchStatus Scenarios started
+[INFO ] 2024-04-01 22:44:36.132 [main] LoggerLoad - Execution of Invalid Url Delete PrgmBatchStatus Scenarios started
+[INFO ] 2024-04-01 22:44:36.601 [main] LoggerLoad - Execution of Invalid Endpoing Delete PrgmBatchStatus Scenarios started
+[INFO ] 2024-04-01 22:44:37.043 [main] LoggerLoad - Execution of Invalid Endpoing Delete PrgmBatchStatus Scenarios started
